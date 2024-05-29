@@ -1,0 +1,39 @@
+{
+  "GlobalKeyWords": {
+    "main": "Asosiy",
+    "service": "Xizmatlar",
+    "project": "Proyektlar",
+    "news": "Yangiliklar",
+    "contact": "Aloqa",
+    "about": "Kompaniya haqida",
+    "address": "Manzil",
+    "info": "Yangiliklar",
+    "btn_text": "Batafsil ma'lumot",
+    "details": "Tafsilotlar",
+    "phone": "Telefon"
+  },
+  "ContactInfoModal": {
+    "contact_number": "Aloqa uchun telefon raqami",
+    "working_hours": "Ish vaqti: dushanba-S6, 9:00 dan 18:00 gacha",
+    "to_call": "Qo'ng'iroq qilish uchun bosing",
+    "schedule": "Ish grafigi:"
+  },
+  "FOOTER": {
+    "footer_title": "IT xizmatlarini ishlab chiqarish va yuqori darajadagi xavfsizlikni ta'minlash.",
+    "navigation": "Menyu",
+    "address": "Toshkent sh., Yashnobod tumani,<br/>Ashxobod bog'i ro'parasida."
+  },
+  "BANNER": {
+    "banner_title": "IT - Xizmatlari,<br/>sifat eng yaxshi tejamkorlik.",
+    "banner_subtitle": "Big Box Pro ikki yo'nalishda mijozlar uchun keng qamrovli xizmatlarni taqdim etadi: dasturiy ta'minot va qurilma vositalaridan foydalanish."
+  },
+  "WhyBBP": {
+    "title": "Qarshi <br/><br/> tomon <br/><br/> fikirlari",
+    "sub_title": "Barcha BBPRO yechimlarining markazida turli nufuzli manbalardan, jumladan eksklyuziv, xususiy va tijorat manbalaridan ma'lumotlarni doimiy ravishda yutadigan katta, dinamik ma'lumotlar ko'liga ega bo'lgan raqib infratuzilma platformasi mavjud. Platforma barcha BBPRO yechimlarini quvvatlaydi, o'rnatish va boshqarish oson, o'ziga xos qiymatni ta'minlaydi va har qanday mavjud xavfsizlik to'plamiga va mijoz arxitekturasiga osongina integratsiya qilinishi mumkin bo'lgan BBPRO echimlari barcha o'lchamdagi tashkilotlarga o'zlarining atrof-muhitini nazorat qilishlari uchun zarur bo'lgan ko'rinish va ko'rinishni ta'minlaydi. Har qanday hujum yoki XOQni tekshirib ko'ring, tegishli ko'rsatkichlarni tezda aniqlang va kiberjinoyat kampaniyasining to'liq arxitekturasini tuzing, u qaerdan kelib chiqqanini aniqlang va qolgan infratuzilma hali qurollanmagan yoki foydalanilmaganligini tushunib, kelajakdagi hujumlarga qarshi faol pozitsiyani egallang. "
+  },
+  "Contact": {
+    "head_office": "Bosh idora",
+    "email": "Elektron pochta",
+    "schedule": "Ish grafigi"
+  }
+}

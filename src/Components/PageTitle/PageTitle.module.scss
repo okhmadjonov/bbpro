@@ -1,0 +1,22 @@
+.page__title {
+  h1 {
+    padding-bottom: 48px;
+    padding-top: 50px;
+    display: flex;
+    justify-content: flex-start;
+    color: var(--black-color);
+    font-weight: 700;
+    font-size: 48px;
+    @media screen and (max-width: 768px) {
+      padding-top: 40px;
+      padding-bottom: 24px;
+      font-size: 40px;
+    }
+
+    @media screen and (max-width: 480px) {
+      padding-top: 24px;
+      padding-bottom: 12px;
+      font-size: 28px;
+    }
+  }
+}

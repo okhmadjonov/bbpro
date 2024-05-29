@@ -1,0 +1,18 @@
+.description {
+  position: relative;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  // background-color: #2c0102;
+
+  @media screen and (-webkit-min-device-pixel-ratio: 0) and (min-width: 1060px) {
+    height: 100vh;
+    max-height: 100vh;
+  }
+  @media screen and (-webkit-min-device-pixel-ratio: 0) and (min-width: 2200px) {
+    height: auto;
+  }
+
+  @media screen and (-webkit-min-device-pixel-ratio: 0) and (max-width: 1450px) {
+    padding-top: 128px;
+  }
+}

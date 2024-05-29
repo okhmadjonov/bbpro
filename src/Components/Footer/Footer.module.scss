@@ -1,0 +1,286 @@
+.footer {
+  // background-color: var(--black-color);
+  padding-top: 150px;
+  background: linear-gradient(to right, #100000, #200102, #1c0000);
+
+  @media (max-width: 1024px) {
+    padding-top: 50px;
+  }
+
+  @media (max-width: 768px) {
+    padding-top: 0px;
+  }
+
+  @media (max-width: 465px) {
+    padding-top: 30px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 180px;
+
+    @media (max-width: 1170px) {
+      gap: 130px;
+    }
+
+    @media (max-width: 768px) {
+      gap: 50px;
+    }
+
+    @media (max-width: 500px) {
+      gap: 30px;
+    }
+
+    @media (max-width: 465px) {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+
+      gap: 24px;
+    }
+  }
+
+  &__logo {
+    font-weight: 700;
+    opacity: 0.8;
+    svg {
+      @media (max-width: 465px) {
+        max-width: 100px;
+        max-height: 32px;
+        fill: #fff;
+      }
+    }
+  }
+  &__logo2 {
+    font-size: 0.7em;
+    color: grey;
+  }
+
+  &__about {
+    p {
+      font-size: 1rem;
+      font-weight: 300;
+      line-height: 25.6px;
+      text-align: left;
+      color: white;
+      opacity: 0.8;
+      margin-top: 25px;
+
+      @media (max-width: 465px) {
+        margin-top: 12px;
+      }
+    }
+  }
+
+  &__top_mobile {
+    display: none;
+    padding: 24px 0px;
+    border-bottom: 1px solid var(--gray-color);
+    margin-top: 50px;
+    margin-bottom: 40px;
+    border: none;
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: 48px;
+
+      @media (max-width: 580px) {
+        gap: 30px;
+        justify-content: space-between;
+      }
+
+      @media (max-width: 490px) {
+        gap: 15px;
+      }
+
+      a {
+        font-size: 1rem;
+        font-weight: 300;
+        line-height: 25.6px;
+        text-align: left;
+        color: var(--white-color);
+        opacity: 0.8;
+      }
+    }
+
+    @media (max-width: 768px) {
+      display: block;
+    }
+
+    @media (max-width: 465px) {
+      display: none;
+    }
+  }
+
+  &__logo {
+    svg {
+      fill: #fff;
+    }
+  }
+  &__navigation {
+    @media (max-width: 768px) {
+      display: none;
+    }
+
+    @media (max-width: 465px) {
+      display: block;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      line-height: 2.4rem;
+      letter-spacing: 0.01em;
+      text-align: left;
+      color: var(--white-color);
+
+      margin-bottom: 30px;
+
+      @media (max-width: 465px) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  &__navs {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 16px;
+
+    @media (max-width: 1295px) {
+      gap: 12px;
+    }
+
+    @media (max-width: 465px) {
+      gap: 8px;
+    }
+
+    a {
+      font-size: 1rem;
+      font-weight: 300;
+      line-height: 25.6px;
+      text-align: left;
+      color: var(--white-color);
+      opacity: 0.8;
+    }
+  }
+
+  &__contact {
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      line-height: 2.4rem;
+      letter-spacing: 0.01em;
+      text-align: left;
+      color: var(--white-color);
+
+      margin-bottom: 30px;
+
+      @media (max-width: 465px) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  &__contact_list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media (max-width: 465px) {
+      gap: 8px;
+    }
+  }
+
+  &__phone {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    div {
+      display: flex;
+      flex-direction: column;
+
+      a {
+        font-size: 1rem;
+        font-weight: 300;
+        line-height: 1.6rem;
+        text-align: left;
+        color: var(--white-color);
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &__map {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    a {
+      font-size: 1rem;
+      font-weight: 300;
+      line-height: 1.6rem;
+      text-align: left;
+      color: var(--white-color);
+      opacity: 0.8;
+    }
+  }
+
+  &__gmail {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    a {
+      font-size: 1rem;
+      font-weight: 300;
+      line-height: 1.6rem;
+      text-align: left;
+      color: var(--white-color);
+      opacity: 0.8;
+    }
+  }
+
+  &__bottom {
+    margin-top: 40px;
+
+    @media (max-width: 768px) {
+      margin-top: 25px;
+    }
+
+    @media (max-width: 465px) {
+      margin-top: 30px;
+    }
+  }
+
+  &__icons {
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--gray-color);
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    svg {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  &__logo_company {
+    padding: 15px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p {
+      font-weight: 400;
+      line-height: 1.2rem;
+      text-align: left;
+      color: var(--gray-color);
+    }
+  }
+}

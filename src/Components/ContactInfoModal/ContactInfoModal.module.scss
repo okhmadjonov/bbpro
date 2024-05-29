@@ -1,0 +1,117 @@
+.contact_info__modal {
+  display: flex;
+  width: 100%;
+  justify-content: space-between !important;
+
+  .contact_info__text {
+    display: flex;
+    flex-direction: column;
+    padding: 28px 48px;
+    gap: 24px;
+
+    .header__title {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      h1 {
+        width: 110%;
+        color: var(--black-color);
+        font-weight: 700;
+        font-size: 33px;
+      }
+
+      p {
+        font-weight: 500;
+        font-size: 16px;
+        color: var(--black-color);
+      }
+    }
+
+    .main__btn {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      .number__btn {
+        display: flex;
+        width: 100%;
+        gap: 8px;
+        align-items: center;
+        justify-content: center;
+        background: var(--white-color);
+        padding: 16px 48px;
+        border: 1px solid var(--btn-default);
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 16px;
+        color: var(--btn-default);
+        cursor: pointer;
+
+        a {
+          color: var(--btn-default);
+        }
+      }
+
+      p {
+        color: var(--dark-gray-color);
+        font-weight: 400;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .contact_info__image {
+    width: 50%;
+
+    .image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contact_info__modal {
+    gap: 0;
+    flex-direction: column-reverse;
+    width: 100%;
+
+    .contact_info__text {
+      justify-content: start;
+      .header__title {
+        h1 {
+          font-size: 28px;
+        }
+      }
+
+      .main__btn {
+        .number__btn {
+          width: 100%;
+          padding: 16px 0;
+        }
+      }
+    }
+
+    .contact_info__image {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .contact_info__modal {
+    gap: 0;
+    .contact_info__text {
+      .header__title {
+        h1 {
+          font-size: 25px;
+        }
+      }
+    }
+
+    .contact_info__image {
+      width: 100%;
+    }
+  }
+}
