@@ -27,7 +27,7 @@ function ProjectSection({ projects }: ProjectProps) {
                     </div>
                     <div className={styles.pj_item_content_header_text}>
                       <p>BBPRO</p>
-                      <h4>Protect</h4>
+                      <h4>Projects</h4>
                     </div>
                   </div>
                   <div className={styles.pj_item_content_body}>

@@ -1,10 +1,10 @@
 import GoToBack from "@/Components/GoToBack";
 import Loader from "@/Components/Loader/Loader";
-import { ProjectInterface } from "@/Components/Types";
+import { NewsInterface } from "@/Components/Types";
 import dynamic from "next/dynamic";
 import React from "react";
 
-const ProjectPage = dynamic(() => import("@/Features/Projects"), {
+const NewsPage = dynamic(() => import("@/Features/News"), {
   loading: () => <Loader />,
 });
 
@@ -12,17 +12,17 @@ const PageTitle = dynamic(() => import("@/Components/PageTitle"), {
   loading: () => <Loader />,
 });
 
-interface ProjectProps {
-  projects: ProjectInterface[];
+interface NewsProps {
+  news: NewsInterface[];
 }
 
-export default function Project({ projects }: ProjectProps) {
+export default function Service({ news }: NewsProps) {
   return (
     <div className="container">
       <div className="container_top_padding">
-        <GoToBack pathArr={[{ title: "project", path: "locations" }]} />
+        <GoToBack pathArr={[{ title: "news", path: "locations" }]} />
         <PageTitle />
-        <ProjectPage projects={projects} />
+        <NewsPage newsdata={news} />
       </div>
     </div>
   );

@@ -195,3 +195,11 @@ export interface ProjectInterface {
   createdAt: string;
   updatedAt: string;
 }
+export interface NewsInterface {
+  id: number;
+  imageUrl: string;
+  title: LocaleStringsInterface;
+  description: LocaleStringsInterface;
+  createdAt: string;
+  updatedAt: string;
+}

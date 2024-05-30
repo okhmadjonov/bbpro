@@ -23,7 +23,7 @@ const Footer = () => {
           <div className={styles.footer__inner}>
             <div className={styles.footer__about}>
               <Link href={"/"} className={styles.footer__logo}>
-                <SvgSelector id="site_logo_svg_2" />
+                <SvgSelector id="site_logo_svg_footer" />
               </Link>
 
               <p>{t("FOOTER.footer_title")}</p>

@@ -6,7 +6,7 @@
     display: flex;
     justify-content: space-between;
     gap: 100px;
-    background-color: #2c0102;
+    background-color: var(--nestle2);
 
     @media (max-width: 1350px) {
       gap: 150px;

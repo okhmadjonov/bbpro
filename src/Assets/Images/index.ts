@@ -5,6 +5,7 @@ import center from "./Center.png";
 import BannerImage from "./BannerImage.png";
 import HomeBanner from "./HomeBanner.png";
 import BannerImage21 from "./BannerImage21.png";
+import BC from "./bc.png";
 import HeadImage from "./BannerImage2.png";
 import BigBoxPro from "./bigboxpro.png";
 import BI from "./bi.png";
@@ -42,6 +43,7 @@ export {
   uz_flag,
   BannerImage,
   BI,
+  BC,
   HeadImage,
   HomeBanner,
   BannerImage21,

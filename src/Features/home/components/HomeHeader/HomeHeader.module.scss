@@ -1,4 +1,7 @@
 .homeheader {
+  margin-top: 50px;
+  // border: 1px solid tomato;
+
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -84,9 +87,11 @@
   }
 
   &__left {
-    width: 40%;
-    padding-top: 35px;
+    width: 45%;
+    padding: 50px 0;
 
+    display: grid;
+    align-items: center;
     @media (max-width: 1180px) {
       width: 50%;
     }
@@ -106,7 +111,7 @@
     height: 100%;
     max-width: 574px;
     max-height: 574px;
-    margin-top: -30px;
+
     @media (max-width: 1180px) {
       min-width: 300px;
       min-height: 300px;
@@ -128,7 +133,7 @@
     }
     img {
       width: 100% !important;
-      height: auto !important;
+      height: 100% !important;
       object-fit: contain;
 
       @media (max-width: 1060px) {

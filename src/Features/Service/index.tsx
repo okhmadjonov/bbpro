@@ -26,7 +26,7 @@ function ServiceSection({ services }: ServiceProps) {
                   </div>
                   <div className={styles.sc_item_content_header_text}>
                     <p>BBPRO</p>
-                    <h4>Protect</h4>
+                    <h4>Services</h4>
                   </div>
                 </div>
                 <div className={styles.sc_item_content_body}>

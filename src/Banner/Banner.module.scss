@@ -2,6 +2,7 @@
   position: relative;
   padding-top: 150px;
   margin-bottom: 108px;
+
   @media screen and (-webkit-min-device-pixel-ratio: 0) and (min-width: 1060px) {
     height: 100vh;
     max-height: 100vh;
@@ -24,6 +25,7 @@
     right: 0%;
     width: 100%;
     height: 100%;
+
     img {
       width: 100%;
       height: 100%;

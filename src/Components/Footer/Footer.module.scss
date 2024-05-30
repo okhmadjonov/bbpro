@@ -1,7 +1,8 @@
 .footer {
   // background-color: var(--black-color);
   padding-top: 150px;
-  background: linear-gradient(to right, #100000, #200102, #1c0000);
+  background-color: var(--nestle1);
+  // background: linear-gradient(to right, #100000, #200102, #1c0000);
 
   @media (max-width: 1024px) {
     padding-top: 50px;

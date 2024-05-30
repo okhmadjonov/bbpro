@@ -81,6 +81,8 @@
 }
 
 :root {
+  --nestle1: #242525;
+  --nestle2: #343331;
   --my-color: #d31217;
   --white-color: #fff;
   --primary-color: #292929;
@@ -143,7 +145,7 @@
 
 *::-webkit-scrollbar-thumb {
   border-radius: 4px;
-  background: linear-gradient(181.17deg, #0367a8, -19.84%, #0367a8 102.61%);
+  background: linear-gradient(181.17deg, #242525, -19.84%, #343331 102.61%);
   box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.05);
 }
 
@@ -156,13 +158,11 @@
 html {
   overflow-x: hidden;
   font-size: 18px;
-  background: #2c0102;
+  /* background: var(--nestle2); */
 }
 body {
   width: 100% !important;
   position: relative;
-  /* background: url("../../public/spiralLine.svg");
-  background-size: cover; */
 }
 
 a {
@@ -191,6 +191,7 @@ a {
   width: 85%;
   max-width: 1440px;
   margin: auto;
+  /* border: 1px solid tomato; */
 }
 
 .container_top_padding {
