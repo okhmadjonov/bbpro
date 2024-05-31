@@ -10,6 +10,11 @@ const HomeHeader = dynamic(
     loading: () => <Loader isComponent={false} />,
   }
 );
+
+const Slider = dynamic(() => import("@/Components/Slider/Slider"), {
+  loading: () => <Loader isComponent={false} />,
+});
+
 const WhyBBP = dynamic(() => import("@/Features/home/components/WhyBBP"), {
   loading: () => <Loader isComponent={false} />,
 });
@@ -36,6 +41,7 @@ const Home = ({ homeBanner, messages, whyBBP }: HomeProps) => (
       <title>Big Box Pro</title>
     </Head>
     <Banner>
+      {/* <Slider /> */}
       <HomeHeader homeBanner={homeBanner} />
     </Banner>
     <HomeDescription>

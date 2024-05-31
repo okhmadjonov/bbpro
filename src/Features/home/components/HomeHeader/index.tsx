@@ -30,9 +30,9 @@ const HomeHeader = ({ homeBanner }: Props) => {
               }}
             />
           </div>
-          <div className={styles.homeheader__text}>
+          {/* <div className={styles.homeheader__text}>
             {t("BANNER.banner_subtitle")}
-          </div>
+          </div> */}
           <Link href="/service">
             <Button
               type="default"

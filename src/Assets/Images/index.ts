@@ -30,7 +30,7 @@ import category from "./category-2.svg";
 import BrandsAdminIcon from "./tag.svg";
 import Mask from "./Mask.png";
 
-export {};
+
 
 export {
   truper,
