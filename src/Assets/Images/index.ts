@@ -18,13 +18,8 @@ import people from "./people.svg";
 import BrandsAdminIcon from "./tag.svg";
 import ct from "./cyberthread.jpeg";
 /*---------------------------Partners----------------------*/
-import ColorCisco from "./partners/ciso.png";
-import ColorCyber from "./partners/cyber.png";
-import ColorLrd from "./partners/lrd.png";
-import ColorMicro from "./partners/micro.png";
-import ColorSas from "./partners/sas.png";
-import ColorWin from "./partners/win.png";
 
+import ColorMicro from "./partners/micro.png";
 import TRCisco from "./partners/ciso1.png";
 import TRCyber from "./partners/cyber1.png";
 import TRLrd from "./partners/lrd1.png";
@@ -33,12 +28,10 @@ import TRSas from "./partners/sas1.png";
 import TRWin from "./partners/win1.png";
 
 export {
-  ColorCisco,
-  ColorCyber,
-  ColorLrd,
+  
+
   ColorMicro,
-  ColorSas,
-  ColorWin,
+
   TRCisco,
   TRCyber,
   TRLrd,
