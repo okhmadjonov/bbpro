@@ -2,15 +2,10 @@ import truper from "./Truper.png";
 import karpo from "./Karpo.png";
 import finland from "./Finland.png";
 import center from "./Center.png";
-import BannerImage from "./BannerImage.png";
 import HomeBanner from "./HomeBanner.png";
-import BannerImage21 from "./BannerImage21.png";
 import BC from "./bc.png";
-import HeadImage from "./BannerImage2.png";
 import BigBoxPro from "./bigboxpro.png";
 import BI from "./bi.png";
-import AboutHeaderImg from "@/Assets/Images/about-header.png";
-import about from "./about.png";
 import en_flag from "./en-flag.png";
 import ru_flag from "./ru-flag.png";
 import uz_flag from "./uz-flag.png";
@@ -26,29 +21,48 @@ import document from "./document-text.svg";
 import folder from "./folder-2.svg";
 import location from "./location.svg";
 import people from "./people.svg";
-import category from "./category-2.svg";
 import BrandsAdminIcon from "./tag.svg";
 import Mask from "./Mask.png";
+import ct from "./cyberthread.jpeg";
+/*---------------------------Partners----------------------*/
+import ColorCisco from "./partners/ciso.png";
+import ColorCyber from "./partners/cyber.png";
+import ColorLrd from "./partners/lrd.png";
+import ColorMicro from "./partners/micro.png";
+import ColorSas from "./partners/sas.png";
+import ColorWin from "./partners/win.png";
 
-
+import TRCisco from "./partners/ciso1.png";
+import TRCyber from "./partners/cyber1.png";
+import TRLrd from "./partners/lrd1.png";
+import TRMicro from "./partners/micro1.png";
+import TRSas from "./partners/sas1.png";
+import TRWin from "./partners/win1.png";
 
 export {
+  ColorCisco,
+  ColorCyber,
+  ColorLrd,
+  ColorMicro,
+  ColorSas,
+  ColorWin,
+  TRCisco,
+  TRCyber,
+  TRLrd,
+  TRMicro,
+  TRSas,
+  TRWin,
   truper,
   karpo,
   finland,
   center,
-  about,
   en_flag,
   ru_flag,
   uz_flag,
-  BannerImage,
   BI,
   BC,
-  HeadImage,
   HomeBanner,
-  BannerImage21,
   BigBoxPro,
-  AboutHeaderImg,
   ContactInfoImage,
   ContactInfoTablet,
   prevIcon,
@@ -57,11 +71,11 @@ export {
   login_lock,
   login_people,
   box,
-  category,
   document,
   folder,
   location,
   people,
   BrandsAdminIcon,
   Mask,
+  ct,
 };

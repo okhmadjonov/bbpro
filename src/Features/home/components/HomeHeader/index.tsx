@@ -8,7 +8,6 @@ import {
   HomeBannerInterface,
   LocaleStringsInterface,
 } from "@/Components/Types";
-import { HeadImage } from "@/Assets/Images";
 
 interface Props {
   homeBanner: HomeBannerInterface[];
@@ -43,7 +42,7 @@ const HomeHeader = ({ homeBanner }: Props) => {
           </Link>
         </div>
         <div className={styles.homeheader__right}>
-          <Image src={HeadImage} alt="img" />
+          {/* <Image src={HeadImage} alt="img" /> */}
         </div>
       </div>
     </div>

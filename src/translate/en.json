@@ -24,13 +24,10 @@
     "address": "Tashkent city, Yashnobod district,<br/> in front of Ashkhabad park."
   },
   "BANNER": {
-    "banner_title": "IT - Services",
+    "banner_title": "New innovations always start with us",
     "banner_subtitle": "Big Box Pro carries out comprehensive supplies of services for customers in two areas: software and hardware use."
   },
-  "WhyBBP": {
-    "title": "Experts in <br/><br/> adversary <br/><br/> infrastructure",
-    "sub_title": "Underpinning all of BBPRO solutions is an adversary infrastructure platform with a large, dynamic data lake that constantly ingests data from a variety of authoritative sources across exclusive, private, and commercial sources. The platform powers all of the BBPRO solutions, which are designed to be easy to deploy and manage, deliver value by themselves as well as seamlessly integrating into any existing security stack and client architecture. <br/><br/> BBPRO solutions provide organizations of all sizes the visibility and observability they need to stay in control of their environment. Threat and fraud analysts can investigate any attack or IOC, rapidly discover related indicators and map out the complete cybercriminal campaign architecture, identify where it came from, and take a proactive stance against future attacks by understanding what remaining infrastructure has not yet been weaponized or utilized."
-  },
+ 
    "Contact": {
     "head_office": "Head office",
     "email": "Email",

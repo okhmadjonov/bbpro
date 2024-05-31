@@ -128,10 +128,6 @@ export interface HomeBannerInterface {
   createdAt: string;
   updatedAt: string;
 }
-export interface WhyBBPInterface {
-  id: number;
-  content: string;
-}
 
 export interface NewListInterface {
   id: number;

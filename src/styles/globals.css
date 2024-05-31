@@ -81,9 +81,11 @@
 }
 
 :root {
+  --hyas-gray: #424a4a;
   --nestle1: #242525;
   --nestle2: #343331;
   --my-color: #d31217;
+  --dark-red: #1c0000;
   --white-color: #fff;
   --primary-color: #292929;
   --violet-800: #048390;
@@ -158,7 +160,7 @@
 html {
   overflow-x: hidden;
   font-size: 18px;
-  /* background: var(--nestle2); */
+  background: var(--nestle2);
 }
 body {
   width: 100% !important;
