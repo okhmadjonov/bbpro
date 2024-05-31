@@ -2,8 +2,6 @@ import React from "react";
 import styles from "./Banner.module.scss";
 import { ReactNode } from "react";
 import newinno from "@/Assets/Videos/newinno.mp4";
-import newinno2 from "@/Assets/Videos/newinno2.mp4";
-import newinno3 from "@/Assets/Videos/newinno2.mp4";
 
 interface ILayoutsProps {
   children: ReactNode;

@@ -1,11 +1,5 @@
-import truper from "./Truper.png";
-import karpo from "./Karpo.png";
-import finland from "./Finland.png";
-import center from "./Center.png";
-import HomeBanner from "./HomeBanner.png";
-import BC from "./bc.png";
+
 import BigBoxPro from "./bigboxpro.png";
-import BI from "./bi.png";
 import en_flag from "./en-flag.png";
 import ru_flag from "./ru-flag.png";
 import uz_flag from "./uz-flag.png";
@@ -22,7 +16,6 @@ import folder from "./folder-2.svg";
 import location from "./location.svg";
 import people from "./people.svg";
 import BrandsAdminIcon from "./tag.svg";
-import Mask from "./Mask.png";
 import ct from "./cyberthread.jpeg";
 /*---------------------------Partners----------------------*/
 import ColorCisco from "./partners/ciso.png";
@@ -52,16 +45,9 @@ export {
   TRMicro,
   TRSas,
   TRWin,
-  truper,
-  karpo,
-  finland,
-  center,
   en_flag,
   ru_flag,
   uz_flag,
-  BI,
-  BC,
-  HomeBanner,
   BigBoxPro,
   ContactInfoImage,
   ContactInfoTablet,
@@ -76,6 +62,6 @@ export {
   location,
   people,
   BrandsAdminIcon,
-  Mask,
+
   ct,
 };
