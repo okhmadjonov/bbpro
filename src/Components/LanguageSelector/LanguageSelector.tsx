@@ -27,7 +27,7 @@ const LanguageSelector = ({
   };
 
   const handleLanguageChange = (lang: string) => {
-    setSelectedLanguage(lang || "");
+    setSelectedLanguage(lang || "uz");
     router.push(router.pathname, router.asPath, {
       locale: lang,
     });

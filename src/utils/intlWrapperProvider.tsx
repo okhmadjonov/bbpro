@@ -1,4 +1,3 @@
-// src/utils/intlWrapperProvider.tsx
 import { IntlProvider } from "next-intl";
 import React from "react";
 import ru from "../translate/ru.json";
@@ -12,7 +11,7 @@ interface IntlWrapperProviderProps {
 
 const IntlWrapperProvider = ({ children }: IntlWrapperProviderProps) => {
   const router = useRouter();
-  const locale = router.locale || "ru";
+  const locale = router.locale || "uz";
   const messages = locale === "uz" ? uz : locale === "ru" ? ru : en;
 
   return (

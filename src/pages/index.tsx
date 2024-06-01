@@ -35,7 +35,7 @@ interface HomeProps {
 const Home = ({ homeBanner, messages }: HomeProps) => (
   <IntlWrapperProvider>
     <Head>
-      <title>Big Box Pro</title>
+      <title>b-b-pro</title>
     </Head>
     <Banner>
       <HomeHeader homeBanner={homeBanner} />

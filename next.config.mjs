@@ -2,8 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   i18n: {
-    locales: ["en", "ru", "uz"],
-    defaultLocale: "ru",
+    locales: ["uz", "ru", "en"],
+    defaultLocale: "uz",
   },
   // images: {
   //   domains: ["127.0.0.1", "bbpro.me"],

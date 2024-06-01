@@ -4,15 +4,18 @@ import { NextResponse, NextRequest } from "next/server";
 export function middleware(req: NextRequest) {
   const { pathname, locale } = req.nextUrl;
 
-  if (pathname === "/" && !locale) {
-    return NextResponse.redirect(new URL("/en", req.url));
+  // Redirect to the default locale if none is set
+  if (pathname === "/" && locale !== "uz") {
+    const url = req.nextUrl.clone();
+    url.pathname = `/uz`;
+    return NextResponse.redirect(url);
   }
 
   return NextResponse.next();
 }
 
 export const config = {
-  matcher: ["/admin/:path*"],
+  matcher: ["/((?!_next/static|_next/image|favicon.ico).*)"],
 };
 
 export default withAuth(
@@ -22,29 +25,27 @@ export default withAuth(
 
     if (!pathName.includes("/login")) {
       // Redirect to login if not authenticated
-      if (pathName === "/admin" && !req.nextauth.token?.token) {
+      if (pathName.startsWith("/admin") && !req.nextauth.token) {
         return NextResponse.redirect(new URL("/login", req.url));
       }
     }
 
     // Set or delete token cookie
     if (req.nextauth.token) {
-      response.cookies.set("token", req.nextauth.token.token + ""); // замена токена на data
+      response.cookies.set("token", req.nextauth.token.token + "");
     } else {
       response.cookies.delete("token");
     }
+
     return response;
   },
   {
     callbacks: {
-      authorized: ({ token }) => {
-        // Check if token exists and return true if it does
-        return !!token;
-      },
+      authorized: ({ token }) => !!token,
     },
     pages: {
-      signIn: "/login", // Define your login page
-      signOut: "/auth/signout", // Define your signout page
+      signIn: "/login",
+      signOut: "/auth/signout",
     },
   }
 );
