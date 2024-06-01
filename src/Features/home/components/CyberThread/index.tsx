@@ -1,7 +1,7 @@
-import React from "react";
 import styles from "./CyberThread.module.scss";
 import { ct } from "@/Assets/Images/index";
 import Image from "next/image";
+
 const CyberThread = () => {
   return (
     <div className={styles.cyberthread}>
@@ -37,21 +37,21 @@ const CyberThread = () => {
                     <p>
                       You receive actionable findings from the investigation:{" "}
                       <br />
-                      <ul>
-                        <li>Adversary/target information</li>
-                        <li>
-                          The actor’s or group’s tactics, techniques, and
-                          procedures (TTPs)
-                        </li>
-                        <li>
-                          The infrastructure associated with the actor or group
-                        </li>
-                        <li>
-                          Options for you, including ongoing monitoring of new
-                          actor infrastructure.
-                        </li>
-                      </ul>
                     </p>
+                    <ul>
+                      <li>Adversary/target information</li>
+                      <li>
+                        The actor’s or group’s tactics, techniques, and
+                        procedures (TTPs)
+                      </li>
+                      <li>
+                        The infrastructure associated with the actor or group
+                      </li>
+                      <li>
+                        Options for you, including ongoing monitoring of new
+                        actor infrastructure.
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>

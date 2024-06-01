@@ -130,10 +130,7 @@ const Navbar = () => {
                   <SvgSelector id="telegram_icon_svg" />
                 </Link>
 
-                <Link
-                  target="_blank"
-                  href="https://www.instagram.com/"
-                >
+                <Link target="_blank" href="https://www.instagram.com/">
                   <SvgSelector id="instagram_icon_svg" />
                 </Link>
               </div>
