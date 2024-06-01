@@ -1,0 +1,83 @@
+{
+  "status": true,
+  "error": "string",
+  "data": {
+    "id": 0,
+    "title": {
+      "uz": "string",
+      "ru": "string",
+      "en": "string"
+    },
+    "imageUrl": "string",
+    "products": [
+      {
+        "id": 0,
+        "isAvailable": true,
+        "title": {
+          "uz": "string",
+          "ru": "string",
+          "en": "string"
+        },
+        "description": {
+          "uz": "string",
+          "ru": "string",
+          "en": "string"
+        },
+        "subDescription": {
+          "uz": "string",
+          "ru": "string",
+          "en": "string"
+        },
+        "applicationArea": {
+          "uz": "string",
+          "ru": "string",
+          "en": "string"
+        },
+        "colors": [
+          {
+            "colorsModel": {
+              "id": 0,
+              "key": "string",
+              "createdAt": "2024-03-29T03:35:53.030Z",
+              "updatedAt": "2024-03-29T03:35:53.030Z",
+              "images": [
+                {
+                  "imagesFromColorModel": {
+                    "id": 0,
+                    "imagePath": "string",
+                    "createdAt": "2024-03-29T03:35:53.030Z",
+                    "updatedAt": "2024-03-29T03:35:53.030Z"
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "techCharacters": [
+          {
+            "techCharacterModel": {
+              "id": 0,
+              "key": {
+                "uz": "string",
+                "ru": "string",
+                "en": "string"
+              },
+              "text": {
+                "uz": "string",
+                "ru": "string",
+                "en": "string"
+              },
+              "createdAt": "2024-03-29T03:35:53.031Z",
+              "updatedAt": "2024-03-29T03:35:53.031Z"
+            }
+          }
+        ],
+        "createdAt": "2024-03-29T03:35:53.031Z",
+        "updatedAt": "2024-03-29T03:35:53.031Z"
+      }
+    ],
+    "createdAt": "2024-03-29T03:35:53.031Z",
+    "updatedAt": "2024-03-29T03:35:53.031Z"
+  },
+  "globalError": true
+}

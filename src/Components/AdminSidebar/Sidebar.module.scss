@@ -1,0 +1,31 @@
+.logo {
+  display: block;
+  transition: 0.3s ease;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  padding: 15px 18px;
+}
+.sider {
+  position: relative;
+}
+.desktop {
+  .logo {
+    min-width: 200px;
+  }
+}
+.mobile {
+  .logo {
+    max-width: 80px;
+  }
+}
+
+.log_out_btn {
+  position: absolute;
+  top: 92vh;
+  color: white;
+  left: 20px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}

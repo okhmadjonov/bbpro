@@ -71,10 +71,11 @@ const SvgSelector = ({ id, className = "" }: SvgSelectorProps) => {
         <svg
           version="1.0"
           xmlns="http://www.w3.org/2000/svg"
-          width="200"
+          width="150"
           height="100"
           viewBox="0 0 300.000000 130.000000"
           preserveAspectRatio="xMidYMid meet"
+          fill="#fff"
         >
           {" "}
           <g

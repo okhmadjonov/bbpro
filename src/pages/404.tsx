@@ -8,7 +8,7 @@ export default function Custom404() {
   return (
     <div className="not_found_page">
       <Image src={notFoundImage} alt="not_found" />
-      <h2>Неправипьно наоранагресипитакемотраницы не существует</h2>
+      <h2>Страницы не существует</h2>
       <Link href={"/"}>
         <Button type="primary" label={"Back Home"} />
       </Link>

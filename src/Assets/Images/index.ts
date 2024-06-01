@@ -1,4 +1,3 @@
-
 import BigBoxPro from "./bigboxpro.png";
 import en_flag from "./en-flag.png";
 import ru_flag from "./ru-flag.png";
@@ -17,6 +16,9 @@ import location from "./location.svg";
 import people from "./people.svg";
 import BrandsAdminIcon from "./tag.svg";
 import ct from "./cyberthread.jpeg";
+import category from "./category-2.svg";
+import CompanyIcon from "./company_icon.svg";
+
 /*---------------------------Partners----------------------*/
 
 import ColorMicro from "./partners/micro.png";
@@ -27,9 +29,12 @@ import TRMicro from "./partners/micro1.png";
 import TRSas from "./partners/sas1.png";
 import TRWin from "./partners/win1.png";
 
-export {
-  
+/*-----------------------------Login----------------------------*/
+import LoginAdmin from "./loginadmin.jpg";
 
+export {
+  LoginAdmin,
+  /* -------------------------- */
   ColorMicro,
   TRCisco,
   TRCyber,
@@ -54,6 +59,7 @@ export {
   location,
   people,
   BrandsAdminIcon,
-
   ct,
+  category,
+  CompanyIcon,
 };

@@ -10,7 +10,14 @@
     "info": "News",
     "btn_text": "More details",
     "details": "Details",
-    "phone": "Telephone"
+    "phone": "Telephone",
+    "catalog": "Catalog"
+  },
+  "LOGIN": {
+    "title": "Login",
+    "login": "Login",
+    "password": "Password",
+    "submit": "sumbit"
   },
   "ContactInfoModal": {
     "contact_number": "Contact phone number",
@@ -27,11 +34,53 @@
     "banner_title": "New innovations always start with us",
     "banner_subtitle": "Big Box Pro carries out comprehensive supplies of services for customers in two areas: software and hardware use."
   },
- 
-   "Contact": {
+
+  "Contact": {
     "head_office": "Head office",
     "email": "Email",
     "schedule": "Schedule"
+  },
+  "OurTeam": {
+    "title": "Our team"
+  },
+  "ADMIN": {
+    "static_data": "Static Data",
+    "products": "Products",
+    "locations": "Location",
+    "CatalogPage": "Catalog Page",
+    "Create": "Create",
+    "Title": "Title",
+    "Description": "Description",
+    "ProductsPage": "Products Page",
+    "NewsPage": "News Page",
+    "Fullname": "Full Name",
+    "OurTeamPage": "Our Team Page",
+    "Address": "Address",
+    "Phone": "Phone",
+    "Email": "Email",
+    "WorkDay": "Work Day",
+    "Weekend": "Weekend",
+    "LocationPage": "Location Page",
+    "Delete": "Delete",
+    "Edit": "Edit",
+    "Upload": "Upload",
+    "position": "Position",
+    "Back": "Back",
+    "Submit": "Submit",
+    "Link": "Link:",
+    "Specifications": "Technical specifications",
+    "Welcome": "Welcome to the administrator page",
+    "StaticsDatas": "Static data",
+    "AboutPage": "About company page",
+    "AboutUsSection": "About company section",
+    "Contacts": "Contacts",
+    "HomeHeader": "Main page header",
+    "Logout": "Log out",
+    "delete_title": "Delete",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "delete_confirmation_message": "Are you sure you want to delete this data?",
+    "Brands": "Brands",
+    "AboutSlider": "Company images"
   }
-
 }

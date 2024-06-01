@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button, Input } from "../../ui";
 import { Form, message } from "antd";
 import Image from "next/image";
-import { login_lock, login_people } from "../../Assets/Images";
+import { login_lock, login_people, LoginAdmin } from "../../Assets/Images";
 import { useTranslations } from "use-intl";
 import styles from "./Login.module.scss";
 import Link from "next/link";
@@ -15,15 +15,16 @@ function LoginForm({ getData, loading, errIs }: any) {
 
   return (
     <div className={styles.main_block}>
+      <Image alt="#" fill={true} src={LoginAdmin} />
       <div className={styles.login_right_img}>
-        {/* <Image alt="#" fill={true} src={login_img} /> */}
+        {/* <Image alt="#" fill={true} src={LoginAdmin} /> */}
       </div>
       <div className={styles.login_form_block}>
         <div className={styles.login_form}>
-          <Link href={"/"}>
-            <div className={styles.back_home}>Back Home</div>
-          </Link>
           <div className={styles.login_title}>
+            <Link href={"/"} className={styles.bh_link}>
+              <div className={styles.bh}>Back Home</div>
+            </Link>
             <h2>{t("title")}</h2>
           </div>
           <div className={styles.login_form}>

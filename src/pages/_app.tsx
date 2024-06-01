@@ -10,6 +10,7 @@ import Head from "next/head";
 import Loader from "@/Components/Loader/Loader";
 import spiralLine from "../../public/spiralLine.svg";
 import Image from "next/image";
+import { SessionProvider } from "next-auth/react";
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -33,19 +34,20 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       {loading && <Loader isComponent={false} />}
-
-      <IntlWrapperProvider>
-        <MainLayout>
-          <Head>
-            <meta name="description" content="Новое описание вашего сайта" />
-            <meta
-              name="viewport"
-              content="width=device-width, initial-scale=1"
-            />
-          </Head>
-          <Component {...pageProps} />
-        </MainLayout>
-      </IntlWrapperProvider>
+      <SessionProvider>
+        <IntlWrapperProvider>
+          <MainLayout>
+            <Head>
+              <meta name="description" content="Новое описание вашего сайта" />
+              <meta
+                name="viewport"
+                content="width=device-width, initial-scale=1"
+              />
+            </Head>
+            <Component {...pageProps} />
+          </MainLayout>
+        </IntlWrapperProvider>
+      </SessionProvider>
     </>
   );
 }

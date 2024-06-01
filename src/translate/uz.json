@@ -10,7 +10,15 @@
     "info": "Yangiliklar",
     "btn_text": "Batafsil ma'lumot",
     "details": "Tafsilotlar",
-    "phone": "Telefon"
+    "phone": "Telefon",
+    "catalog": "Katalog"
+  },
+
+  "LOGIN": {
+    "title": "Tizimga Kirish",
+    "login": "Login",
+    "password": "Parol",
+    "submit": "Kirish"
   },
   "ContactInfoModal": {
     "contact_number": "Aloqa uchun telefon raqami",
@@ -32,5 +40,48 @@
     "head_office": "Bosh idora",
     "email": "Elektron pochta",
     "schedule": "Ish grafigi"
+  },
+  "OurTeam": {
+    "title": "Bizning jamoamiz"
+  },
+  "ADMIN": {
+    "static_data": "Statik ma'lumotlar",
+    "products": "Mahsulotlar",
+    "locations": "Manzil",
+    "CatalogPage": "Katalog Sahifasi",
+    "Create": "Yaratish",
+    "Title": "Sarlavha",
+    "Description": "Tavsif",
+    "ProductsPage": "Mahsulotlar Sahifasi",
+    "NewsPage": "Yangiliklar Sahifasi",
+    "Fullname": "To'liq Ism",
+    "OurTeamPage": "Bizning Jamoa Sahifasi",
+    "Address": "Manzil",
+    "Phone": "Telefon",
+    "Email": "Elektron Pochta",
+    "WorkDay": "Ish Kuni",
+    "Weekend": "Dam Olish",
+    "LocationPage": "Joylashuv Sahifasi",
+    "Delete": "O'chirish",
+    "Edit": "Tahrirlash",
+    "Upload": "Yuklash",
+    "position": "Holat",
+    "Back": "Orqaga",
+    "Submit": "Yuborish",
+    "Link": "Xavfsiz havola:",
+    "Specifications": "Texnik xususiyatlar",
+    "Welcome": "Administrator sahifasiga xush kelibsiz",
+    "StaticsDatas": "Statistika ma'lumotlari",
+    "AboutPage": "Kompaniya haqida sahifa",
+    "AboutUsSection": "Kompaniya haqida bo'lim",
+    "Contacts": "Bog'lanish",
+    "HomeHeader": "Asosiy sahifa sarlavhasi",
+    "Logout": "Chiqish",
+    "delete_title": "O'chirish",
+    "cancel": "Bekor qilish",
+    "confirm": "Tasdiqlash",
+    "delete_confirmation_message": "Siz haqiqatan ham ushbu ma'lumotlarni o'chirmoqchimisiz?",
+    "Brands": "Brandlar",
+    "AboutSlider": "Kompaniya rasmlari"
   }
 }
