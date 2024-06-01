@@ -1,0 +1,23 @@
+.swipe__btns {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    @media (max-width:768px) {
+        display: none;
+    }
+
+    button {
+        border-radius: 100%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        border: 2px solid var(--white-color);
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        fill: var(--button-pressed);
+        box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.4);
+        background-color: rgba(2, 96, 101, 0.5);
+    }
+}
