@@ -1,7 +1,6 @@
 .newscard {
   padding: 24px;
   border: 1px solid var(--border-color);
-  border-radius: 12px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -19,15 +18,15 @@
   &__title {
     margin: 12px 0px 0px 0px;
     font-size: 1.125rem;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 1.5rem;
     letter-spacing: 0em;
     text-align: left;
     font-family: "RG-StandardBold";
+    color: #fff;
   }
 
   &__text {
-    opacity: 0.5;
     margin: 12px 0px 0px 0px;
     font-size: 1rem;
     font-weight: 400;
@@ -58,7 +57,7 @@
   }
   &__btn {
     border: 2px solid var(--violet-50);
-    color: var(--btn-color);
+    color: var(--white-color);
     background: none;
     border-radius: 8px;
     font-size: 16px;
@@ -82,6 +81,7 @@
     svg {
       min-width: 24px;
       min-height: 24px;
+      fill: #fff;
     }
   }
 }
@@ -95,11 +95,12 @@
   }
 
   .newscard__title {
-    color: var(--btn-color);
+    color: var(--white-color);
   }
 
   .newscard__btn {
-    border: 1px solid var(--btn-color) !important;
+    background-color: var(--hyas-gray);
+
     span {
       color: var(--btn-color) !important;
     }

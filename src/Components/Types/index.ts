@@ -137,7 +137,7 @@ export interface NewListInterface {
 }
 
 export interface NewsListResponseInterface {
-  items: NewListInterface[];
+  data: NewListInterface[];
   totalItems: number;
   itemsPerPage: number;
   pageIndex: number;

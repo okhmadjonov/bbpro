@@ -3,11 +3,11 @@
     "main": "Main",
     "service": "Services",
     "project": "Projects",
-
     "contact": "Contact",
     "address": "Address",
     "about": "About company",
     "info": "News",
+    "news": "News",
     "btn_text": "More details",
     "details": "Details",
     "phone": "Telephone",

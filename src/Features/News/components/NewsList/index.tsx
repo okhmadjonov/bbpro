@@ -44,13 +44,9 @@ const NewList = ({ newlist }: NewListProps) => {
   return (
     <div className={styles.newslist}>
       <div className={styles.newslist__about}>
-        {newsDataState?.items?.length > 0 &&
-          newsDataState.items.map((data, index) => (
-            <>
-              <NewsCard key={index} index={index} data={data} locale={locale} />
-            </>
-          ))}
-        {newsDataState?.items?.length === 0 && <p>No news items found.</p>}
+        {newsDataState?.data?.map((data, index) => (
+          <NewsCard key={index} index={index} data={data} locale={locale} />
+        ))}
       </div>
       <div>
         <Pagination

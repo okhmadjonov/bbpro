@@ -42,9 +42,7 @@ const NewsCard = (props: NewCardProps) => {
     };
   }, [data.description, locale]);
 
-  // Log the content of the data object
-  console.log("Data:", data);
-
+ 
   return (
     <div className={styles.newscard} data-aos="fade-up">
       <div className={styles.newproducts__inner}>

@@ -17,7 +17,7 @@ export default function InfoDetail({ newsDetail }: Props) {
       </Head>
       <div className="container_top_padding"></div>
       <GoToBack
-        pathArr={[{ title: "news", path: "/info" }, { title: "details" }]}
+        pathArr={[{ title: "info", path: "/info" }, { title: "details" }]}
       />
       <PageTitle title="news" />
       <NewDetails newsDetail={newsDetail} />
