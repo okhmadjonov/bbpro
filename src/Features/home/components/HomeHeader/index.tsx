@@ -29,9 +29,7 @@ const HomeHeader = ({ homeBanner }: Props) => {
               }}
             />
           </div>
-          {/* <div className={styles.homeheader__text}>
-            {t("BANNER.banner_subtitle")}
-          </div> */}
+
           <Link href="/service">
             <Button
               type="default"
@@ -41,9 +39,9 @@ const HomeHeader = ({ homeBanner }: Props) => {
             />
           </Link>
         </div>
-        <div className={styles.homeheader__right}>
-          {/* <Image src={HeadImage} alt="img" /> */}
-        </div>
+        {/* <div className={styles.homeheader__right}>
+         
+        </div> */}
       </div>
     </div>
   );
