@@ -7,9 +7,9 @@ import ServiceDetails from "@/Features/Service/components/ServiceDetails";
 import { ServicesData } from "@/Features/Service/types";
 
 interface Props {
-  servicessDetail: ServicesData;
+  servicesDetail: ServicesData;
 }
-export default function ServiceDetail({ servicessDetail }: Props) {
+export default function ServiceDetail({ servicesDetail }: Props) {
   return (
     <div className="container">
       <Head>
@@ -20,7 +20,7 @@ export default function ServiceDetail({ servicessDetail }: Props) {
         pathArr={[{ title: "service", path: "/service" }, { title: "details" }]}
       />
       <PageTitle title="service" />
-      <ServiceDetails servicesDetail={servicessDetail} />
+      <ServiceDetails ssDetail={servicesDetail} />
     </div>
   );
 }
