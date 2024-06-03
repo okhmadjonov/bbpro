@@ -143,9 +143,53 @@ export interface NewsListResponseInterface {
   pageIndex: number;
   totalPages: number;
 }
+//Projects
+export interface ProjectListInterface {
+  id: number;
+  imageUrl: string;
+  title: LocaleStringsInterface;
+  description: LocaleStringsInterface;
+}
+export interface ProjectsListResponseInterface {
+  data: ProjectListInterface[];
+  totalItems: number;
+  itemsPerPage: number;
+  pageIndex: number;
+  totalPages: number;
+}
+
+//Services
+
+export interface ServiceListInterface {
+  id: number;
+  imageUrl: string;
+  title: LocaleStringsInterface;
+  description: LocaleStringsInterface;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface ServicesListResponseInterface {
+  data: ServiceListInterface[];
+  totalItems: number;
+  itemsPerPage: number;
+  pageIndex: number;
+  totalPages: number;
+}
 
 export interface NewCardProps {
   data: NewListInterface;
+  index: number;
+  locale: string;
+}
+
+export interface ProjectCardProps {
+  data: ProjectListInterface;
+  index: number;
+  locale: string;
+}
+export interface ServiceCardProps {
+  data: ServiceListInterface;
   index: number;
   locale: string;
 }
@@ -172,15 +216,6 @@ export interface ContactInterface {
   createdAt: string;
   updatedAt: string;
 }
-export interface ServiceInterface {
-  id: number;
-  imageUrl: string;
-  title: LocaleStringsInterface;
-  description: LocaleStringsInterface;
-  subDescription: LocaleStringsInterface;
-  createdAt: string;
-  updatedAt: string;
-}
 
 export interface ProjectInterface {
   id: number;
@@ -191,6 +226,15 @@ export interface ProjectInterface {
   updatedAt: string;
 }
 export interface NewsInterface {
+  id: number;
+  imageUrl: string;
+  title: LocaleStringsInterface;
+  description: LocaleStringsInterface;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface ServicesInterface {
   id: number;
   imageUrl: string;
   title: LocaleStringsInterface;

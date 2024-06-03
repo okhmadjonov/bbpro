@@ -1,0 +1,108 @@
+.projectscard {
+  padding: 24px;
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+
+  @media (max-width: 768px) {
+    max-width: 387px !important;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin: 12px 0px 0px 0px;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    letter-spacing: 0em;
+    text-align: left;
+    font-family: "RG-StandardBold";
+    color: #fff;
+  }
+
+  &__text {
+    margin: 12px 0px 0px 0px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  &__image {
+    width: 100% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    @media (max-width: 768px) {
+      max-width: 336px !important;
+    }
+
+    img {
+      transition: 0.3s;
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
+  a {
+    text-decoration: none;
+    list-style: none;
+  }
+  &__btn {
+    border: 2px solid var(--violet-50);
+    color: var(--white-color);
+    background: none;
+    border-radius: 8px;
+    font-size: 16px;
+    margin: 12px 0px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    min-width: 164px;
+    white-space: nowrap;
+    min-height: 48px;
+    padding: 0px 16px;
+    font-weight: 600;
+    line-height: 1.5rem;
+    letter-spacing: 0.2px;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+
+    svg {
+      min-width: 24px;
+      min-height: 24px;
+      fill: #fff;
+    }
+  }
+}
+
+.projectscard:hover {
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+  .projectscard__image {
+    img {
+      transform: scale(1.03);
+    }
+  }
+
+  .projectscard__title {
+    color: var(--white-color);
+  }
+
+  .projectscard__btn {
+    background-color: var(--hyas-gray);
+
+    span {
+      color: var(--btn-color) !important;
+    }
+  }
+}

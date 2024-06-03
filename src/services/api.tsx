@@ -82,21 +82,8 @@ export const API = {
 
   getAboutPageHeader: () => axiosInstance.get("/AboutPage"),
 
-  // catalog
-  getOneProductDetail: (id: number) => axiosInstance.get(`/Product/${id}`),
-  getCatalogProducts: (id: number, pageSize: number, pageIndex: number) =>
-    axiosInstance.get(
-      `/Product/products-by-categoryid?PageIndex=${pageIndex}&PageSize=${pageSize}&id=${id}`
-    ),
-
-  getCatalogCategory: () => axiosInstance.get("/Category"),
-
   //news
   getNewsList: () => axiosInstance.get("/News?PageIndex=1&PageSize=10"),
-
-  // projects
-
-  getProjectsList: () => axiosInstance.get("/Project"),
 
   getOneNewsDetail: (id: number) => axiosInstance.get(`/News/${id}`),
 
@@ -104,4 +91,14 @@ export const API = {
   getLocationsItems: () => axiosInstance.get("/Location"),
 
   getBrands: () => axiosInstance.get("/Brands"),
+
+  // projects
+
+  getProjectsList: () => axiosInstance.get("/Project?PageIndex=1&PageSize=10"),
+  getOneProjectsDetail: (id: number) => axiosInstance.get(`/Project/${id}`),
+
+  // services
+
+  getServicesList: () => axiosInstance.get("/Solution?PageIndex=1&PageSize=10"),
+  getOneServicesDetail: (id: number) => axiosInstance.get(`/Solution/${id}`),
 };

@@ -1,29 +1,32 @@
 import GoToBack from "@/Components/GoToBack";
 import Loader from "@/Components/Loader/Loader";
-import { NewsListResponseInterface } from "@/Components/Types";
+import { ServicesListResponseInterface } from "@/Components/Types";
 import { API, axiosHeadersSetToken } from "@/services/api";
 import dynamic from "next/dynamic";
 import React from "react";
 
-const NewList = dynamic(() => import("@/Features/News/components/NewsList"), {
-  loading: () => <Loader />,
-});
+const ServiceList = dynamic(
+  () => import("@/Features/Service/components/ServicesList"),
+  {
+    loading: () => <Loader />,
+  }
+);
 
 const PageTitle = dynamic(() => import("@/Components/PageTitle"), {
   loading: () => <Loader />,
 });
 
 interface Props {
-  newlist: NewsListResponseInterface;
+  servicelist: ServicesListResponseInterface;
 }
 
-export default function Info({ newlist }: Props) {
+export default function Service({ servicelist }: Props) {
   return (
     <div className="container">
       <div className="container_top_padding">
-        <GoToBack pathArr={[{ title: "info", path: "locations" }]} />
+        <GoToBack pathArr={[{ title: "service", path: "locations" }]} />
         <PageTitle />
-        <NewList newlist={newlist} />
+        <ServiceList servicelist={servicelist} />
       </div>
     </div>
   );
@@ -32,15 +35,15 @@ export default function Info({ newlist }: Props) {
 export const getServerSideProps = async (context: any) => {
   try {
     await axiosHeadersSetToken(context);
-    const newsListResponse = await API.getNewsList();
-  
+    const servicesListResponse = await API.getServicesList();
+
     return {
       props: {
-        newlist: newsListResponse.data || [],
+        servicelist: servicesListResponse.data || [],
       },
     };
   } catch (error) {
-    console.error("Error fetching news list:", error);
-    return { props: { newlist: [] } };
+    console.error("Error fetching services list:", error);
+    return { props: { servicelist: [] } };
   }
 };
