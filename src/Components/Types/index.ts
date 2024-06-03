@@ -134,7 +134,6 @@ export interface NewListInterface {
   imageUrl: string;
   title: LocaleStringsInterface;
   description: LocaleStringsInterface;
-  subTitle: LocaleStringsInterface;
 }
 
 export interface NewsListResponseInterface {

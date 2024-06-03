@@ -31,7 +31,7 @@ function Contact({ contact }: ContactProps) {
   return (
     <div className={styles.contact_page} data-aos="fade-up">
       <div className={styles.contact_main__content}>
-        {/* <h3>{t("Contact.head_office")}</h3> */}
+        <h3>{t("Contact.head_office")}</h3>
 
         <div className={styles.contact_main__items}>
           <div className={styles.contact_item__one}>

@@ -3,8 +3,6 @@ import Axios from "axios";
 import { getToken } from "next-auth/jwt";
 import { getSession, signOut } from "next-auth/react";
 
-
-
 export const BASE_URL = process.env.NEXT_PUBLIC_BACK_URL;
 
 export const axiosInstance = Axios.create({
@@ -24,7 +22,6 @@ export const axiosHeadersSetToken = async (context: any) => {
   }
 };
 
-// run before each request
 axiosInstance.interceptors.request.use(
   async (config) => {
     if (!config.headers.Authorization) {
@@ -35,21 +32,15 @@ axiosInstance.interceptors.request.use(
         config.headers.Authorization = token;
       }
     }
-
     return config;
   },
-
   (error) => Promise.reject(error)
 );
 
-// run after each response
 axiosInstance.interceptors.response.use(
   (response) => response,
   async (error) => {
     const status = error.response?.status;
-    // console.log("error", error);
-
-    // if unauthenticated error, reset persisted data and log out the user
     if (typeof window !== "undefined") {
       if (status === 401) {
         console.log("Run after api call", status);
@@ -72,14 +63,11 @@ export const API = {
       .then((res: any) => res && console.log(data)),
 
   getHomePageNewProducts: () =>
-    axiosInstance
-      .get("/News?PageIndex=1&PageSize=10"),
+    axiosInstance.get("/News?PageIndex=1&PageSize=10"),
 
-  getHomePageBanner: () =>
-    axiosInstance.get("/HomeBanner"),
+  getHomePageBanner: () => axiosInstance.get("/HomeBanner"),
 
-  getHomeCategory: () =>
-    axiosInstance.get("/Category"),
+  getHomeCategory: () => axiosInstance.get("/Category"),
 
   getAboutUs: () => axiosInstance.get("/AboutUs"),
 
@@ -88,38 +76,32 @@ export const API = {
 
   // About page
 
-  getAboutPageSlider: () =>
-  axiosInstance.get("/AboutSlider"),
+  getAboutPageSlider: () => axiosInstance.get("/AboutSlider"),
 
-  getAboutPageOutTeam: () =>
-    axiosInstance.get("/OurTeam"),
+  getAboutPageOutTeam: () => axiosInstance.get("/OurTeam"),
 
-  getAboutPageHeader: () =>
-    axiosInstance.get("/AboutPage"),
+  getAboutPageHeader: () => axiosInstance.get("/AboutPage"),
 
   // catalog
-  getOneProductDetail: (id: number) =>
-    axiosInstance.get(`/Product/${id}`),
+  getOneProductDetail: (id: number) => axiosInstance.get(`/Product/${id}`),
   getCatalogProducts: (id: number, pageSize: number, pageIndex: number) =>
-    axiosInstance
-      .get(
-        `/Product/products-by-categoryid?PageIndex=${pageIndex}&PageSize=${pageSize}&id=${id}`
-      ),
+    axiosInstance.get(
+      `/Product/products-by-categoryid?PageIndex=${pageIndex}&PageSize=${pageSize}&id=${id}`
+    ),
 
-  getCatalogCategory: () =>
-    axiosInstance.get("/Category"),
+  getCatalogCategory: () => axiosInstance.get("/Category"),
 
   //news
-  getNewsList: () =>
-    axiosInstance
-      .get("/News?PageIndex=1&PageSize=12"),
+  getNewsList: () => axiosInstance.get("/News?PageIndex=1&PageSize=10"),
 
-  getOneNewsDetail: (id: number) =>
-    axiosInstance.get(`/News/${id}`),
+  // projects
+
+  getProjectsList: () => axiosInstance.get("/Project"),
+
+  getOneNewsDetail: (id: number) => axiosInstance.get(`/News/${id}`),
 
   //locations
-  getLocationsItems: () =>
-    axiosInstance.get("/Location"),
+  getLocationsItems: () => axiosInstance.get("/Location"),
 
   getBrands: () => axiosInstance.get("/Brands"),
 };

@@ -11,8 +11,8 @@ interface IntlWrapperProviderProps {
 
 const IntlWrapperProvider = ({ children }: IntlWrapperProviderProps) => {
   const router = useRouter();
-  const locale = router.locale || "uz";
-  const messages = locale === "uz" ? uz : locale === "ru" ? ru : en;
+  const locale = router.locale || "en";
+  const messages = locale === "en" ? en : locale === "uz" ? uz : ru;
 
   return (
     <IntlProvider messages={messages} locale={locale}>
