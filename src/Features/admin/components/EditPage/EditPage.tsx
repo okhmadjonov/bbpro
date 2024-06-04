@@ -6,6 +6,7 @@ import useQueryApiClient from "@/utils/useQueryApiClient";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { Button, Upload } from "@/ui";
+import { BASE_URL } from "@/services/api";
 
 interface Props {
   link: string;
@@ -60,12 +61,10 @@ const EditPage = ({ link, children, data, multipart }: Props) => {
 
         if (Array.isArray(value)) {
           if (key === "phone") {
-            // If key is 'phone', directly append the whole array
             value.forEach((phone: string, index: number) => {
               formData.append(`phone[${index}]`, phone);
             });
           } else {
-            // Process other arrays similarly as before
             value.forEach((subContent: any, index: number) => {
               for (const subKey in subContent) {
                 if (Object.prototype.hasOwnProperty.call(subContent, subKey)) {
@@ -90,7 +89,6 @@ const EditPage = ({ link, children, data, multipart }: Props) => {
             }
           }
         } else {
-          // Append other fields as-is
           formData.append(key, value);
         }
       }
@@ -136,7 +134,7 @@ const EditPage = ({ link, children, data, multipart }: Props) => {
           <Upload
             onChange={(file: File) => setImageFile(file)}
             btnLabel={t("Upload")}
-            imageUrl={data?.imageUrl}
+            imageUrl={`${BASE_URL}/${data?.imageUrl}`}
             rules={[
               {
                 required: true,

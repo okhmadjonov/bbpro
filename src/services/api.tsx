@@ -75,12 +75,7 @@ export const API = {
   getContact: () => axiosInstance.get("/Contact"),
 
   // About page
-
-  getAboutPageSlider: () => axiosInstance.get("/AboutSlider"),
-
-  getAboutPageOutTeam: () => axiosInstance.get("/OurTeam"),
-
-  getAboutPageHeader: () => axiosInstance.get("/AboutPage"),
+  getAbout: () => axiosInstance.get("/AboutPage"),
 
   //news
   getNewsList: () => axiosInstance.get("/News?PageIndex=1&PageSize=10"),

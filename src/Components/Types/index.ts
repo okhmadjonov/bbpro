@@ -31,11 +31,6 @@ export interface OurTeamListItemInterface {
   updatedAt: string;
 }
 
-export interface AboutSliderItemInterface {
-  id: number;
-  imageUrl: string;
-}
-
 export interface ContactPageInterface {
   id: number;
   map: string;
@@ -53,15 +48,6 @@ export interface locationItemsInterface {
   email: string;
   workDay: LocaleStringsInterface;
   weekend: LocaleStringsInterface;
-  createdAt: string;
-  updatedAt: string;
-}
-
-export interface ProductGetOneInterface {
-  id: number;
-  imageUrl: string;
-  title: LocaleStringsInterface;
-  description: LocaleStringsInterface;
   createdAt: string;
   updatedAt: string;
 }
@@ -194,16 +180,6 @@ export interface ServiceCardProps {
   locale: string;
 }
 
-export interface AboutUsInterface {
-  id: number;
-  imageUrl: string;
-  title: LocaleStringsInterface;
-  description: LocaleStringsInterface;
-  subDescription: LocaleStringsInterface;
-  createdAt: string;
-  updatedAt: string;
-}
-
 export interface ContactInterface {
   id: number;
   title: string;
@@ -235,6 +211,17 @@ export interface NewsInterface {
 }
 
 export interface ServicesInterface {
+  id: number;
+  imageUrl: string;
+  title: LocaleStringsInterface;
+  description: LocaleStringsInterface;
+  createdAt: string;
+  updatedAt: string;
+}
+
+// About
+
+export interface AboutInterface {
   id: number;
   imageUrl: string;
   title: LocaleStringsInterface;
