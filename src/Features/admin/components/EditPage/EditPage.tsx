@@ -1,5 +1,6 @@
 import { Form, message } from "antd";
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import useQueryApiClient from "@/utils/useQueryApiClient";
 import Link from "next/link";
