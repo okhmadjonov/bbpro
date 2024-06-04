@@ -10,8 +10,9 @@
     h3 {
       font-size: 24px;
       font-weight: 600px;
-      color: #fff;
+      color: #000;
       opacity: 0.9;
+      font-weight: 500;
     }
 
     .contact_main__items {
@@ -32,19 +33,18 @@
           gap: 12px;
 
           h4 {
-            color: var(--white-color);
-            font-size: 0.9em;
-            font-weight: 600px;
+            color: var(--black-color);
+            font-size: 1em;
+            font-weight: 500;
           }
 
           p {
             display: flex;
             flex-direction: column;
             gap: 5px;
-            color: var(--white-color);
+            color: var(--black-color);
             font-size: 0.8em;
-            opacity: 0.9;
-            font-weight: 400px;
+            font-weight: 500;
             width: 12.5rem;
           }
         }

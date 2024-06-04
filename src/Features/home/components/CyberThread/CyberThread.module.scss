@@ -1,12 +1,6 @@
 .cyberthread {
   width: 100%;
-  height: 120vh;
-
-  h4 {
-    font-weight: 500;
-    color: #fff;
-    font-size: 1.5em;
-  }
+  height: 140vh;
 
   .cyberthread_inner {
     width: 100%;
@@ -55,31 +49,31 @@
 
         .cyberthreadLeftInner {
           width: 80%;
-          height: 80%;
+          height: 100%;
           display: grid;
           gap: 30px;
           grid-template-columns: 1fr;
           h3 {
             font-weight: 500;
             color: #292929;
-            font-size: 2em;
+            font-size: 1.5em;
           }
           h4 {
             font-weight: 400;
             color: #d31217;
-            font-size: 1.5em;
+            font-size: 1.2em;
             width: 100%;
             height: 50px;
             display: flex;
+            margin-top: -50px;
             align-items: center;
           }
           p {
             font-weight: 500;
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: #292929;
             letter-spacing: 1px;
             line-height: 30px;
-            margin-top: 10px;
           }
           ul {
             li {
@@ -95,7 +89,6 @@
           .cyberthreadLeftSubTitle {
             width: 100%;
             height: auto;
-          
           }
         }
       }

@@ -42,7 +42,6 @@ const NewsCard = (props: NewCardProps) => {
     };
   }, [data.description, locale]);
 
- 
   return (
     <div className={styles.newscard} data-aos="fade-up">
       <div className={styles.newproducts__inner}>
