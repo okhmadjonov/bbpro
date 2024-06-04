@@ -92,7 +92,7 @@ const LanguageSelector = ({
             className={styles.flag}
           />
           <span className={styles.lang_item}>{selectedLanguage}</span>
-          <SvgSelector id="chevron-svg" />
+         
         </div>
         <ul className={styles.language_list}>
           {languages?.map((lang) => (

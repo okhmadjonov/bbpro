@@ -1,6 +1,6 @@
 import React from "react";
 import SvgSelector from "@/Assets/Icons/SvgSelector";
-import styles from "./SliderSwipes.module.scss";
+import styles from "./SlidersSwipes.module.scss";
 import { SliderSwipesProps } from "../Types/index";
 
 const SlidersSwipes: React.FC<SliderSwipesProps> = ({ prevEl, nextEl }) => {

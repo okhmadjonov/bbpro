@@ -21,10 +21,12 @@ const Navbar = () => {
   );
 
   const navLinks = [
+    { link: "/about", key: "GlobalKeyWords.about" },
     { link: "/service", key: "GlobalKeyWords.service" },
     { link: "/project", key: "GlobalKeyWords.project" },
     { link: "/info", key: "GlobalKeyWords.info" },
     { link: "/contact", key: "GlobalKeyWords.contact" },
+    { link: "/challenge", key: "GlobalKeyWords.challenge" },
   ];
 
   const showModal = () => {
@@ -118,7 +120,6 @@ const Navbar = () => {
               <div onClick={showModal}>
                 <div className={styles.number}>
                   <h5>{phoneNumber1}</h5>
-                  <SvgSelector id="chevron-svg" />
                 </div>
               </div>
               <div className={styles.navbar__icons}>
@@ -199,7 +200,6 @@ const Navbar = () => {
               <div onClick={showModal}>
                 <div className={styles.number}>
                   <h5>{phoneNumber1}</h5>
-                  <SvgSelector id="chevron-svg" />
                 </div>
               </div>
             </div>

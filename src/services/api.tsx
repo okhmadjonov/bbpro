@@ -90,6 +90,7 @@ export const API = {
   //locations
   getLocationsItems: () => axiosInstance.get("/Location"),
 
+  // Brands
   getBrands: () => axiosInstance.get("/Brands"),
 
   // projects

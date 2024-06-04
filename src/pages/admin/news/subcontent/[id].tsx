@@ -3,7 +3,6 @@ import {
   LocaleStringsInterface,
   SelectedDataInterface,
 } from "@/Components/Types";
-import SubContentModal from "@/Features/admin/components/ActionModals/SubContentModal";
 import { Button } from "@/ui";
 import DeleteModal from "@/ui/DeleteModal";
 import useQueryApiClient from "@/utils/useQueryApiClient";
@@ -93,21 +92,10 @@ const Subcontent = () => {
                 </div>
               </div>
             }
-          >
-            <p
-              dangerouslySetInnerHTML={{
-                __html:
-                  item?.subdescription[locale as keyof LocaleStringsInterface],
-              }}
-            ></p>
-          </Card>
+          ></Card>
         ))}
       </div>
-      <SubContentModal
-        selectedData={selectedData}
-        setSelectedData={setSelectedData}
-        refetch={getOneData}
-      />
+
       <DeleteModal
         selectedData={selectedData}
         setSelectedData={setSelectedData}

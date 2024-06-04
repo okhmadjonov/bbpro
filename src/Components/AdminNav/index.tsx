@@ -13,12 +13,14 @@ interface Props {
   collapsed: boolean;
   setCollapsed: React.Dispatch<React.SetStateAction<boolean>>;
 }
+
 const AdminNav = ({ collapsed, setCollapsed }: Props) => {
   const t = useTranslations("ADMIN");
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
   const router = useRouter();
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 500) {
@@ -28,7 +30,7 @@ const AdminNav = ({ collapsed, setCollapsed }: Props) => {
       }
     };
 
-    handleResize(); // Initial check on component mount
+    handleResize();
 
     window.addEventListener("resize", handleResize);
 
@@ -38,8 +40,14 @@ const AdminNav = ({ collapsed, setCollapsed }: Props) => {
   }, []);
 
   const handleSignOut = async () => {
-    await signOut({ redirect: true });
-    router.push("/login");
+   
+    try {
+      await signOut({ redirect: false });
+      console.log("Sign out successful, redirecting to login page");
+      router.push("/login");
+    } catch (error) {
+      console.error("Sign out error:", error);
+    }
   };
 
   return (

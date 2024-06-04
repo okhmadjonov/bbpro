@@ -4,8 +4,6 @@ import { ReactNode } from "react";
 
 import video2 from "@/Assets/Videos/video2.mp4";
 import video3 from "@/Assets/Videos/video3.mp4";
-import video4 from "@/Assets/Videos/video4.mp4";
-import video5 from "@/Assets/Videos/video5.mp4";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
@@ -35,14 +33,11 @@ const Banner = ({ children }: ILayoutsProps) => {
             spaceBetween={0}
             slidesPerView={1}
             autoplay={{
-              delay: 10000,
+              delay: 100000,
               disableOnInteraction: false,
             }}
             onSlideChange={() => console.log("slide change")}
             onSwiper={(swiper) => console.log(swiper)}
-            // navigation
-            // pagination={{ clickable: true }}
-            // scrollbar={{ draggable: true }}
           >
             <SwiperSlide>
               <video autoPlay loop muted className={styles.bannerVideo}>
@@ -52,16 +47,6 @@ const Banner = ({ children }: ILayoutsProps) => {
             <SwiperSlide>
               <video autoPlay loop muted className={styles.bannerVideo}>
                 <source src={video3} type="video/mp4" />
-              </video>
-            </SwiperSlide>
-            <SwiperSlide>
-              <video autoPlay loop muted className={styles.bannerVideo}>
-                <source src={video4} type="video/mp4" />
-              </video>
-            </SwiperSlide>
-            <SwiperSlide>
-              <video autoPlay loop muted className={styles.bannerVideo}>
-                <source src={video5} type="video/mp4" />
               </video>
             </SwiperSlide>
           </Swiper>

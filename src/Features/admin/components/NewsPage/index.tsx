@@ -38,16 +38,7 @@ const NewsPage = () => {
         <div>{record.description[locale as keyof LocaleStringsInterface]}</div>
       ),
     },
-    {
-      title: "",
-      dataIndex: "subcontent",
-      key: "subcontent",
-      render: (text: string, record: any) => (
-        <Link href={`/admin/news/subcontent/${record?.id}`}>
-          <Button label="Sub Content" size="small" />
-        </Link>
-      ),
-    },
+ 
   ];
 
   const handleSubmitDelete = () => {
