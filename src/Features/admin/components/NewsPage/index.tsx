@@ -82,7 +82,6 @@ const NewsPage = () => {
 
   useEffect(() => {
     appendData(query);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query]);
 
   return (

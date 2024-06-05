@@ -37,11 +37,13 @@
   }
 
   &__image {
-    width: 100% !important;
+    width: auto !important;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: 0.3s;
+
     @media (max-width: 768px) {
       max-width: 336px !important;
     }

@@ -41,13 +41,13 @@ const AdminSidebar = ({ collapsed }: Props) => {
 
     {
       text: "GlobalKeyWords.service",
-      link: "/admin/service",
+      link: "/admin/services",
       id: 3,
       icon: <Image src={document} width={20} height={20} alt="#" />,
     },
     {
       text: "GlobalKeyWords.project",
-      link: "/admin/project",
+      link: "/admin/projects",
       id: 4,
       icon: <Image src={CompanyIcon} width={20} height={20} alt="#" />,
     },

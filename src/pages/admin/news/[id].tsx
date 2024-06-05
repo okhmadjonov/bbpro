@@ -10,9 +10,7 @@ import {
 } from "@/Components/Types";
 import { useLocale } from "use-intl";
 import StaticsModal from "@/Features/admin/components/ActionModals/StaticsModal";
-import SubContentForm from "@/Features/admin/components/ActionForms/SubContentForm";
 import AdminEditButton from "@/Components/AdminEditButton";
-import SubContentModal from "@/Features/admin/components/ActionModals/SubContentModal";
 import { Button } from "@/ui";
 
 const Edit = () => {
