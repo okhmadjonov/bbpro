@@ -114,7 +114,7 @@ const Brands = ({ brands }: Props) => {
               }}
               autoplay={
                 {
-                  delay: 3500,
+                  delay: 1000,
                   disableOnInteraction: true,
                   pauseOnMouseEnter: true,
                   autoplay: swiperAutoplay,

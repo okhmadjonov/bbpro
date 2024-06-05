@@ -55,8 +55,8 @@
     "Title": "Title",
     "Description": "Description",
     "NewsPage": "News Page",
-    "ProjectsPage":"Projects Page",
-    "ServicesPage":"Services Page",
+    "ProjectsPage": "Projects Page",
+    "ServicesPage": "Services Page",
     "Fullname": "Full Name",
     "OurTeamPage": "Our Team Page",
     "Address": "Address",
@@ -102,5 +102,8 @@
     "step_three_sub_two": "The actor’s or group’s tactics, techniques, and procedures (TTPs)",
     "step_three_sub_three": "The infrastructure associated with the actor or group",
     "step_three_sub_four": "Options for you, including ongoing monitoring of new actor infrastructure."
+  },
+  "call": {
+    "day_time": "Call. Mon-Fri: 10:00-18:00"
   }
 }

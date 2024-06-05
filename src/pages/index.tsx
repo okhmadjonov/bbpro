@@ -41,7 +41,7 @@ export default function Home({ homeBanner, brands, messages }: HomeProps) {
   return (
     <IntlWrapperProvider>
       <Head>
-        <title>Big Box Pro</title>
+        <title>bbpro.me — Проверенный временем IT-интегратор</title>
       </Head>
       <Banner>
         <HomeHeader homeBanner={homeBanner} />

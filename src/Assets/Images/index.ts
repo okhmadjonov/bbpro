@@ -19,6 +19,10 @@ import ct from "./cyberthread.jpeg";
 import category from "./category-2.svg";
 import CompanyIcon from "./company_icon.svg";
 
+import facebook from "./facebook.png";
+import instagram from "./instagram.png";
+import telegram from "./telegram.png";
+
 /*---------------------------Partners----------------------*/
 
 import ColorMicro from "./partners/micro.png";
@@ -33,6 +37,10 @@ import TRWin from "./partners/win1.png";
 import LoginAdmin from "./loginadmin.jpg";
 
 export {
+  facebook,
+  instagram,
+  telegram,
+  /**----------------- */
   LoginAdmin,
   /* -------------------------- */
   ColorMicro,

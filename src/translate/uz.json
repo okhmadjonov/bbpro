@@ -104,5 +104,8 @@
     "step_three_sub_two": "Shaxs yoki guruh taktikasi, texnikasi va protseduralari (TTP)",
     "step_three_sub_three": "Shaxs yoki guruh bilan bog'liq infratuzilma",
     "step_three_sub_four": "Siz uchun imkoniyatlar, jumladan, yangi ishtirokchilar infratuzilmasini doimiy monitoring qilish."
+  },
+  "call": {
+    "day_time": "Aloqa. Du-Ju: 10:00-18:00"
   }
 }

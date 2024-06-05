@@ -9,6 +9,7 @@ import { phoneNumber1 } from "@/utils/consts";
 import { ContactInfoModal } from "../ContactInfoModal/ContactInfoModal";
 import { useEffect, useState } from "react";
 import { BigBoxPro } from "@/Assets/Images";
+import { facebook, instagram, telegram } from "@/Assets/Images";
 
 const Navbar = () => {
   const location = useRouter();
@@ -119,20 +120,25 @@ const Navbar = () => {
               <LanguageSelector navType={navType} />
               <div onClick={showModal}>
                 <div className={styles.number}>
+                  <p>{t("call.day_time")}</p>
                   <h5>{phoneNumber1}</h5>
                 </div>
               </div>
               <div className={styles.navbar__icons}>
                 <Link target="_blank" href="https://www.facebook.com/">
-                  <SvgSelector id="facebook_icon_svg" />
+                  {/* <SvgSelector id="facebook_icon_svg" /> */}
+
+                  <Image src={facebook} alt="Facebook Icon" />
                 </Link>
 
                 <Link target="_blank" href="https://t.me/">
-                  <SvgSelector id="telegram_icon_svg" />
+                  <Image src={telegram} alt="Facebook Icon" />
+                  {/* <SvgSelector id="telegram_icon_svg" /> */}
                 </Link>
 
                 <Link target="_blank" href="https://www.instagram.com/">
-                  <SvgSelector id="instagram_icon_svg" />
+                  {/* <SvgSelector id="instagram_icon_svg" /> */}
+                  <Image src={instagram} alt="Facebook Icon" />
                 </Link>
               </div>
               <div
@@ -185,15 +191,19 @@ const Navbar = () => {
             </ul>
             <div className={styles.navbar__icons}>
               <Link target="_blank" href="https://www.facebook.com/">
-                <SvgSelector id="facebook_icon_svg" />
+                {/* <SvgSelector id="facebook_icon_svg" /> */}
+
+                <Image src={facebook} alt="Facebook Icon" />
               </Link>
 
               <Link target="_blank" href="https://t.me/">
-                <SvgSelector id="telegram_icon_svg" />
+                <Image src={telegram} alt="Facebook Icon" />
+                {/* <SvgSelector id="telegram_icon_svg" /> */}
               </Link>
 
               <Link target="_blank" href="https://www.instagram.com/">
-                <SvgSelector id="instagram_icon_svg" />
+                {/* <SvgSelector id="instagram_icon_svg" /> */}
+                <Image src={instagram} alt="Facebook Icon" />
               </Link>
             </div>
             <div className={styles.number}>

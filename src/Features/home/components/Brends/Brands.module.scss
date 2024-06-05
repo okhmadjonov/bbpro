@@ -54,11 +54,14 @@
 
   &__title {
     font-size: var(--heading-four);
-    font-weight: 700;
+    font-weight: 600;
     line-height: 4.3125rem;
     letter-spacing: 0em;
     text-align: left;
     color: var(--black-color);
+    text-decoration: underline;
+    text-decoration-thickness: 0.1em;
+    text-underline-offset: 0.2em;
   }
 
   &__image {
@@ -77,10 +80,9 @@
     max-height: 150px !important;
     min-width: 200px !important;
     min-height: 78px !important;
-    background-color: rgb(255, 255, 255);
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
     &:hover {
-      box-shadow: 0px 15px 20px 0px #0000000d !important;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
       img {
         transform: scale(1.03) !important;
@@ -111,6 +113,7 @@
 .brands__cards {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   padding-bottom: 78px;
 
   @media (max-width: 800px) {
@@ -122,6 +125,18 @@
 }
 
 .brands__cards .swiper-slide {
-  display: flex;
-  align-items: stretch;
+  width: calc(50% - 10px);
+  margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    width: calc(33.333% - 10px);
+  }
+
+  @media (max-width: 480px) {
+    width: calc(50% - 10px);
+  }
+
+  &:nth-child(odd) {
+    margin-right: 20px;
+  }
 }
