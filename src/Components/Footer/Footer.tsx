@@ -27,6 +27,13 @@ const Footer = () => {
                 <SvgSelector id="site_logo_svg_footer" />
               </Link>
 
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2997.2018079399927!2d69.29970527646154!3d41.304473201133476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef50eb05f7557%3A0xd1af3ccd8a800427!2sASHXOBOD%20PARK!5e0!3m2!1sen!2s!4v1717592272490!5m2!1sen!2s"
+                width="100%"
+                height="250"
+                loading="lazy"
+              />
+
               <p>{t("FOOTER.footer_title")}</p>
             </div>
 

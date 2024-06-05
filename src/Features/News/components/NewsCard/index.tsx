@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import styles from "./NewsCard.module.scss";
 import Link from "next/link";
 import { BASE_URL } from "@/services/api";
+import { back1} from "@/Assets/Images";
 
 const NewsCard = (props: NewCardProps) => {
   const { data, index, locale } = props;
@@ -42,8 +43,15 @@ const NewsCard = (props: NewCardProps) => {
     };
   }, [data.description, locale]);
 
+  const backgroundImages = [back1];
+  const backgroundImage = backgroundImages[index % backgroundImages.length];
+
   return (
-    <div className={styles.newscard} data-aos="fade-up">
+    <div
+      className={styles.newscard}
+      data-aos="fade-up"
+      style={{ backgroundImage: `url(${backgroundImage.src})` }}
+    >
       <div className={styles.newproducts__inner}>
         <div className={styles.newscard__image}>
           <Image

@@ -23,6 +23,8 @@ import facebook from "./facebook.png";
 import instagram from "./instagram.png";
 import telegram from "./telegram.png";
 
+import back1 from "./back1.jpg";
+
 /*---------------------------Partners----------------------*/
 
 import ColorMicro from "./partners/micro.png";
@@ -37,6 +39,8 @@ import TRWin from "./partners/win1.png";
 import LoginAdmin from "./loginadmin.jpg";
 
 export {
+  back1,
+
   facebook,
   instagram,
   telegram,

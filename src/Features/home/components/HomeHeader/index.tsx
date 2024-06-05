@@ -25,7 +25,7 @@ const HomeHeader = ({ homeBanner }: Props) => {
           <div className={styles.homeheader__title}>
             <h2
               dangerouslySetInnerHTML={{
-                __html: t("BANNER.banner_title"),
+                __html: t("BANNER.banner_subtitle"),
               }}
             />
           </div>

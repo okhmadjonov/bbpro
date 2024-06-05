@@ -160,7 +160,7 @@
 html {
   overflow-x: hidden;
   font-size: 18px;
-  background: rgb(246, 245, 245);
+  /* background: rgb(246, 245, 245); */
 }
 body {
   width: 100% !important;
