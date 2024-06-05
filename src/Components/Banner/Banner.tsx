@@ -4,6 +4,7 @@ import { ReactNode } from "react";
 
 import video2 from "@/Assets/Videos/video2.mp4";
 import video3 from "@/Assets/Videos/video3.mp4";
+import video1 from "@/Assets/Videos/video1.mp4";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
@@ -41,12 +42,13 @@ const Banner = ({ children }: ILayoutsProps) => {
           >
             <SwiperSlide>
               <video autoPlay loop muted className={styles.bannerVideo}>
-                <source src={video2} type="video/mp4" />
+                <source src={video1} type="video/mp4" />
               </video>
             </SwiperSlide>
             <SwiperSlide>
               <video autoPlay loop muted className={styles.bannerVideo}>
-                <source src={video3} type="video/mp4" />
+                {/* <source src={video3} type="video/mp4" /> */}
+                <source src={video1} type="video/mp4" />
               </video>
             </SwiperSlide>
           </Swiper>
