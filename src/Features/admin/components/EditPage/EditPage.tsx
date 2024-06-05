@@ -1,9 +1,7 @@
 import { Form, message } from "antd";
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
 import { useRouter } from "next/router";
 import useQueryApiClient from "@/utils/useQueryApiClient";
-import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { Button, Upload } from "@/ui";
 import { BASE_URL } from "@/services/api";
@@ -24,8 +22,8 @@ const EditPage = ({ link, children, data, multipart }: Props) => {
   const [imageFile, setImageFile] = useState<File | null>();
   useEffect(() => {
     form.setFieldsValue(data);
-    if (data?.categoryId) {
-      form.setFieldValue("categoryId", String(data.categoryId));
+    if (data?.Id) {
+      form.setFieldValue("Id", String(data.Id));
     }
   }, [data]);
 
@@ -51,7 +49,6 @@ const EditPage = ({ link, children, data, multipart }: Props) => {
     },
   });
 
-  // bu esa faqat shu yer uchun qogan joylaga ishlatmisiz
   const convertDataToFormData = (data: any) => {
     const formData = new FormData();
 
@@ -134,7 +131,7 @@ const EditPage = ({ link, children, data, multipart }: Props) => {
           <Upload
             onChange={(file: File) => setImageFile(file)}
             btnLabel={t("Upload")}
-            imageUrl={`${BASE_URL}/${data?.imageUrl}`}
+            imageUrl={data?.imageUrl ? `${BASE_URL}/${data?.imageUrl}` : ""}
             rules={[
               {
                 required: true,
