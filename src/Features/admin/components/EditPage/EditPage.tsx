@@ -22,8 +22,8 @@ const EditPage = ({ link, children, data, multipart }: Props) => {
   const [imageFile, setImageFile] = useState<File | null>();
   useEffect(() => {
     form.setFieldsValue(data);
-    if (data?.Id) {
-      form.setFieldValue("Id", String(data.Id));
+    if (data?.categoryId) {
+      form.setFieldValue("categoryId", String(data.categoryId));
     }
   }, [data]);
 
@@ -131,7 +131,7 @@ const EditPage = ({ link, children, data, multipart }: Props) => {
           <Upload
             onChange={(file: File) => setImageFile(file)}
             btnLabel={t("Upload")}
-            imageUrl={data?.imageUrl ? `${BASE_URL}/${data?.imageUrl}` : ""}
+            imageUrl={data?.imageUrl}
             rules={[
               {
                 required: true,

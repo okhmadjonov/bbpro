@@ -6,7 +6,7 @@ const nextConfig = {
     defaultLocale: "ru",
   },
   images: {
-    domains: ["localhost", "bbpro.me"],
+    domains: ["bbpro.me", "localhost"],
   },
   transpilePackages: [
     "@ant-design",

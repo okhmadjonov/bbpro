@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { ColumnsType, TableLocale } from "antd/lib/table/interface";
 import { Table as AntdTable } from "antd";
 import {
@@ -8,12 +8,10 @@ import {
   TablePaginationConfig,
   TableRowSelection,
 } from "antd/es/table/interface";
-import useQueryApiClient from "@/utils/useQueryApiClient";
 import Link from "next/link";
 import { Button } from "..";
 import { useTranslations } from "next-intl";
-
-type TypeType = "page" | "prev" | "next" | "jump-prev" | "jump-next";
+import Image from "next/image"; // Import Image from next/image
 
 export type TableFilterType = {
   pageIndex: number;

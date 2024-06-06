@@ -12,7 +12,7 @@ import { smoothScroll } from "@/utils/smoothScroll";
 import Link from "next/link";
 
 const NewsPage = () => {
-  const t = useTranslations('ADMIN')
+  const t = useTranslations("ADMIN");
   const locale = useLocale();
   const router = useRouter();
   const [query, setQuery] = useState({ PageSize: 10, PageIndex: 1 });
@@ -23,7 +23,7 @@ const NewsPage = () => {
 
   const columns = [
     {
-      title: t('Title'),
+      title: t("Title"),
       dataIndex: "title",
       key: "title",
       render: (text: string, record: any) => (
@@ -38,7 +38,6 @@ const NewsPage = () => {
         <div>{record.description[locale as keyof LocaleStringsInterface]}</div>
       ),
     },
- 
   ];
 
   const handleSubmitDelete = () => {
@@ -88,7 +87,11 @@ const NewsPage = () => {
     <div>
       <div className="admin_page_title">
         <h1>{t("NewsPage")}</h1>
-        <Button onClick={handleOpenCreateModal} size="middle" label={t("Create")} />
+        <Button
+          onClick={handleOpenCreateModal}
+          size="middle"
+          label={t("Create")}
+        />
       </div>
       <AdminTableList
         columns={columns}

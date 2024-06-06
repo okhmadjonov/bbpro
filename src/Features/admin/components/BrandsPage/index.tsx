@@ -8,12 +8,13 @@ import DeleteModal from "@/ui/DeleteModal";
 import Pagination from "@/ui/Pagination/Pagination";
 import React, { useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
 import useQueryApiClient from "@/utils/useQueryApiClient";
 import { BASE_URL } from "@/services/api";
+import Image from "next/image";
 
 const BrandsPage = () => {
-  const t = useTranslations('ADMIN')
+  const t = useTranslations("ADMIN");
   const locale = useLocale();
   const [selectedData, setSelectedData] = useState<SelectedDataInterface>({
     type: "default",
@@ -22,12 +23,17 @@ const BrandsPage = () => {
 
   const columns = [
     {
-      title: 'Images',
+      title: "Images",
       dataIndex: "title",
       key: "title",
       render: (text: string, record: any) => (
         <div>
-          <img src={`${BASE_URL}/${record.imageUrl}`} alt="" width="100px" height="50px"/>
+          <img
+            src={`${BASE_URL}/${record.imageUrl}`}
+            alt=""
+            width="100px"
+            height="50px"
+          />
         </div>
       ),
     },
@@ -39,7 +45,7 @@ const BrandsPage = () => {
 
   const router = useRouter();
   const handleOpenCreateModal = () => {
-    router.push('/admin/brands/create');
+    router.push("/admin/brands/create");
   };
 
   const {
@@ -63,12 +69,16 @@ const BrandsPage = () => {
         setSelectedData({ type: "default", data: {} });
         refetchGetApi();
       },
-    })
+    });
   return (
     <div>
       <div className="admin_page_title">
         <h1>{t("Brands")}</h1>
-        <Button onClick={handleOpenCreateModal} size="middle" label={t("Create")} />
+        <Button
+          onClick={handleOpenCreateModal}
+          size="middle"
+          label={t("Create")}
+        />
       </div>
       <AdminTableList
         columns={columns}
@@ -78,7 +88,6 @@ const BrandsPage = () => {
         setSelectedData={setSelectedData}
         isLoading={isLoading || deleteIsLoading}
       />
-
     </div>
   );
 };
