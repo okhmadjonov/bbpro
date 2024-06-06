@@ -2,10 +2,6 @@ import React, { useState, useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import styled from "./Brands.module.scss";
 import { useTranslations, useLocale } from "next-intl";
-import truper from "@/Assets/Images/Truper.png";
-import center from "@/Assets/Images/Center.png";
-import finland from "@/Assets/Images/Finland.png";
-import karpo from "@/Assets/Images/Karpo.png";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Autoplay, Navigation } from "swiper/modules";
@@ -32,25 +28,7 @@ const Brands = ({ brands }: Props) => {
   }, [brands]);
 
   const swiperRef = useRef<any>({});
-  const images = [
-    truper,
-    center,
-    finland,
-    karpo,
-    truper,
-    center,
-    finland,
-    karpo,
-    truper,
-    center,
-    finland,
-    karpo,
-    truper,
-    center,
-    finland,
-    karpo,
-  ];
-
+ 
   const [swiperAutoplay, setSwiperAutoplay] = useState(true);
 
   const handleMouseEnter = () => {

@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { Modal } from "antd";
-import { ContactInfoImage, ContactInfoTablet } from "@/Assets/Images/index";
+import { ContactInfo } from "@/Assets/Images/index";
 import Image, { StaticImageData } from "next/image";
 import styles from "./ContactInfoModal.module.scss";
 import SvgSelector from "@/Assets/Icons/SvgSelector";
 import Link from "next/link";
-// import useQueryApiClient from "@/utils/useQueryApiClient";
 import { ContactInterface, LocaleStringsInterface } from "../Types";
 interface Props {
   isModalOpen: boolean;
@@ -19,7 +18,7 @@ export const ContactInfoModal: React.FC<Props> = ({
 }) => {
   const t = useTranslations("ContactInfoModal");
   const [currentImage, setCurrentImage] =
-    useState<StaticImageData>(ContactInfoImage);
+    useState<StaticImageData>(ContactInfo);
   const [contactData, setContactData] = useState<ContactInterface | null>(null);
   const locale = useLocale();
 
@@ -30,9 +29,9 @@ export const ContactInfoModal: React.FC<Props> = ({
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 768) {
-        setCurrentImage(ContactInfoTablet);
+        setCurrentImage(ContactInfo);
       } else {
-        setCurrentImage(ContactInfoImage);
+        setCurrentImage(ContactInfo);
       }
     };
 

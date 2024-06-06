@@ -4,7 +4,6 @@ import { Rule } from "rc-field-form/lib/interface";
 import { PlusOutlined } from "@ant-design/icons";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { BannerImg } from "@/Assets/Images";
 import { BASE_URL } from "@/services/api";
 interface UploadProps {
   onChange?: (file: File) => void;
@@ -73,7 +72,7 @@ export const Upload = ({
 
   useEffect(() => {
     if (imageUrl) {
-    setImageSrc(`${BASE_URL}/${imageUrl}`);
+      setImageSrc(`${BASE_URL}/${imageUrl}`);
     }
   }, [imageUrl]);
 
