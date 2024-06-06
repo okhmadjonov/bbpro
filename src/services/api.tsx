@@ -62,15 +62,6 @@ export const API = {
       .post("/Auth/login", data)
       .then((res: any) => res && console.log(data)),
 
-  getHomePageNewProducts: () =>
-    axiosInstance.get("/News?PageIndex=1&PageSize=10"),
-
-  getHomePageBanner: () => axiosInstance.get("/HomeBanner"),
-
-  getHomeCategory: () => axiosInstance.get("/Category"),
-
-  getAboutUs: () => axiosInstance.get("/AboutUs"),
-
   //contact info
   getContact: () => axiosInstance.get("/Contact"),
 
@@ -82,8 +73,6 @@ export const API = {
 
   getOneNewsDetail: (id: number) => axiosInstance.get(`/News/${id}`),
 
-  //locations
-  getLocationsItems: () => axiosInstance.get("/Location"),
 
   // Brands
   getBrands: () => axiosInstance.get("/Brands"),
