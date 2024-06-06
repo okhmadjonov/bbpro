@@ -8,8 +8,6 @@ import { useEffect, useState } from "react";
 import MainLayout from "@/Components/Layout";
 import Head from "next/head";
 import Loader from "@/Components/Loader/Loader";
-import spiralLine from "../../public/spiralLine.svg";
-import Image from "next/image";
 import { SessionProvider } from "next-auth/react";
 
 export default function App({ Component, pageProps }: AppProps) {

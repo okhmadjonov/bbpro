@@ -4,18 +4,11 @@ import Loader from "@/Components/Loader/Loader";
 import { HomeBannerInterface } from "@/Components/Types";
 import IntlWrapperProvider from "@/utils/intlWrapperProvider";
 import { BrandsInterface } from "@/Features/home/components/types";
-import Brands from "../Features/home/components/Brends/Index";
 import { API } from "@/services/api";
+import { useTranslations } from "next-intl";
 
 const HomeHeader = dynamic(
   () => import("@/Features/home/components/HomeHeader"),
-  {
-    loading: () => <Loader isComponent={false} />,
-  }
-);
-
-const CyberThread = dynamic(
-  () => import("@/Features/home/components/CyberThread"),
   {
     loading: () => <Loader isComponent={false} />,
   }
@@ -31,6 +24,14 @@ const Brends = dynamic(
     loading: () => <Loader />,
   }
 );
+
+const Advantages = dynamic(
+  () => import("../Features/home/components/Advantages/"),
+  {
+    loading: () => <Loader />,
+  }
+);
+
 interface HomeProps {
   homeBanner: HomeBannerInterface[];
   brands: BrandsInterface[];
@@ -38,15 +39,17 @@ interface HomeProps {
 }
 
 export default function Home({ homeBanner, brands, messages }: HomeProps) {
+  const t = useTranslations();
+
   return (
     <IntlWrapperProvider>
       <Head>
-        <title>bbpro.me — Проверенный временем IT-интегратор</title>
+        <title> {t("browserico.brow")}</title>
       </Head>
       <Banner>
         <HomeHeader homeBanner={homeBanner} />
       </Banner>
-      <CyberThread />
+      <Advantages />
       <Brends brands={brands} />
     </IntlWrapperProvider>
   );

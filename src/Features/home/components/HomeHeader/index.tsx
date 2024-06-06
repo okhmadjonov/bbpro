@@ -1,13 +1,9 @@
 import React from "react";
 import styles from "./HomeHeader.module.scss";
-import Image from "next/image";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import { Button } from "@/ui/index";
 import Link from "next/link";
-import {
-  HomeBannerInterface,
-  LocaleStringsInterface,
-} from "@/Components/Types";
+import { HomeBannerInterface } from "@/Components/Types";
 
 interface Props {
   homeBanner: HomeBannerInterface[];
@@ -15,8 +11,6 @@ interface Props {
 
 const HomeHeader = ({ homeBanner }: Props) => {
   const t = useTranslations("");
-  const locale = useLocale();
-  const data = homeBanner && homeBanner[0];
 
   return (
     <div className={styles.homeheader} data-aos="fade-up">
@@ -39,9 +33,6 @@ const HomeHeader = ({ homeBanner }: Props) => {
             />
           </Link>
         </div>
-        {/* <div className={styles.homeheader__right}>
-         
-        </div> */}
       </div>
     </div>
   );
