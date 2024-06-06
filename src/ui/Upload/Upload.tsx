@@ -5,6 +5,7 @@ import { PlusOutlined } from "@ant-design/icons";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { BASE_URL } from "@/services/api";
+
 interface UploadProps {
   onChange?: (file: File) => void;
   name?: (string | number)[] | string | number;
@@ -18,6 +19,7 @@ interface UploadProps {
   multipleLanguages?: boolean;
   imageUrl?: any;
 }
+
 export const Upload = ({
   name,
   label,
@@ -100,7 +102,6 @@ export const Upload = ({
             listType="picture-card"
             className="avatar-uploader"
             showUploadList={false}
-            // action={`${BASE_URL}/upload`}
             action="https://run.mocky.io/v3/435e224c-44fb-4773-9faf-380c5e6a2188"
           >
             {imageSrc ? (
@@ -116,6 +117,10 @@ export const Upload = ({
             )}
           </AntdUpload>
         </Space>
+      </Form.Item>
+      {/* Hidden field to store imageUrl */}
+      <Form.Item name="imageUrl" noStyle>
+        <input type="hidden" value={imageSrc} />
       </Form.Item>
     </div>
   );

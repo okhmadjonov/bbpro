@@ -19,7 +19,9 @@ const EditPage = ({ link, children, data, multipart }: Props) => {
   const slug = router?.query?.id;
   const t = useTranslations("ADMIN");
 
-  const [imageFile, setImageFile] = useState<File | null>();
+  const [imageFile, setImageFile] = useState<File | null>(null);
+  const [imageSrc, setImageSrc] = useState<string | undefined>(data?.imageUrl);
+
   useEffect(() => {
     form.setFieldsValue(data);
     if (data?.categoryId) {
@@ -98,6 +100,8 @@ const EditPage = ({ link, children, data, multipart }: Props) => {
     const formData = convertDataToFormData(values);
     if (imageFile) {
       formData.append("imageUrl", imageFile);
+    } else if (imageSrc) {
+      formData.append("imageUrl", imageSrc);
     }
     if (slug) {
       updateData(formData);
@@ -127,7 +131,7 @@ const EditPage = ({ link, children, data, multipart }: Props) => {
         label={t("Back")}
       ></Button>
       <Form onFinish={onFinish} form={form}>
-        {multipart && multipart == true ? (
+        {multipart && multipart === true ? (
           <Upload
             onChange={(file: File) => setImageFile(file)}
             btnLabel={t("Upload")}
@@ -135,12 +139,11 @@ const EditPage = ({ link, children, data, multipart }: Props) => {
             rules={[
               {
                 required: true,
-                message: `Please Select Image!`,
+                message: "Please Select Image!",
               },
             ]}
           />
         ) : null}
-
         {children}
         <Button
           size="small"
