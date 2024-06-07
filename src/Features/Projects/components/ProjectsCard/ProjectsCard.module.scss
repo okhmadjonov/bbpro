@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  box-shadow: rgba(35, 35, 35, 0.1) 0px 4px 12px;
 
   @media (max-width: 768px) {
     max-width: 387px !important;
@@ -16,7 +16,7 @@
   }
 
   &__title {
-    margin: 12px 0px 0px 0px;
+    margin: 12px 10px 0px 0px;
     font-size: 1.125rem;
     font-weight: 400;
     line-height: 1.5rem;
@@ -24,6 +24,9 @@
     text-align: left;
     font-family: "RG-StandardBold";
     color: var(--black-color);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   &__text {
@@ -34,11 +37,14 @@
     letter-spacing: 0em;
     text-align: left;
     color: var(--black-color);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   &__image {
-    width: auto !important;
-    height: auto;
+    width: 350px !important;
+    height: 150px !important;
     display: flex;
     align-items: center;
     justify-content: center;

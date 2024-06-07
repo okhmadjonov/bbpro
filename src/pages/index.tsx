@@ -44,7 +44,7 @@ export default function Home({ homeBanner, brands, messages }: HomeProps) {
   return (
     <IntlWrapperProvider>
       <Head>
-        <title> {t("browserico.brow")}</title>
+        <title>bbpro.me</title>
       </Head>
       <Banner>
         <HomeHeader homeBanner={homeBanner} />

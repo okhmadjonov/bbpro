@@ -1,7 +1,9 @@
 .servicedetails {
+  display: grid;
+  grid-template-columns: 1fr;
   .imageUrl {
-    width: auto !important;
-    height: auto !important; /* To maintain the aspect ratio */
+    width: 350px !important;
+    height: 150px !important; /* To maintain the aspect ratio */
   }
 
   .details {
@@ -18,6 +20,7 @@
     display: flex;
     flex-direction: column;
     display: 20px;
+    gap: 20px;
 
     .details_about,
     .details_regarding {
@@ -26,13 +29,14 @@
 
       h2 {
         font-size: var(--heading-two);
-        font-weight: 700;
+        font-weight: 500;
         font-family: "RG-StandardBold";
         color: var(--black-color);
+        margin-bottom: 20px;
 
         @media (max-width: 650px) {
           font-size: var(--heading-four);
-          font-weight: 700;
+          font-weight: 500;
           line-height: 1.1; /* Line height as a unitless value for better responsiveness */
         }
       }
@@ -41,7 +45,7 @@
         padding: 48px 0px 32px 0px;
         color: var(--black-color);
         font-size: var(--heading-five);
-        font-weight: 700;
+        font-weight: 500;
         height: auto; /* Adjust as needed */
         line-height: 1.1; /* Line height as a unitless value for better responsiveness */
         font-family: "RG-StandardBold";
@@ -49,7 +53,7 @@
         @media (max-width: 650px) {
           padding: 20px 0px 12px 0px;
           font-size: var(--heading-five);
-          font-weight: 700;
+          font-weight: 500;
           line-height: 1.1; /* Line height as a unitless value for better responsiveness */
         }
       }

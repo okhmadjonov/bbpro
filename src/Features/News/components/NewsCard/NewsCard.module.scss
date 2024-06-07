@@ -5,11 +5,6 @@
   justify-content: space-between;
   height: 100%;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  border-radius: 8px;
-  overflow: hidden;
 
   @media (max-width: 768px) {
     max-width: 387px !important;
@@ -28,7 +23,7 @@
     letter-spacing: 0em;
     text-align: left;
     font-family: "RG-StandardBold";
-    color: var(--white-color);
+    color: var(--black-color);
   }
 
   &__text {
@@ -38,12 +33,12 @@
     line-height: 1.5rem;
     letter-spacing: 0em;
     text-align: left;
-    color: var(--white-color);
+    color: var(--black-color);
   }
 
   &__image {
-    width: auto !important;
-    height: auto;
+    width: 350px !important;
+    height: 150px !important;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -64,7 +59,7 @@
     list-style: none;
   }
   &__btn {
-    color: var(--white-color);
+    color: var(--black-color);
     border: 1px solid white;
     background: none;
     border-radius: 8px;
@@ -81,7 +76,6 @@
     font-weight: 600;
     line-height: 1.5rem;
     letter-spacing: 0.2px;
-
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 
     @media screen and (max-width: 768px) {
@@ -91,7 +85,7 @@
     svg {
       min-width: 24px;
       min-height: 24px;
-      fill: #fff;
+      fill: #000;
     }
   }
 }

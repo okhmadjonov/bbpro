@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import NewsCard from "../ProjectsCard/index";
 import styles from "./ProjectsList.module.scss";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
@@ -8,6 +7,7 @@ import { nextIcon, prevIcon } from "@/Assets/Images/index";
 import { ProjectsListResponseInterface } from "@/Components/Types";
 import useQueryApiClient from "@/utils/useQueryApiClient";
 import { smoothScroll } from "@/utils/smoothScroll";
+import ProjectsCard from "../ProjectsCard/index";
 
 interface ProjectListProps {
   projectlist: ProjectsListResponseInterface;
@@ -42,7 +42,7 @@ const ProjectList = ({ projectlist }: ProjectListProps) => {
     <div className={styles.projectslist}>
       <div className={styles.projectslist__about}>
         {projectsDataState?.data?.map((data, index) => (
-          <NewsCard key={index} index={index} data={data} locale={locale} />
+          <ProjectsCard key={index} index={index} data={data} locale={locale} />
         ))}
       </div>
       <div>

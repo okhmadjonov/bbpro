@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from  './ChallengeList.module.scss';
-import PhotoGallery from '../PhotoGallery';
+import PhotoGallery from '../ChallangeCard';
 
 
 
