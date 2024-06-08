@@ -3,24 +3,34 @@ import Image from "next/image";
 import SvgSelector from "@/Assets/Icons/SvgSelector";
 import {
   LocaleStringsInterface,
-  ProjectCardProps,
+  NewServicesCardProps,
+  ServiceCardProps,
 } from "@/Components/Types/index";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import styles from "./ServicesCard.module.scss";
 import Link from "next/link";
 import { BASE_URL } from "@/services/api";
+import { Button } from "@/ui/index";
 
-const ServicesCard = (props: ProjectCardProps) => {
-  const { data, index, locale } = props;
+const ServicesCard = ({
+  description,
+  id,
+  index,
+  title,
+  imageUrl,
+}: NewServicesCardProps) => {
   const t = useTranslations("");
-  const [truncate, setTruncate] = useState("");
+  const locale = useLocale();
+  const [truncatedDescription, setTruncatedDescription] = useState("");
 
   useEffect(() => {
-    const changedSize = () => {
+    const handleResize = () => {
       const screenWidth = window.innerWidth;
       let maxLength;
 
-      if (screenWidth > 1050) {
+      if (screenWidth > 1350) {
+        maxLength = 100;
+      } else if (screenWidth > 1050) {
         maxLength = 80;
       } else if (screenWidth <= 1050) {
         maxLength = 100;
@@ -28,48 +38,64 @@ const ServicesCard = (props: ProjectCardProps) => {
         maxLength = 120;
       }
 
-      const description =
-        data.description[locale as keyof LocaleStringsInterface];
-      const truncateText =
-        description.slice(0, maxLength) +
-        (description.length > maxLength ? "..." : "");
-      setTruncate(truncateText);
+      let truncatedDescription: any;
+      if (
+        description != null &&
+        description[locale as keyof LocaleStringsInterface] !== ""
+      ) {
+        const localeDescription =
+          description[locale as keyof LocaleStringsInterface];
+        truncatedDescription =
+          localeDescription.slice(0, maxLength) +
+          (localeDescription.length > maxLength ? "..." : "");
+        setTruncatedDescription(truncatedDescription);
+      }
     };
 
-    changedSize();
+    handleResize();
 
-    window.addEventListener("resize", changedSize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener("resize", changedSize);
+      window.removeEventListener("resize", handleResize);
     };
-  }, [data.description, locale]);
+  }, [description, locale]);
 
   return (
-    <div className={styles.servicescard} data-aos="fade-up">
-      <div className={styles.servicesproducts__inner}>
-        <div className={styles.servicescard__image}>
-          <Image
-            src={`${BASE_URL}/${data?.imageUrl}`}
-            alt="img"
-            width={336}
-            height={248}
-          />
+    <>
+      <div className={styles.newproductscard} data-aos="fade-up">
+        <div className={styles.newproducts__inner}>
+          <div className={styles.newproductscard__image}>
+            <Image
+              src={BASE_URL + "/" + imageUrl}
+              alt="img"
+              width={1000}
+              height={1000}
+            />
+          </div>
+
+          <h2 className={styles.newproductscard__title}>
+            {title && title[locale as keyof LocaleStringsInterface]}
+          </h2>
+
+          <p
+            className={styles.newproductscard__text}
+            dangerouslySetInnerHTML={{ __html: truncatedDescription }}
+          ></p>
         </div>
-
-        <h2 className={styles.servicescard__title}>
-          {data.title[locale as keyof LocaleStringsInterface]}
-        </h2>
-
-        <p className={styles.servicescard__text}>{truncate}</p>
+        <div className={styles.btn_block}>
+          <Link href={`/service/${id}`}>
+            <Button
+              type="default"
+              label={t("GlobalKeyWords.btn_text")}
+              iconId="nextgreen-svg"
+              iconPosition="right"
+              size="middle"
+            />
+          </Link>
+        </div>
       </div>
-
-      <Link href={`service/${data.id}`}>
-        <button className={styles.servicescard__btn}>
-          {t("GlobalKeyWords.btn_text")} <SvgSelector id="nextgreen-svg" />
-        </button>
-      </Link>
-    </div>
+    </>
   );
 };
 

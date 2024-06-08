@@ -26,7 +26,7 @@ export default function ServiceDetail({ servicesDetail }: Props) {
 }
 
 export const getServerSideProps = async (context: any) => {
-  const serviceDetailResponse = await API.getOneServicesDetail(
+  const serviceDetailResponse = await API.getOneSolutionDetail(
     context.params.id
   )
     .then((res: any) => res.data)

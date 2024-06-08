@@ -37,8 +37,7 @@ const Banner = ({ children }: ILayoutsProps) => {
               delay: 10000,
               disableOnInteraction: false,
             }}
-            onSlideChange={() => console.log("slide change")}
-            onSwiper={(swiper) => console.log(swiper)}
+          
           >
             <SwiperSlide>
               <video autoPlay loop muted className={styles.bannerVideo}>

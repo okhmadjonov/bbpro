@@ -1,118 +1,113 @@
-.servicescard {
+.newproductscard {
   padding: 24px;
+  border: 1px solid #e4e7e9;
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
-  box-shadow: rgba(205, 67, 67, 0.1) 0px 4px 12px;
+  max-width: 100% !important;
+  height: 100% !important;
 
   @media (max-width: 768px) {
-    max-width: 387px !important;
+    padding: 14px;
   }
 
   &__inner {
     display: flex;
     flex-direction: column;
   }
-
+  a {
+    display: block;
+    width: 180px;
+  }
   &__title {
-    margin: 12px 0px 0px 0px;
+    font-family: "RG-StandardBold";
+    margin-bottom: 12px;
     font-size: 1.125rem;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.5rem;
     letter-spacing: 0em;
     text-align: left;
-    font-family: "RG-StandardBold";
-    color: var(--black-color);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
 
   &__text {
-    margin: 12px 0px 0px 0px;
+    opacity: 0.5;
+    padding-bottom: 8px;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5rem;
     letter-spacing: 0em;
     text-align: left;
-    color: var(--black-color);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
 
   &__image {
-    width: 350px !important;
-    height: 150px !important;
+    width: 100% !important;
+    display: flex;
     align-items: center;
     justify-content: center;
+    max-height: 248px !important;
+    margin-bottom: 10px;
     transition: 0.3s;
-    @media (max-width: 768px) {
-      max-width: 336px !important;
-    }
+    overflow: hidden;
+    border-radius: 6px;
 
     img {
       transition: 0.3s;
       width: 100% !important;
       height: 100% !important;
-    }
-  }
-  a {
-    text-decoration: none;
-    list-style: none;
-  }
-  &__btn {
-    color: var(--black-color);
-    background: none;
-    border-radius: 8px;
-    font-size: 16px;
-    margin: 12px 0px 0px 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    min-width: 164px;
-    white-space: nowrap;
-    min-height: 48px;
-    padding: 0px 16px;
-    font-weight: 600;
-    line-height: 1.5rem;
-    letter-spacing: 0.2px;
-    border: none;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      object-fit: contain !important;
 
-    @media screen and (max-width: 768px) {
-      width: 100%;
+      @media (max-width: 600px) {
+        object-fit: cover !important;
+      }
     }
 
-    svg {
-      min-width: 24px;
-      min-height: 24px;
-      fill: #000;
+    @media (max-width: 768px) {
+      width: 100% !important;
+      height: 224px !important;
+      max-width: 100% !important;
+      max-height: 224px !important;
+    }
+
+    @media (max-width: 660px) {
+      height: 200px !important;
+    }
+
+    @media (max-width: 500px) {
+      height: 180px !important;
+    }
+
+    @media (max-width: 400px) {
+      height: 220px !important;
+    }
+
+    @media (max-width: 335px) {
+      height: 200px !important;
+    }
+  }
+  .btn_block {
+    a {
+      @media (max-width: 768px) {
+        width: 100% !important;
+      }
     }
   }
 }
 
-.servicescard:hover {
+.newproductscard:hover {
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
-  .servicescard__image {
+  .newproductscard__image {
     img {
-      transform: scale(1.03);
+      transform: scale(1.05);
     }
   }
 
-  .servicescard__title {
-    color: var(--black-color);
+  .newproductscard__title {
+    color: var(--btn-color);
   }
 
-  .servicescard__btn {
-    border: none;
-    color: var(--white-color);
-    background-color: var(--btn-default);
-    svg {
-      fill: #fff;
-    }
+  button {
+    border: 1px solid var(--btn-color) !important;
     span {
       color: var(--btn-color) !important;
     }

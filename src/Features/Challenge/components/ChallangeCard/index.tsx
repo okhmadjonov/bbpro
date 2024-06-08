@@ -17,7 +17,6 @@ import "swiper/css";
 import { Navigation } from "swiper/modules";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { FaChevronRight, FaChevronLeft } from "react-icons/fa6";
 
 const PhotoGallery = () => {
   const t = useTranslations("translation");
@@ -37,10 +36,8 @@ const PhotoGallery = () => {
       <div className={styles.photo_gallery_title}>
         <h3>Photo Gallery from Challenge</h3>
         <div className={styles.navigate_icons}>
-          {/* <FaChevronLeft className="button_prev_galery" /> */}
           <Image className="button_prev_galery" src={leftIcon} alt="l" />
           <Image className="button_next_galery" src={rightIcon} alt="r" />
-          {/* <FaChevronRight className="" /> */}
         </div>
       </div>
       <div className={styles.photo_gallery_slide}>

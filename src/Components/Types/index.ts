@@ -145,14 +145,21 @@ export interface ProjectsListResponseInterface {
 }
 
 //Services
-
 export interface ServiceListInterface {
   id: number;
   imageUrl: string;
   title: LocaleStringsInterface;
   description: LocaleStringsInterface;
+  categoryId: number;
   createdAt: string;
   updatedAt: string;
+}
+export interface NewServicesCardProps {
+  description: LocaleStringsInterface;
+  title: LocaleStringsInterface;
+  id: number;
+  index: number;
+  imageUrl: string;
 }
 
 export interface ServicesListResponseInterface {
@@ -162,7 +169,9 @@ export interface ServicesListResponseInterface {
   pageIndex: number;
   totalPages: number;
 }
-
+export interface NewServicesItemInterface {
+  items: ServiceListInterface[];
+}
 export interface NewCardProps {
   data: NewListInterface;
   index: number;
@@ -215,6 +224,7 @@ export interface ServicesInterface {
   imageUrl: string;
   title: LocaleStringsInterface;
   description: LocaleStringsInterface;
+  categoryId: number;
   createdAt: string;
   updatedAt: string;
 }

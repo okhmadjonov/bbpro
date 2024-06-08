@@ -17,16 +17,20 @@ const PageTitle = dynamic(() => import("@/Components/PageTitle"), {
 });
 
 interface Props {
-  servicelist: ServicesListResponseInterface;
+  // servicelist: ServicesListResponseInterface;
+  catalogCategory: any;
 }
 
-export default function Service({ servicelist }: Props) {
+export default function Service({ catalogCategory }: Props) {
   return (
     <div className="container">
       <div className="container_top_padding">
-        <GoToBack pathArr={[{ title: "service", path: "locations" }]} />
+        <GoToBack pathArr={[{ title: "service", path: "service" }]} />
         <PageTitle />
-        <ServiceList servicelist={servicelist} />
+        <ServiceList
+          catalogCategory={catalogCategory}
+          initialDataId={catalogCategory?.[0]?.id}
+        />
       </div>
     </div>
   );
@@ -35,15 +39,26 @@ export default function Service({ servicelist }: Props) {
 export const getServerSideProps = async (context: any) => {
   try {
     await axiosHeadersSetToken(context);
-    const servicesListResponse = await API.getServicesList();
+    const servicesListResponse = await API.getSolutionsList();
+
+    const catalogCategoryResponse = await API.getCatalogCategory()
+      .then((res: any) => res.data)
+      .catch((error: any) => {
+        return { data: [] };
+      });
 
     return {
       props: {
         servicelist: servicesListResponse.data || [],
+        catalogCategory: catalogCategoryResponse.data || [],
       },
     };
   } catch (error) {
-    console.error("Error fetching services list:", error);
-    return { props: { servicelist: [] } };
+    return {
+      props: {
+        servicelist: [],
+        catalogCategory: [],
+      },
+    };
   }
 };

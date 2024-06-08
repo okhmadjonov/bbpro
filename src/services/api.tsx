@@ -73,7 +73,6 @@ export const API = {
 
   getOneNewsDetail: (id: number) => axiosInstance.get(`/News/${id}`),
 
-
   // Brands
   getBrands: () => axiosInstance.get("/Brands"),
 
@@ -84,6 +83,14 @@ export const API = {
 
   // services
 
-  getServicesList: () => axiosInstance.get("/Solution?PageIndex=1&PageSize=10"),
-  getOneServicesDetail: (id: number) => axiosInstance.get(`/Solution/${id}`),
+  getSolutionsList: () =>
+    axiosInstance.get("/Solution?PageIndex=1&PageSize=10"),
+  getOneSolutionDetail: (id: number) => axiosInstance.get(`/Solution/${id}`),
+
+  getCatalogSolutions: (id: number, pageSize: number, pageIndex: number) =>
+    axiosInstance.get(
+      `/Solution/solutions-by-categoryid?PageIndex=${pageIndex}&PageSize=${pageSize}&id=${id}`
+    ),
+
+  getCatalogCategory: () => axiosInstance.get("/Category"),
 };

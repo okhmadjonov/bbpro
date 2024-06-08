@@ -1,60 +1,98 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ServicesCard from "../ServicesCard/index";
 import styles from "./ServicesList.module.scss";
+import { Tabs } from "antd";
+
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
 import Pagination from "@/ui/Pagination/Pagination";
 import { nextIcon, prevIcon } from "@/Assets/Images/index";
-import { ServicesListResponseInterface } from "@/Components/Types";
+import {
+  LocaleStringsInterface,
+  ServiceListInterface,
+  ServicesListResponseInterface,
+} from "@/Components/Types";
 import useQueryApiClient from "@/utils/useQueryApiClient";
 import { smoothScroll } from "@/utils/smoothScroll";
 
 interface ServiceListProps {
-  servicelist: ServicesListResponseInterface;
+  catalogCategory: any[];
+  initialDataId: number;
 }
 
-const ServicesList = ({ servicelist }: ServiceListProps) => {
+const ServicesList = ({ catalogCategory, initialDataId }: ServiceListProps) => {
   const t = useTranslations("");
   const locale: string = useLocale();
-  const [servicesDataState, setServicesDataState] =
-    useState<ServicesListResponseInterface>(servicelist);
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const [currentCatrgoryId, setCurrentCatrgoryId] = useState(initialDataId);
+  const [catrgoryData, setCatrgoryData] = useState({
+    items: [],
+    totalItems: 0,
+  });
 
-  const [currentPage, setCurrentPage] = useState(1);
-
-  const handlePageChange = (page: number, pageSize: number) => {
-    appendData({ PageSize: pageSize, PageIndex: page });
+  const pagination = (page: number) => {
     setCurrentPage(page);
   };
+  const onChange = (key: any) => {
+    setCurrentPage(1);
+    setCurrentCatrgoryId(key);
+    appendData({ pageIndex: 1, pageSize: 12, id: key });
+  };
+  useEffect(() => {
+    if (typeof currentCatrgoryId !== "number") return;
+    appendData({ pageIndex: currentPage, pageSize: 12, id: currentCatrgoryId });
+  }, [currentPage, currentCatrgoryId]);
 
   const { appendData, isLoading } = useQueryApiClient({
     request: {
-      url: "/Solution",
+      url: "/Solution/solutions-by-categoryid",
       method: "GET",
       disableOnMount: true,
     },
     onSuccess(res) {
-      setServicesDataState(res.data);
+      setCatrgoryData(res.data);
       smoothScroll("top", 0);
     },
   });
 
   return (
-    <div className={styles.serviceslist}>
-      <div className={styles.serviceslist__about}>
-        {servicesDataState?.data?.map((data, index) => (
-          <ServicesCard key={index} index={index} data={data} locale={locale} />
-        ))}
-      </div>
-      <div>
-        <Pagination
-          total={servicesDataState.totalItems}
-          pageSize={12}
-          current={currentPage}
-          onChange={handlePageChange}
-          prevIcon={prevIcon.src}
-          nextIcon={nextIcon.src}
-        />
-      </div>
+    <div className={styles.products_list} data-aos="fade-up">
+      <Tabs
+        defaultActiveKey="Software"
+        items={catalogCategory?.map((item) => ({
+          key: item.id,
+          label: item.title,
+          children: (
+            <div className={styles.products_list__cards}>
+              {catrgoryData?.items?.map(
+                (el: ServiceListInterface, index: number) => {
+                  return (
+                    <ServicesCard
+                      id={el.id}
+                      key={index}
+                      index={index}
+                      description={el.description}
+                      title={el.title}
+                      imageUrl={el.imageUrl}
+                    />
+                  );
+                }
+              )}
+            </div>
+          ),
+        }))}
+        onChange={onChange}
+      />
+
+      <Pagination
+        className="pagination_product_list"
+        current={currentPage}
+        pageSize={12}
+        total={catrgoryData?.totalItems}
+        onChange={pagination}
+        prevIcon={prevIcon.src}
+        nextIcon={nextIcon.src}
+      />
     </div>
   );
 };
