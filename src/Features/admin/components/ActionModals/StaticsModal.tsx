@@ -4,7 +4,6 @@ import LanguageFormList from "@/ui/LanguageFormList/LanguageFormList";
 import { Form } from "antd";
 import { useTranslations } from "next-intl";
 import React, { useEffect, useState } from "react";
-import AboutUsForm from "../ActionForms/AboutUsForm/index";
 import { useRouter } from "next/router";
 import useQueryApiClient from "@/utils/useQueryApiClient";
 
