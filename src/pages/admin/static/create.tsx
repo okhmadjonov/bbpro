@@ -7,7 +7,7 @@ const Create = () => {
       <EditPage
         link="AboutUs/" 
       >
-       <AboutUsForm/>
+      
       </EditPage>
     </div>
   )
