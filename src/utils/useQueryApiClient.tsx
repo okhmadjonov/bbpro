@@ -58,11 +58,11 @@ function useQueryApiClient({
   const router = useRouter();
   const [handleError] = useHandleError();
   const token = session?.user?.token;
-  const enableOnMount = request?.enableOnMount; // For methods except 'GET'
-  const disableOnMount = request?.disableOnMount; // For method 'GET'
+  const enableOnMount = request?.enableOnMount;
+  const disableOnMount = request?.disableOnMount;
 
   useEffect(() => {
-    //Enable or disable on mount fetch
+  
     if (!disableOnMount && (enableOnMount || method === "GET")) {
       actualCall(
         request.url,
@@ -74,7 +74,7 @@ function useQueryApiClient({
         request.baseUrl
       );
     }
-  }, [enabled, disableOnMount, enableOnMount]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [enabled, disableOnMount, enableOnMount]); 
 
   const refetch = () => {
     setIsRefetching(true);
@@ -164,7 +164,7 @@ function useQueryApiClient({
 
       setReceivedData(responseContent);
       setIsSuccess(true);
-      onSuccess && onSuccess(responseContent, passOnSuccess); //Call onSuccess if set
+      onSuccess && onSuccess(responseContent, passOnSuccess); 
 
       return responseContent;
     } catch (e: any) {
@@ -176,10 +176,10 @@ function useQueryApiClient({
           ? response.data
           : e;
 
-      onError && onError(actualError); //Call onSuccess if set
-      handleError(actualError); //hook for global handling of errors
+      onError && onError(actualError); 
+      handleError(actualError); 
     } finally {
-      onFinally && onFinally(); //Call onFinally if set
+      onFinally && onFinally(); 
       setIsRefetching(false);
       setIsLoading(false);
     }

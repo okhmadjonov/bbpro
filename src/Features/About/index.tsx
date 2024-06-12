@@ -25,7 +25,7 @@ const About = ({ about }: AboutProps) => {
             className={styles.image}
           />
         </div>
-        {/* <h2>{data.title[locale as keyof LocaleStringsInterface]}</h2> */}
+       
         <div className={styles.about_description}>
           <p>{data.description[locale as keyof LocaleStringsInterface]}</p>
         </div>

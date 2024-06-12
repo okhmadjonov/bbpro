@@ -92,19 +92,7 @@
   "BRANDS": {
     "brands": "Bizning hamkorlarimiz"
   },
-  "engagement": {
-    "title": "IJODIY YONDASHUVNING AMALIY BOSQICHLARI",
-    "step_one": "MIJOZLAR KO'RSATMALARI VA MA'LUMOT ALMASHISH",
-    "step_one_sub": "Bizning kiber tahdidlar bo'yicha jamoamiz a'zolari sizning katalizator voqea(lar)ingizni hamda asosiy xizmat ustuvorliklarini muhokama qiladi. Ushbu munozara oxirida biz davom etayotgan munosabatlar orqali qiymat qo'shishimiz mumkinligini bilib olamiz. ",
-    "step_two": "TEKSHIRUV BOSQICHI",
-    "step_two_sub": "Biz sizning kibertahdidingiz holatlarini chuqur o'rganamiz va ma'lumotlarni boyitish va razvedka talablariga javob beradigan dalillarni taqdim etish uchun tekshiruvlar o'tkazamiz.",
-    "step_three": "MIJOZLAR HAQIDA QISQA VA TEZKOR HISOBOTLAR.",
-    "step_three_sub": "Tekshiruv natijalari bo'yicha amaliy xulosalar olasiz:",
-    "step_three_sub_one": "Xujumkor/maqsadi haqida ma'lumot",
-    "step_three_sub_two": "Shaxs yoki guruh taktikasi, texnikasi va protseduralari (TTP)",
-    "step_three_sub_three": "Shaxs yoki guruh bilan bog'liq infratuzilma",
-    "step_three_sub_four": "Siz uchun imkoniyatlar, jumladan, yangi ishtirokchilar infratuzilmasini doimiy monitoring qilish."
-  },
+
   "call": {
     "day_time": "Aloqa. Du-Ju: 10:00-18:00"
   },

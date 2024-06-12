@@ -15,6 +15,7 @@
   &__inner {
     display: flex;
     flex-direction: column;
+   
   }
   a {
     display: block;
@@ -45,46 +46,67 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    max-height: 248px !important;
-    margin-bottom: 10px;
     transition: 0.3s;
-    overflow: hidden;
-    border-radius: 6px;
+    @media (max-width:768px) {
+      max-width: 336px !important;
+    }
+
 
     img {
       transition: 0.3s;
       width: 100% !important;
       height: 100% !important;
-      object-fit: contain !important;
-
-      @media (max-width: 600px) {
-        object-fit: cover !important;
-      }
-    }
-
-    @media (max-width: 768px) {
-      width: 100% !important;
-      height: 224px !important;
-      max-width: 100% !important;
-      max-height: 224px !important;
-    }
-
-    @media (max-width: 660px) {
-      height: 200px !important;
-    }
-
-    @media (max-width: 500px) {
-      height: 180px !important;
-    }
-
-    @media (max-width: 400px) {
-      height: 220px !important;
-    }
-
-    @media (max-width: 335px) {
-      height: 200px !important;
     }
   }
+  // &__image {
+  //   width: 100% !important;
+  //   height:  auto !important;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   max-height: 248px !important;
+  //   margin-bottom: 10px;
+  //   transition: 0.3s;
+  //   overflow: hidden;
+  //   border-radius: 6px;
+  //   border: 1px solid black;
+
+  //   img {
+  //     transition: 0.3s;
+  //     width: 100% !important;
+  //     height: 100% !important;
+  //     object-fit: contain !important;
+
+  //     @media (max-width: 600px) {
+  //       object-fit: cover !important;
+  //     }
+  //   }
+
+  //   @media (max-width: 768px) {
+  //     width: 100% !important;
+  //     height: 224px !important;
+  //     max-width: 100% !important;
+  //     max-height: 224px !important;
+  //   }
+
+  //   @media (max-width: 660px) {
+  //     height: 200px !important;
+  //   }
+
+  //   @media (max-width: 500px) {
+  //     height: 180px !important;
+  //   }
+
+  //   @media (max-width: 400px) {
+  //     height: 220px !important;
+  //   }
+
+  //   @media (max-width: 335px) {
+  //     height: 200px !important;
+  //   }
+  // }
+
+
   .btn_block {
     a {
       @media (max-width: 768px) {
