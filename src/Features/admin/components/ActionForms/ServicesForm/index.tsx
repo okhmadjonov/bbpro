@@ -3,6 +3,7 @@ import LanguageFormList from "@/ui/LanguageFormList/LanguageFormList";
 import { RichTextarea, Select, SelectOption, Upload } from "@/ui";
 import { useLocale, useTranslations } from "next-intl";
 import useQueryApiClient from "@/utils/useQueryApiClient";
+import { LocaleStringsInterface } from "@/Components/Types";
 
 interface Props {
   data?: any;
@@ -33,8 +34,8 @@ const ServicesForm = ({ data }: Props) => {
       >
         {categoryRes?.data?.map((item: any) => (
           <SelectOption key={item.id}>
-            {item.title}
-            {/* {item.title[locale as keyof LocaleStringsInterface]} */}
+            {/* {item.title} */}
+            {item.title[locale as keyof LocaleStringsInterface]}
           </SelectOption>
         ))}
       </Select>

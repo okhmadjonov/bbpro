@@ -34,7 +34,7 @@ const PhotoGallery = () => {
   return (
     <div className={styles.photo_gallery}>
       <div className={styles.photo_gallery_title}>
-        <h3>Photo Gallery from Challenge</h3>
+        {/* <h3>Photo Gallery from Challenge</h3> */}
         <div className={styles.navigate_icons}>
           <Image className="button_prev_galery" src={leftIcon} alt="l" />
           <Image className="button_next_galery" src={rightIcon} alt="r" />

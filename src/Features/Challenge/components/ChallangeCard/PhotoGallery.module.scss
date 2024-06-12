@@ -1,5 +1,4 @@
 .photo_gallery {
-  // min-height: 400px;
   display: grid;
   grid-template-columns: 1fr;
 
@@ -22,14 +21,15 @@
       margin-right: 20px;
       img {
         cursor: pointer;
-        width: 50px;
-        height: 50px;
-        border-radius: 20px;
-        background-color: lightgray;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: white;
         padding: 1vw;
         margin: 8px;
         font-size: 2em;
         cursor: pointer;
+        border: 1px solid var(--nestle1);
 
         &:hover {
           border: none;
