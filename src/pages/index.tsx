@@ -1,11 +1,12 @@
 import dynamic from "next/dynamic";
 import Head from "next/head";
 import Loader from "@/Components/Loader/Loader";
-import { HomeBannerInterface } from "@/Components/Types";
+import { AboutInterface, HomeBannerInterface } from "@/Components/Types";
 import IntlWrapperProvider from "@/utils/intlWrapperProvider";
 import { BrandsInterface } from "@/Features/home/components/types";
 import { API } from "@/services/api";
 import { useTranslations } from "next-intl";
+import About from "./about";
 
 const HomeHeader = dynamic(
   () => import("@/Features/home/components/HomeHeader"),
@@ -32,10 +33,19 @@ const Advantages = dynamic(
   }
 );
 
+const AboutCompany = dynamic(
+  () => import("../Features/home/components/AboutCompany/"),
+  {
+    loading: () => <Loader />,
+  }
+);
+
+
 interface HomeProps {
   homeBanner: HomeBannerInterface[];
   brands: BrandsInterface[];
   messages: any;
+ 
 }
 
 export default function Home({ homeBanner, brands, messages }: HomeProps) {
@@ -50,6 +60,7 @@ export default function Home({ homeBanner, brands, messages }: HomeProps) {
         <HomeHeader homeBanner={homeBanner} />
       </Banner>
       <Advantages />
+   
       <Brends brands={brands} />
     </IntlWrapperProvider>
   );
