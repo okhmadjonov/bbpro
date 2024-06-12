@@ -1,29 +1,28 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import styles from "./AboutCompany.module.scss";
 import { AboutInterface, LocaleStringsInterface } from "@/Components/Types";
-import { useLocale } from "next-intl";
-import { API, BASE_URL } from "@/services/api";
+import { useLocale, useTranslations } from "next-intl";
+import { BASE_URL } from "@/services/api";
 
 interface AboutProps {
-  about: AboutInterface[];
+  abouts: AboutInterface[];
 }
 
-const AboutCompany = ({ about }: AboutProps) => {
+const AboutCompany = ({ abouts }: AboutProps) => {
   const locale = useLocale();
+  const t = useTranslations();
+  const data = abouts && abouts[0]
 
-  if (!about || about.length === 0) {
-    return <div className={styles.about}>No data available.</div>;
-  }
-
-  const data = about[0];
 
   return (
     <div className={styles.about}>
+      <div className="container">
+        <h3>{t("AboutCompany.title")}</h3>
       <div className={styles.aboutItem}>
         <div className={styles.aboutImage}>
           <Image
-            src={`${BASE_URL}/${data?.imageUrl}`}
+            src={`${BASE_URL}/${data.imageUrl}`}
             alt={data.title[locale as keyof LocaleStringsInterface]}
             width={500}
             height={500}
@@ -35,22 +34,9 @@ const AboutCompany = ({ about }: AboutProps) => {
           <p>{data.description[locale as keyof LocaleStringsInterface]}</p>
         </div>
       </div>
+      </div>
     </div>
   );
 };
 
 export default AboutCompany;
-
-export const getServerSideProps = async (context: any) => {
-    const aboutResponse = await API.getAbout()
-      .then((res: any) => res.data)
-      .catch((error: any) => {
-        return { data: [] };
-      });
-    return {
-      props: {
-        about: aboutResponse.data || [],
-      },
-    };
-  };
-  
