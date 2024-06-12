@@ -61,7 +61,7 @@ const ServicesList = ({ catalogCategory, initialDataId }: ServiceListProps) => {
         defaultActiveKey="Software"
         items={catalogCategory?.map((item) => ({
           key: item.id,
-          label: item.title,
+          label: item.title[locale as keyof LocaleStringsInterface],
           children: (
             <div className={styles.products_list__cards}>
               {catrgoryData?.items?.map(

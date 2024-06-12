@@ -22,7 +22,7 @@ const Navbar = () => {
   );
 
   const navLinks = [
-    { link: "/about", key: "GlobalKeyWords.about" },
+    // { link: "/about", key: "GlobalKeyWords.about" },
     { link: "/service", key: "GlobalKeyWords.service" },
     { link: "/project", key: "GlobalKeyWords.project" },
     { link: "/info", key: "GlobalKeyWords.info" },
