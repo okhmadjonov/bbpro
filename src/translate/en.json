@@ -90,19 +90,7 @@
   "BRANDS": {
     "brands": "Our sponsors"
   },
-  "engagement": {
-    "title": "TYPICAL CLIENT ENGAGEMENT PHASES",
-    "step_one": "INITIAL CLIENT SCOPING & DATA EXCHANGE",
-    "step_one_sub": "Our cyber threat intelligence services team will discuss your catalyst event(s) and key investigative and intelligence priorities. At the close of this discussion, we’ll know if we can add value through an ongoing relationship.",
-    "step_two": "INVESTIGATION PHASE",
-    "step_two_sub": "We dig deep into the circumstances of your cyber threat and investigate to enrich the data and provide evidence that delivers on your intelligence requirements.",
-    "step_three": "CLIENT BRIEF AND INVESTIGATIVE REPORTS",
-    "step_three_sub": "You receive actionable findings from the investigation:",
-    "step_three_sub_one": "Adversary/target information",
-    "step_three_sub_two": "The actor’s or group’s tactics, techniques, and procedures (TTPs)",
-    "step_three_sub_three": "The infrastructure associated with the actor or group",
-    "step_three_sub_four": "Options for you, including ongoing monitoring of new actor infrastructure."
-  },
+
   "call": {
     "day_time": "Call. Mon-Fri: 10:00-18:00"
   },
