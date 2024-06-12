@@ -98,5 +98,8 @@
 
   "ADVAN": {
     "title": "Преимущества"
+  },
+  "AboutCompany":{
+    "title":"О компании"
   }
 }
