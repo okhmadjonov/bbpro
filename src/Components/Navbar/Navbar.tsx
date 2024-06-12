@@ -22,7 +22,7 @@ const Navbar = () => {
   );
 
   const navLinks = [
-    // { link: "/about", key: "GlobalKeyWords.about" },
+    { link: "/about", key: "GlobalKeyWords.about" },
     { link: "/service", key: "GlobalKeyWords.service" },
     { link: "/project", key: "GlobalKeyWords.project" },
     { link: "/info", key: "GlobalKeyWords.info" },
@@ -126,18 +126,15 @@ const Navbar = () => {
               </div>
               <div className={styles.navbar__icons}>
                 <Link target="_blank" href="https://www.facebook.com/">
-                  {/* <SvgSelector id="facebook_icon_svg" /> */}
-
+               
                   <Image src={facebook} alt="Facebook Icon" />
                 </Link>
 
                 <Link target="_blank" href="https://t.me/">
                   <Image src={telegram} alt="Facebook Icon" />
-                  {/* <SvgSelector id="telegram_icon_svg" /> */}
                 </Link>
 
                 <Link target="_blank" href="https://www.instagram.com/">
-                  {/* <SvgSelector id="instagram_icon_svg" /> */}
                   <Image src={instagram} alt="Facebook Icon" />
                 </Link>
               </div>
@@ -191,18 +188,15 @@ const Navbar = () => {
             </ul>
             <div className={styles.navbar__icons}>
               <Link target="_blank" href="https://www.facebook.com/">
-                {/* <SvgSelector id="facebook_icon_svg" /> */}
-
+             
                 <Image src={facebook} alt="Facebook Icon" />
               </Link>
 
               <Link target="_blank" href="https://t.me/">
                 <Image src={telegram} alt="Facebook Icon" />
-                {/* <SvgSelector id="telegram_icon_svg" /> */}
               </Link>
 
               <Link target="_blank" href="https://www.instagram.com/">
-                {/* <SvgSelector id="instagram_icon_svg" /> */}
                 <Image src={instagram} alt="Facebook Icon" />
               </Link>
             </div>
