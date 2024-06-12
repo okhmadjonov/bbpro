@@ -99,6 +99,9 @@
       display: flex;
       align-items: center;
       gap: 30px;
+      @media (max-width:360px){
+        display: none;
+      }
 
       img {
         width: 22px;

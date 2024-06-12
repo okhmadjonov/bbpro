@@ -1,4 +1,20 @@
 .brands {
+  height: 50vh;
+  padding: 30px 0px;
+  border: 2px solid teal;
+
+
+@media(max-width:360px){
+  margin-top: 50px;
+  
+}
+
+@media(max-width:480px){
+  margin-top: 80px;
+}
+@media(max-width:560px){
+  margin-top: 50px;
+}
 
   &__top {
     display: flex;
@@ -20,7 +36,7 @@
       padding-bottom: 80px;
     }
     @media (max-width: 480px) {
-      padding-bottom: 48px;
+      // padding-bottom: 48px;
     }
   }
 
@@ -83,8 +99,7 @@
 
     &:hover {
       box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-      // border: 1px solid rgba(99, 99, 99, 0.2);
-
+     
       img {
         transform: scale(1.03) !important;
       }
@@ -111,34 +126,19 @@
     padding: 30px  !important;
   }
 }
-
 .brands__cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   padding-bottom: 78px;
-
-  @media (max-width: 800px) {
-    padding-bottom: 80px;
+  @media (max-width:800px) {
+      padding-bottom: 80px;
   }
-  @media (max-width: 480px) {
-    padding-bottom: 48px;
+  @media (max-width:480px) {
+      padding-bottom: 48px;
   }
 }
 
 .brands__cards .swiper-slide {
-  width: calc(50% - 10px);
-  margin-bottom: 20px;
- 
-  @media (max-width: 768px) {
-    width: calc(33.333% - 10px);
-  }
-
-  @media (max-width: 480px) {
-    width: calc(50% - 10px);
-  }
-
-  &:nth-child(odd) {
-    margin-right: 20px;
-  }
+  display: flex;
+  align-items: stretch;
 }
