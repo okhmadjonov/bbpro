@@ -11,6 +11,12 @@ interface AboutProps {
 
 const About = ({ about }: AboutProps) => {
   const locale = useLocale();
+
+  // Check if about array is defined and has at least one element
+  if (!about || about.length === 0) {
+    return <div className={styles.about}>No data available.</div>;
+  }
+
   const data = about[0];
 
   return (
