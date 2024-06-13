@@ -1,6 +1,7 @@
 .photo_gallery {
   display: grid;
   grid-template-columns: 1fr;
+  min-height: 420px;
 
   .photo_gallery_title {
     width: 100%;
@@ -29,12 +30,12 @@
         margin: 8px;
         font-size: 2em;
         cursor: pointer;
-        border: 1px solid var(--nestle1);
 
         &:hover {
           border: none;
+          color: white;
           transition: all 0.3 ease-in-out;
-          background-color: rgb(184, 183, 183);
+          background-color: var(--btn-hover);
         }
       }
     }
