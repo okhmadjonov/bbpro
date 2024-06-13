@@ -16,6 +16,12 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "./next-auth.d.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "./next-auth.d.ts",
+    "src/Features/Challenge/components/Faq/index.tsx"
+  ],
   "exclude": ["node_modules"]
 }

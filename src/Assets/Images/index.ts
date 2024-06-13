@@ -21,7 +21,7 @@ import facebook from "./facebook.png";
 import instagram from "./instagram.png";
 import telegram from "./telegram.png";
 import back1 from "./back1.jpg";
-import aboutUsIcon from './aboutusIcon.png';
+import aboutUsIcon from "./aboutusIcon.png";
 /**------------------------------PhotoGallery--------------------------------- */
 import PhotoGallerySlide1 from "./PhotoGallery/1.png";
 import PhotoGallerySlide2 from "./PhotoGallery/2.png";
@@ -33,6 +33,7 @@ import PhotoGallerySlide7 from "./PhotoGallery/7.png";
 import PhotoGallerySlide8 from "./PhotoGallery/8.png";
 import leftIcon from "./leftIcon.png";
 import rightIcon from "./rightIcon.png";
+import chevronDown from "./chevron-down.png";
 
 /**------------------------------PhotoGallery--------------------------------- */
 
@@ -40,6 +41,7 @@ import rightIcon from "./rightIcon.png";
 import LoginAdmin from "./loginadmin.jpg";
 
 export {
+  chevronDown,
   back1,
   facebook,
   instagram,

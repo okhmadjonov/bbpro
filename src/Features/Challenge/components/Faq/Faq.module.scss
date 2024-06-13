@@ -1,0 +1,107 @@
+.faq {
+  transition: all 0.5s ease-in-out;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+
+  .left {
+    text-align: center;
+    background-color: #fff;
+    padding: 2rem 3rem;
+    width: 30%;
+    margin: auto 0;
+    margin-top: 0;
+    @media (max-width: 1439px) {
+      display: none;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      font-weight: 500;
+      color: var(--nestle2);
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #0078c8;
+
+      img {
+        width: 1.3rem;
+        margin-left: 0.5rem;
+      }
+    }
+  }
+
+  .right {
+    width: 65%;
+    @media (max-width: 1439px) {
+      width: 100%;
+    }
+    .accordion_item {
+      padding: 1.5rem 2rem;
+      margin-bottom: 1.5em;
+      background-color: #fff;
+
+      .title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+
+        h1 {
+          width: 90%;
+          font-size: 1.3rem;
+          font-weight: 500;
+          color: var(--nestle2);
+        }
+
+        img {
+          width: 30px;
+          height: 30px;
+          background-color: var(--btn-hover);
+          border-radius: 100px;
+          padding: 0.4rem;
+          transition: 0.5s ease;
+          width: 2.5rem;
+          cursor: pointer;
+        }
+      }
+
+      .content {
+        display: block;
+        position: relative;
+        padding: 0;
+        margin: 0;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.3s, opacity 0.5s;
+
+        p {
+          font-size: 1.2rem;
+        }
+      }
+
+      &.active {
+        border: 1px solid var(--btn-hover);
+        border-radius: 10px;
+
+        .title {
+          img {
+            transform: rotate(180deg);
+          }
+        }
+
+        .content {
+          height: auto;
+          padding-top: 2rem;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

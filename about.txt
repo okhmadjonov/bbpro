@@ -1,0 +1,43 @@
+/*--------------------------------------------------UZ---------------------------------------------*/
+Bizning korxona 2016-yilda tashkil topgan bo'lib, ilk yillaridayoq biznin gurux sifatli maxsulot chiqara boshladi. 
+Chunki, bu IT  firma zamon talablariga mos va sifatli xizmatlarni ishlab chiqsihni yo'lga qo'ygan edi.
+Ilk yillarda korxona faqat kompyuterlarga web dasturlar ishlab chiqish bilan shug'ullangan bo'lsa,
+bugungi kunga kelib bu xizmat turlari asosan 4  yo'nalishda kengaydi.
+Masalan: dasturiy taminot, texnik taminot, mobil ilovalar ishlab chiqish va telekomminikatsiyaviy jixozlash tizimlariga bo'linadi.
+Bularga qisqacha to'xtalsak: dasturiy taminot bo'limida turli  xil web ilova (website) lar ishlab chiqish, texnik 
+ jixozlash va telekommunikatsiya bo'limida esa turli xil ishxona qurilmalarini (masalan, Switch, Router, Hub,Camera, Server) 
+yetkazib  berish va o'rnatishni o'z ichiga oladi,  mobil ilovalarda esa android va ios mobil qurilmalar uchun 
+sifatli ilovalar ishlab chiqiladi va texnik xizmatlar ko'rsatiladi. Bundan tashqari, bizning korxona firmalarning xavfsizligi
+ uchun maxsus maslahatlar va texnik yordam ko'rsata oladi.
+
+/*--------------------------------------------------RU---------------------------------------------*/
+Наша компания была основана в 2016 году, и уже в первые годы наша группа начала производить качественную продукцию.
+Потому что эта IT-компания начала разрабатывать качественные услуги, соответствующие требованиям времени.
+В первые годы компания занималась только разработкой веб-программ для компьютеров, но сегодня эти виды услуг
+расширились в основном по 4 направлениям.
+Например, он делится на разработку программного обеспечения, техническую разработку, разработку мобильных 
+приложений и системы телекоммуникационного оборудования. Поговорим о них вкратце: разработка различных веб-приложений (сайтов)
+ в отделе программного обеспечения и поставка различных офисных устройств (например, Switch, Router, Hub, Camera, Server)
+ в отдел технического оборудования и телекоммуникаций и включает в себя установка, а в мобильных приложениях мы разрабатываем
+ качественные приложения для мобильных устройств android и ios и оказываем технические услуги. Кроме того, наша компания может
+ предоставить специальные консультации и техническую поддержку по обеспечению безопасности компаний.
+
+
+/*--------------------------------------------------EN---------------------------------------------*/
+Our company was founded in 2016, and in the first years, our group began to produce quality products. 
+Because, this IT company started to develop high-quality services in line with the requirements of the time.
+In the early years, the company was engaged only in the development of web programs for computers, but today 
+these types of services have expanded mainly in 4 directions.
+For example, it is divided into software development, technical development, 
+mobile application development and telecommunication equipment systems.
+Let's talk about them briefly: the development of various web applications (websites) in the software department, 
+and the delivery of various office devices (for example, Switch, Router, Hub, Camera, Server) in the technical
+ equipment and telecommunications department and includes installation, while in mobile applications, we develop
+ quality applications for android and ios mobile devices and provide technical services. In addition, our company
+ can provide special advice and technical support for the security of companies.
+
+
+
+
+
+
