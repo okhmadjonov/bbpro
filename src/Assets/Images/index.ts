@@ -23,14 +23,13 @@ import telegram from "./telegram.png";
 import back1 from "./back1.jpg";
 import aboutUsIcon from "./aboutusIcon.png";
 /**------------------------------PhotoGallery--------------------------------- */
-import PhotoGallerySlide1 from "./PhotoGallery/1.png";
+import PhotoGallerySlide1 from "./PhotoGallery/1.jpg";
 import PhotoGallerySlide2 from "./PhotoGallery/2.png";
 import PhotoGallerySlide3 from "./PhotoGallery/3.png";
-import PhotoGallerySlide4 from "./PhotoGallery/4.png";
-import PhotoGallerySlide5 from "./PhotoGallery/5.png";
+import PhotoGallerySlide4 from "./PhotoGallery/4.jpg";
+import PhotoGallerySlide5 from "./PhotoGallery/5.jpg";
 import PhotoGallerySlide6 from "./PhotoGallery/6.png";
-import PhotoGallerySlide7 from "./PhotoGallery/7.png";
-import PhotoGallerySlide8 from "./PhotoGallery/8.png";
+import PhotoGallerySlide8 from "./PhotoGallery/8.jpg";
 import leftIcon from "./leftIcon.png";
 import rightIcon from "./rightIcon.png";
 import chevronDown from "./chevron-down.png";
@@ -76,7 +75,6 @@ export {
   PhotoGallerySlide4,
   PhotoGallerySlide5,
   PhotoGallerySlide6,
-  PhotoGallerySlide7,
   PhotoGallerySlide8,
   leftIcon,
   rightIcon,

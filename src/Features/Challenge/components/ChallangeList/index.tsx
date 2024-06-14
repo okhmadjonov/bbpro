@@ -6,8 +6,8 @@ import Faq from "../Faq/Faq";
 const ChallengeList = () => {
   return (
     <div className={styles.challengelist}>
-      <Faq />
       <PhotoGallery />
+      <Faq />
     </div>
   );
 };
