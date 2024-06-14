@@ -7,7 +7,7 @@ import {
   PhotoGallerySlide4,
   PhotoGallerySlide5,
   PhotoGallerySlide6,
-  PhotoGallerySlide7,
+
   PhotoGallerySlide8,
   leftIcon,
   rightIcon,
@@ -27,7 +27,7 @@ const PhotoGallery = () => {
     { image: PhotoGallerySlide4, id: 4 },
     { image: PhotoGallerySlide5, id: 5 },
     { image: PhotoGallerySlide6, id: 6 },
-    { image: PhotoGallerySlide7, id: 7 },
+
     { image: PhotoGallerySlide8, id: 8 },
   ];
 

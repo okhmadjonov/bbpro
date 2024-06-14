@@ -7,6 +7,8 @@ import { phoneNumber1 } from "@/utils/consts";
 
 const Footer = () => {
   const t = useTranslations("");
+  const currentYear = new Date().getFullYear();
+
   return (
     <>
       <div className={styles.footer}>
@@ -100,7 +102,7 @@ const Footer = () => {
             </div>
 
             <div className={styles.footer__logo_company}>
-              <p>© 2024 BIG BOX PRO</p>
+              <p>© {currentYear} BIG BOX PRO</p>
 
               <Link
                 target="_blank"
