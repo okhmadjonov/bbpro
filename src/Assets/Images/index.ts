@@ -21,7 +21,7 @@ import facebook from "./facebook.png";
 import instagram from "./instagram.png";
 import telegram from "./telegram.png";
 import back1 from "./back1.jpg";
-import aboutUsIcon from "./aboutusIcon.png";
+
 /**------------------------------PhotoGallery--------------------------------- */
 import PhotoGallerySlide1 from "./PhotoGallery/1.jpg";
 import PhotoGallerySlide2 from "./PhotoGallery/2.png";
@@ -67,7 +67,7 @@ export {
   ct,
   category,
   CompanyIcon,
-  aboutUsIcon,
+
   /**  ---------------photo gallery----------------- */
   PhotoGallerySlide1,
   PhotoGallerySlide2,

@@ -65,7 +65,7 @@ export default function Home({
       </Banner>
 
       <Advantages />
-      {/* <AboutCompany abouts={abouts} /> */}
+      <AboutCompany abouts={abouts} />
 
       <Brends brands={brands} />
     </IntlWrapperProvider>
