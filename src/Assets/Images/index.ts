@@ -34,13 +34,13 @@ import PhotoGallerySlide8 from "./PhotoGallery/8.png";
 import leftIcon from "./leftIcon.png";
 import rightIcon from "./rightIcon.png";
 import chevronDown from "./chevron-down.png";
-
-/**------------------------------PhotoGallery--------------------------------- */
+import AboutComp from "./cscu2.png";
 
 /*-----------------------------Login----------------------------*/
 import LoginAdmin from "./loginadmin.jpg";
 
 export {
+  AboutComp,
   chevronDown,
   back1,
   facebook,

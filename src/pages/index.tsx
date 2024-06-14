@@ -40,16 +40,19 @@ const AboutCompany = dynamic(
   }
 );
 
-
 interface HomeProps {
   homeBanner: HomeBannerInterface[];
   brands: BrandsInterface[];
   messages: any;
-  abouts: AboutInterface[]
- 
+  abouts: AboutInterface[];
 }
 
-export default function Home({ homeBanner, brands, messages, abouts }: HomeProps) {
+export default function Home({
+  homeBanner,
+  brands,
+  messages,
+  abouts,
+}: HomeProps) {
   const t = useTranslations();
 
   return (
@@ -60,18 +63,26 @@ export default function Home({ homeBanner, brands, messages, abouts }: HomeProps
       <Banner>
         <HomeHeader homeBanner={homeBanner} />
       </Banner>
- 
+
       <Advantages />
-        <AboutCompany abouts={abouts} />
-     
+      {/* <AboutCompany abouts={abouts} /> */}
+
       <Brends brands={brands} />
     </IntlWrapperProvider>
   );
 }
 
 export const getServerSideProps = async () => {
-  const brands = await API.getBrands().then((res: any) => res.data).catch((error: any) => {return { data: [] }; });
-  const aboutResponse = await API.getAbout().then((res: any) => res.data).catch((error: any) => {return { data: [] }; });
+  const brands = await API.getBrands()
+    .then((res: any) => res.data)
+    .catch((error: any) => {
+      return { data: [] };
+    });
+  const aboutResponse = await API.getAbout()
+    .then((res: any) => res.data)
+    .catch((error: any) => {
+      return { data: [] };
+    });
   return {
     props: {
       brands: brands.data || [],
@@ -79,4 +90,3 @@ export const getServerSideProps = async () => {
     },
   };
 };
-
