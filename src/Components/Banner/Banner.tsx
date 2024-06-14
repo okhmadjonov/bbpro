@@ -37,7 +37,6 @@ const Banner = ({ children }: ILayoutsProps) => {
               delay: 10000,
               disableOnInteraction: false,
             }}
-          
           >
             <SwiperSlide>
               <video autoPlay loop muted className={styles.bannerVideo}>
