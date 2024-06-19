@@ -32,11 +32,7 @@ const Order = () => {
           </div>
         </div>
       </div>
-      <OrderModal
-        isModalOpen={isModalOpen}
-        setIsModalOpen={setIsModalOpen}
-       
-      />
+      <OrderModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
     </div>
   );
 };
