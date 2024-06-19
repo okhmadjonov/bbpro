@@ -58,6 +58,12 @@ const AdminSidebar = ({ collapsed }: Props) => {
       id: 5,
       icon: <Image src={BrandsAdminIcon} width={20} height={20} alt="#" />,
     },
+    {
+      text: "GlobalKeyWords.order",
+      link: "/admin/orders",
+      id: 6,
+      icon: <Image src={BrandsAdminIcon} width={20} height={20} alt="#" />,
+    },
   ];
   useEffect(() => {
     setSelectedKey(router.pathname);

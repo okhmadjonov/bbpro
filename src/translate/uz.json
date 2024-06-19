@@ -13,10 +13,11 @@
 
     "details": "Tafsilotlar",
     "phone": "Telefon",
-    "catalog": "Katalog"
+    "catalog": "Katalog",
+    "order": "Arizalar"
   },
   "Order": {
-    "order":"Yuborish",
+    "order": "Yuborish",
     "order_btn": "Ariza qoldirish",
     "order_title": "O'zingiz uchun yechim topmadingizmi?",
     "order_subtitle": "Ariza qoldiring va menejerimiz siz bilan bog'lanadi va siz uchun individual echimni tanlaydi!"
@@ -94,7 +95,13 @@
     "confirm": "Tasdiqlash",
     "delete_confirmation_message": "Siz haqiqatan ham ushbu ma'lumotlarni o'chirmoqchimisiz?",
     "Brands": "Brandlar",
-    "AboutSlider": "Kompaniya rasmlari"
+    "AboutSlider": "Kompaniya rasmlari",
+    "Orders": "Arizalar",
+    "Name": "Ismi",
+    "Phone": "Telefon raqami",
+    "Email": "Email",
+    "Message": "Xabar",
+    "close": "Chiqish"
   },
   "BRANDS": {
     "brands": "Bizning hamkorlarimiz"

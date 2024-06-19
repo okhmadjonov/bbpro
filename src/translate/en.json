@@ -10,13 +10,13 @@
     "info": "News",
     "news": "News",
     "btn_text": "More details",
-
+    "order": "Orders",
     "details": "Details",
     "phone": "Telephone",
     "catalog": "Catalog"
   },
   "Order": {
-    "order":"Send",
+    "order": "Send",
     "order_btn": "Apply order",
     "order_title": "Didn't find a solution for yourself?",
     "order_subtitle": "Submit an application and our manager will contact you and choose an individual solution for you!"
@@ -92,7 +92,13 @@
     "confirm": "Confirm",
     "delete_confirmation_message": "Are you sure you want to delete this data?",
     "Brands": "Brands",
-    "AboutSlider": "Company images"
+    "AboutSlider": "Company images",
+    "Orders": "Orders",
+    "Name": "Name",
+    "Phone": "Phone",
+    "Email": "Email",
+    "Message": "Message",
+    "close":"Exit"
   },
   "BRANDS": {
     "brands": "Our sponsors"
