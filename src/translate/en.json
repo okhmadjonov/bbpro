@@ -10,9 +10,16 @@
     "info": "News",
     "news": "News",
     "btn_text": "More details",
+
     "details": "Details",
     "phone": "Telephone",
     "catalog": "Catalog"
+  },
+  "Order": {
+    "order":"Send",
+    "order_btn": "Apply order",
+    "order_title": "Didn't find a solution for yourself?",
+    "order_subtitle": "Submit an application and our manager will contact you and choose an individual solution for you!"
   },
   "LOGIN": {
     "title": "Login",
@@ -98,7 +105,7 @@
   "ADVAN": {
     "title": "Advantages"
   },
-  "AboutCompany":{
-    "title":"About company"
+  "AboutCompany": {
+    "title": "About company"
   }
 }

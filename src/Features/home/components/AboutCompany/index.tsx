@@ -20,10 +20,6 @@ const AboutCompany = ({ abouts }: AboutProps) => {
         <h3>{t("AboutCompany.title")}</h3>
         <div
           className={styles.aboutItem}
-          style={{
-            backgroundImage: isHovered ? "none" : `url(${BigBoxPro.src})`,
-            backgroundColor: isHovered ? "teal" : "transparent",
-          }}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >

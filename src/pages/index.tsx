@@ -40,6 +40,10 @@ const AboutCompany = dynamic(
   }
 );
 
+const Order = dynamic(() => import("../Features/home/components/Order"), {
+  loading: () => <Loader />,
+});
+
 interface HomeProps {
   homeBanner: HomeBannerInterface[];
   brands: BrandsInterface[];
@@ -68,6 +72,7 @@ export default function Home({
       <AboutCompany abouts={abouts} />
 
       <Brends brands={brands} />
+      <Order />
     </IntlWrapperProvider>
   );
 }

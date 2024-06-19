@@ -24,16 +24,18 @@
     background-repeat: no-repeat;
     cursor: pointer;
     border-radius: 12px;
-    padding: 25px 10px;
+    padding: 40px 10px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     transition: all 0.3s ease-in-out;
     overflow: hidden;
+    align-items: center;
 
     &:hover {
       box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
       transform: scale(1);
       transition: all 5ms ease-in-out;
       color: #fff;
+      background: var(--nestle2);
     }
 
     @media (max-width: 360px) {
