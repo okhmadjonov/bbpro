@@ -11,9 +11,16 @@ interface Props {
   children?: React.ReactNode;
   data?: any;
   multipart?: boolean;
+  showBackButton?: boolean;
 }
 
-const EditPage = ({ link, children, data, multipart }: Props) => {
+const EditPage = ({
+  link,
+  children,
+  data,
+  multipart,
+  showBackButton = true,
+}: Props) => {
   const [form] = Form.useForm();
   const router = useRouter();
   const slug = router?.query?.id;
@@ -53,6 +60,7 @@ const EditPage = ({ link, children, data, multipart }: Props) => {
 
   const convertDataToFormData = (data: any) => {
     const formData = new FormData();
+    console.log("data: " + JSON.stringify(formData));
 
     for (const key in data) {
       if (Object.prototype.hasOwnProperty.call(data, key)) {
@@ -124,12 +132,14 @@ const EditPage = ({ link, children, data, multipart }: Props) => {
 
   return (
     <>
-      <Button
-        type="primary"
-        onClick={handleBackButtonClick}
-        style={buttonStyle}
-        label={t("Back")}
-      ></Button>
+      {showBackButton && (
+        <Button
+          type="primary"
+          onClick={handleBackButtonClick}
+          style={{ marginBottom: "30px" }}
+          label={t("Back")}
+        />
+      )}
       <Form onFinish={onFinish} form={form}>
         {multipart && multipart === true ? (
           <Upload

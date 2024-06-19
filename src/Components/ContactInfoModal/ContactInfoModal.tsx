@@ -44,27 +44,6 @@ export const ContactInfoModal: React.FC<Props> = ({
     };
   }, []);
 
-  //   const {
-  //     data: responseData,
-  //     isLoading,
-  //     refetch,
-  //   } = useQueryApiClient({
-  //     request: {
-  //       url: "/Contact",
-  //       method: "GET",
-  //       disableOnMount: true,
-  //     },
-  //     onSuccess: (response) => {
-  //       setContactData(response.data[0]);
-  //     },
-  //   });
-
-  //   useEffect(() => {
-  //     if (isModalOpen && !contactData) {
-  //       refetch();
-  //     }
-  //   }, [isModalOpen, contactData, refetch]);
-
   return (
     <>
       <Modal
@@ -82,16 +61,13 @@ export const ContactInfoModal: React.FC<Props> = ({
             </div>
 
             <div className={styles.main__btn}>
-              {/* {contactData?.phone.map((num) => ( */}
               <Link href="/">
                 <button className={styles.number__btn}>
                   <SvgSelector id="contact_info_phone_svg" />
-                  {/* {num}
-                   */}
                   +99 (890) 000-00-00
                 </button>
               </Link>
-              {/* // ))} */}
+
               <p>{t("to_call")}</p>
             </div>
           </div>

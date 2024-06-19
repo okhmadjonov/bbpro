@@ -332,18 +332,3 @@ main {
 .ql-snow .ql-tooltip {
   z-index: 2060;
 }
-
-/*-----------------------------------------------------*/
-.background-line {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
-.background-line img {
-  width: 100%;
-  height: auto;
-}

@@ -62,7 +62,6 @@ function useQueryApiClient({
   const disableOnMount = request?.disableOnMount;
 
   useEffect(() => {
-  
     if (!disableOnMount && (enableOnMount || method === "GET")) {
       actualCall(
         request.url,
@@ -74,13 +73,13 @@ function useQueryApiClient({
         request.baseUrl
       );
     }
-  }, [enabled, disableOnMount, enableOnMount]); 
+  }, [enabled, disableOnMount, enableOnMount]);
 
-  const refetch = () => {
+  const refetch = (refetchProps?: { data?: any; urlParams?: any }) => {
     setIsRefetching(true);
     actualCall(
       request.url,
-      request?.data,
+      refetchProps?.data,
       method,
       request?.mustRetry,
       request?.multipart,
@@ -144,7 +143,7 @@ function useQueryApiClient({
       },
     };
 
-    //set data in right place
+    // set data in right place
     if (method === "GET") {
       requestConfig.params = data;
     } else {
@@ -152,19 +151,19 @@ function useQueryApiClient({
     }
 
     try {
-      //call request
+      // call request
       const response = await axios.request(requestConfig);
 
       const responseContent = response.data;
 
-      //if status code is error type, throw error
+      // if status code is error type, throw error
       if (responseContent && responseContent.status_code > 299) {
         throw parsedError(responseContent);
       }
 
       setReceivedData(responseContent);
       setIsSuccess(true);
-      onSuccess && onSuccess(responseContent, passOnSuccess); 
+      onSuccess && onSuccess(responseContent, passOnSuccess);
 
       return responseContent;
     } catch (e: any) {
@@ -176,10 +175,10 @@ function useQueryApiClient({
           ? response.data
           : e;
 
-      onError && onError(actualError); 
-      handleError(actualError); 
+      onError && onError(actualError);
+      handleError(actualError);
     } finally {
-      onFinally && onFinally(); 
+      onFinally && onFinally();
       setIsRefetching(false);
       setIsLoading(false);
     }

@@ -93,4 +93,6 @@ export const API = {
     ),
 
   getCatalogCategory: () => axiosInstance.get("/Category"),
+
+  getOrders: () => axiosInstance.get("/Order"),
 };

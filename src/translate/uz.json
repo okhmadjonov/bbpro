@@ -10,9 +10,16 @@
     "info": "Yangiliklar",
     "news": "Yangiliklar",
     "btn_text": "Batafsil ma'lumot",
+
     "details": "Tafsilotlar",
     "phone": "Telefon",
     "catalog": "Katalog"
+  },
+  "Order": {
+    "order":"Yuborish",
+    "order_btn": "Ariza qoldirish",
+    "order_title": "O'zingiz uchun yechim topmadingizmi?",
+    "order_subtitle": "Ariza qoldiring va menejerimiz siz bilan bog'lanadi va siz uchun individual echimni tanlaydi!"
   },
 
   "LOGIN": {
@@ -97,11 +104,10 @@
     "day_time": "Aloqa. Du-Ju: 10:00-18:00"
   },
 
- 
   "ADVAN": {
     "title": "Afzalliklari"
   },
-  "AboutCompany":{
-    "title":"Korxona haqida"
+  "AboutCompany": {
+    "title": "Korxona haqida"
   }
 }

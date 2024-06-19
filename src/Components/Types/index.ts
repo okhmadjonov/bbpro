@@ -239,3 +239,11 @@ export interface AboutInterface {
   createdAt: string;
   updatedAt: string;
 }
+
+export interface OrderModalInterface{
+  id:number,
+  Name:string,
+  Phone:string,
+  Email: string,
+  Message:string
+}
