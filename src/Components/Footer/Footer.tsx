@@ -43,7 +43,6 @@ const Footer = () => {
               <h2>{t("FOOTER.navigation")}</h2>
 
               <div className={styles.footer__navs}>
-                {/* <Link href={"/about"}>{t("GlobalKeyWords.about")}</Link> */}
                 <Link href={"/service"}>{t("GlobalKeyWords.service")}</Link>
                 <Link href={"/project"}>{t("GlobalKeyWords.project")}</Link>
                 <Link href={"/contact"}>{t("GlobalKeyWords.contact")}</Link>
@@ -62,9 +61,6 @@ const Footer = () => {
                     <Link target="_blank" href={`tel:${phoneNumber1}`}>
                       {phoneNumber1}
                     </Link>
-                    <Link target="_blank" href={`tel:${phoneNumber1}`}>
-                      {phoneNumber1}
-                    </Link>
                   </div>
                 </div>
 
@@ -78,7 +74,7 @@ const Footer = () => {
 
                 <div className={styles.footer__gmail}>
                   <SvgSelector id="mail-svg" />
-                  <Link target="_blank" href="mailto: bigboxpro@gmail.com">
+                  <Link target="_blank" href="mailto: bigboxpros@gmail.com">
                     bigboxpro@gmail.com
                   </Link>
                 </div>
