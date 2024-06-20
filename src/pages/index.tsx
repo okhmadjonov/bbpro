@@ -6,7 +6,6 @@ import IntlWrapperProvider from "@/utils/intlWrapperProvider";
 import { BrandsInterface } from "@/Features/home/components/types";
 import { API } from "@/services/api";
 import { useTranslations } from "next-intl";
-import About from "./about";
 
 const HomeHeader = dynamic(
   () => import("@/Features/home/components/HomeHeader"),
