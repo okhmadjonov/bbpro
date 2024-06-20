@@ -75,7 +75,7 @@ const Footer = () => {
                 <div className={styles.footer__gmail}>
                   <SvgSelector id="mail-svg" />
                   <Link target="_blank" href="mailto: bigboxpros@gmail.com">
-                    bigboxpro@gmail.com
+                    bigboxpros@gmail.com
                   </Link>
                 </div>
               </div>
