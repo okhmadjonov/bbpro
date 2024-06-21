@@ -3,6 +3,7 @@ import Loader from "@/Components/Loader/Loader";
 import { ProjectsListResponseInterface } from "@/Components/Types";
 import { API, axiosHeadersSetToken } from "@/services/api";
 import dynamic from "next/dynamic";
+import Head from "next/head";
 import React from "react";
 
 const ProjectList = dynamic(
@@ -22,11 +23,16 @@ interface Props {
 
 export default function Project({ projectlist }: Props) {
   return (
-    <div className="container">
-      <div className="container_top_padding">
-        <GoToBack pathArr={[{ title: "project", path: "locations" }]} />
-        <PageTitle />
-        <ProjectList projectlist={projectlist} />
+    <div>
+      <Head>
+        <title>Projects</title>
+      </Head>
+      <div className="container">
+        <div className="container_top_padding">
+          <GoToBack pathArr={[{ title: "project", path: "locations" }]} />
+          <PageTitle />
+          <ProjectList projectlist={projectlist} />
+        </div>
       </div>
     </div>
   );
