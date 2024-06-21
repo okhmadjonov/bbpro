@@ -3,6 +3,7 @@ import Loader from "@/Components/Loader/Loader";
 import { ServicesListResponseInterface } from "@/Components/Types";
 import { API, axiosHeadersSetToken } from "@/services/api";
 import dynamic from "next/dynamic";
+import Head from "next/head";
 import React from "react";
 
 const ServiceList = dynamic(
@@ -23,14 +24,20 @@ interface Props {
 
 export default function Service({ catalogCategory }: Props) {
   return (
-    <div className="container">
-      <div className="container_top_padding">
-        <GoToBack pathArr={[{ title: "service", path: "service" }]} />
-        <PageTitle />
-        <ServiceList
-          catalogCategory={catalogCategory}
-          initialDataId={catalogCategory?.[0]?.id}
-        />
+    <div>
+      <Head>
+        <title>Services</title>
+      </Head>
+
+      <div className="container">
+        <div className="container_top_padding">
+          <GoToBack pathArr={[{ title: "service", path: "service" }]} />
+          <PageTitle />
+          <ServiceList
+            catalogCategory={catalogCategory}
+            initialDataId={catalogCategory?.[0]?.id}
+          />
+        </div>
       </div>
     </div>
   );
