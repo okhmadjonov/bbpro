@@ -38,6 +38,24 @@
           background-color: var(--btn-hover);
         }
       }
+      .button_prev_galery,
+      .button_next_galery {
+        cursor: pointer;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: white;
+        padding: 1vw;
+        margin: 8px;
+        font-size: 2em;
+      
+        &:hover {
+          border: none;
+          color: white;
+          transition: all 0.3 ease-in-out;
+          background-color: var(--btn-hover);
+        }
+      }
     }
   }
 

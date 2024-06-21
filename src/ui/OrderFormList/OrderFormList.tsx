@@ -4,6 +4,7 @@ import { AndTextArea } from "../Textarea/Textarea";
 import { Button } from "../../ui";
 import { useTranslations } from "next-intl";
 import useQueryApiClient from "@/utils/useQueryApiClient";
+import styles from "./OrderFormList.module.scss";
 
 const OrderFormList = () => {
   const [form] = Form.useForm();
@@ -50,6 +51,17 @@ const OrderFormList = () => {
               message: "Please enter your name",
             },
           ]}
+          validateStatus={
+            form.isFieldTouched("name") && form.getFieldError("name")
+              ? "error"
+              : ""
+          }
+          hasFeedback
+          className={
+            form.isFieldTouched("name") && form.getFieldError("name")
+              ? styles.error
+              : ""
+          }
         >
           <Input />
         </Form.Item>
@@ -64,6 +76,17 @@ const OrderFormList = () => {
               message: "Please enter your phone number",
             },
           ]}
+          validateStatus={
+            form.isFieldTouched("phone") && form.getFieldError("phone")
+              ? "error"
+              : ""
+          }
+          hasFeedback
+          className={
+            form.isFieldTouched("phone") && form.getFieldError("phone")
+              ? styles.error
+              : ""
+          }
         >
           <Input
             addonBefore="+998"
@@ -83,6 +106,17 @@ const OrderFormList = () => {
               message: "Please enter a valid email address",
             },
           ]}
+          validateStatus={
+            form.isFieldTouched("email") && form.getFieldError("email")
+              ? "error"
+              : ""
+          }
+          hasFeedback
+          className={
+            form.isFieldTouched("email") && form.getFieldError("email")
+              ? styles.error
+              : ""
+          }
         >
           <Input />
         </Form.Item>
@@ -96,6 +130,17 @@ const OrderFormList = () => {
               message: "Please enter your message",
             },
           ]}
+          validateStatus={
+            form.isFieldTouched("message") && form.getFieldError("message")
+              ? "error"
+              : ""
+          }
+          hasFeedback
+          className={
+            form.isFieldTouched("message") && form.getFieldError("message")
+              ? styles.error
+              : ""
+          }
         >
           <AndTextArea />
         </Form.Item>
