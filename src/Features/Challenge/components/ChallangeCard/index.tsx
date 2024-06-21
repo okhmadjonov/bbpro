@@ -7,7 +7,6 @@ import {
   PhotoGallerySlide4,
   PhotoGallerySlide5,
   PhotoGallerySlide6,
-
   PhotoGallerySlide8,
   leftIcon,
   rightIcon,
@@ -17,6 +16,7 @@ import "swiper/css";
 import { Navigation } from "swiper/modules";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
 
 const PhotoGallery = () => {
   const t = useTranslations("translation");
@@ -34,10 +34,36 @@ const PhotoGallery = () => {
   return (
     <div className={styles.photo_gallery}>
       <div className={styles.photo_gallery_title}>
-        {/* <h3>Photo Gallery from Challenge</h3> */}
         <div className={styles.navigate_icons}>
-          <Image className="button_prev_galery" src={leftIcon} alt="l" />
-          <Image className="button_next_galery" src={rightIcon} alt="r" />
+          <BsChevronLeft
+            style={{
+              cursor: "pointer",
+              width: "60px",
+              height: "60px",
+              borderRadius: "50%",
+              backgroundColor: "white",
+              padding: "1vw",
+              margin: "8px",
+              fontSize: "2em",
+            }}
+            className="button_prev_galery"
+          />
+
+          <div>
+            <BsChevronRight
+              style={{
+                cursor: "pointer",
+                width: "60px",
+                height: "60px",
+                borderRadius: "50%",
+                backgroundColor: "white",
+                padding: "1vw",
+                margin: "8px",
+                fontSize: "2em",
+              }}
+              className="button_next_galery"
+            />
+          </div>
         </div>
       </div>
       <div className={styles.photo_gallery_slide}>
