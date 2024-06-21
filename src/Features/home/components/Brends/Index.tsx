@@ -28,7 +28,7 @@ const Brands = ({ brands }: Props) => {
   }, [brands]);
 
   const swiperRef = useRef<any>({});
- 
+
   const [swiperAutoplay, setSwiperAutoplay] = useState(true);
 
   const handleMouseEnter = () => {
@@ -62,23 +62,23 @@ const Brands = ({ brands }: Props) => {
           >
             <Swiper
               ref={swiperRef}
-              slidesPerView={brands?.length <= 5 ? brands?.length : 6}
+              slidesPerView={brands?.length <= 4 ? brands?.length : 5}
               spaceBetween={32}
               breakpoints={{
                 1400: {
-                  slidesPerView: brands?.length <= 5 ? brands?.length : 6,
+                  slidesPerView: brands?.length <= 4 ? brands?.length : 5,
                   spaceBetween: 32,
                 },
                 1200: {
-                  slidesPerView: brands?.length <= 4 ? brands?.length : 4,
+                  slidesPerView: brands?.length <= 3 ? brands?.length : 4,
                   spaceBetween: 32,
                 },
                 980: {
-                  slidesPerView: brands?.length <= 4 ? brands?.length : 4,
+                  slidesPerView: brands?.length <= 3 ? brands?.length : 4,
                   spaceBetween: 30,
                 },
                 600: {
-                  slidesPerView: brands?.length <= 3 ? brands?.length : 3.2,
+                  slidesPerView: brands?.length <= 2 ? brands?.length : 3.2,
                   spaceBetween: 20,
                 },
                 460: {
