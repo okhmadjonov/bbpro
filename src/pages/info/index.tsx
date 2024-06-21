@@ -3,6 +3,7 @@ import Loader from "@/Components/Loader/Loader";
 import { NewsListResponseInterface } from "@/Components/Types";
 import { API, axiosHeadersSetToken } from "@/services/api";
 import dynamic from "next/dynamic";
+import Head from "next/head";
 import React from "react";
 
 const NewList = dynamic(() => import("@/Features/News/components/NewsList"), {
@@ -19,11 +20,16 @@ interface Props {
 
 export default function Info({ newlist }: Props) {
   return (
-    <div className="container">
-      <div className="container_top_padding">
-        <GoToBack pathArr={[{ title: "info", path: "locations" }]} />
-        <PageTitle />
-        <NewList newlist={newlist} />
+    <div>
+      <Head>
+        <title>News</title>
+      </Head>
+      <div className="container">
+        <div className="container_top_padding">
+          <GoToBack pathArr={[{ title: "info", path: "locations" }]} />
+          <PageTitle />
+          <NewList newlist={newlist} />
+        </div>
       </div>
     </div>
   );
@@ -33,7 +39,7 @@ export const getServerSideProps = async (context: any) => {
   try {
     await axiosHeadersSetToken(context);
     const newsListResponse = await API.getNewsList();
-  
+
     return {
       props: {
         newlist: newsListResponse.data || [],

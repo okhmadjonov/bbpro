@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import GoToBack from "@/Components/GoToBack";
 import { ContactInterface } from "@/Components/Types";
 import { API } from "@/services/api";
+import Head from "next/head";
 
 const ContactPage = dynamic(
   () => import("@/Features/Contact/ContactSection/"),
@@ -21,11 +22,16 @@ interface ContactProps {
 
 export default function Contact({ contact }: ContactProps) {
   return (
-    <div className="container">
-      <div className="container_top_padding">
-        <GoToBack pathArr={[{ title: "contact", path: "locations" }]} />
-        <PageTitle />
-        <ContactPage contact={contact} />
+    <div>
+      <Head>
+        <title>Contact</title>
+      </Head>
+      <div className="container">
+        <div className="container_top_padding">
+          <GoToBack pathArr={[{ title: "contact", path: "locations" }]} />
+          <PageTitle />
+          <ContactPage contact={contact} />
+        </div>
       </div>
     </div>
   );
