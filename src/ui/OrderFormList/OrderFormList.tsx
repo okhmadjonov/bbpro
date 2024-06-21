@@ -32,6 +32,13 @@ const OrderFormList = () => {
     saveOrderData(values);
   };
 
+  const getFieldStyle = (fieldName: any) => {
+    return form.isFieldTouched(fieldName) &&
+      form.getFieldError(fieldName).length
+      ? { backgroundColor: "darkred" }
+      : { backgroundColor: "white" };
+  };
+
   return (
     <div>
       <Form
@@ -51,19 +58,8 @@ const OrderFormList = () => {
               message: "Please enter your name",
             },
           ]}
-          validateStatus={
-            form.isFieldTouched("name") && form.getFieldError("name")
-              ? "error"
-              : ""
-          }
-          hasFeedback
-          className={
-            form.isFieldTouched("name") && form.getFieldError("name")
-              ? styles.error
-              : ""
-          }
         >
-          <Input />
+          <Input style={getFieldStyle("name")} />
         </Form.Item>
 
         <Form.Item
@@ -75,24 +71,19 @@ const OrderFormList = () => {
               required: true,
               message: "Please enter your phone number",
             },
+            {
+              pattern: /^\d{1,14}$/,
+              message: "Phone number must be numeric and less than 15 digits",
+            },
           ]}
-          validateStatus={
-            form.isFieldTouched("phone") && form.getFieldError("phone")
-              ? "error"
-              : ""
-          }
-          hasFeedback
-          className={
-            form.isFieldTouched("phone") && form.getFieldError("phone")
-              ? styles.error
-              : ""
-          }
         >
           <Input
             addonBefore="+998"
-            style={{ width: "100%" }}
-            maxLength={9}
+            style={{ ...getFieldStyle("phone"), width: "100%" }}
+            maxLength={14}
             placeholder="Enter phone number without country code"
+            inputMode="numeric"
+            pattern="\d*"
           />
         </Form.Item>
 
@@ -106,19 +97,8 @@ const OrderFormList = () => {
               message: "Please enter a valid email address",
             },
           ]}
-          validateStatus={
-            form.isFieldTouched("email") && form.getFieldError("email")
-              ? "error"
-              : ""
-          }
-          hasFeedback
-          className={
-            form.isFieldTouched("email") && form.getFieldError("email")
-              ? styles.error
-              : ""
-          }
         >
-          <Input />
+          <Input style={getFieldStyle("email")} />
         </Form.Item>
 
         <Form.Item
@@ -130,19 +110,10 @@ const OrderFormList = () => {
               message: "Please enter your message",
             },
           ]}
-          validateStatus={
-            form.isFieldTouched("message") && form.getFieldError("message")
-              ? "error"
-              : ""
-          }
-          hasFeedback
-          className={
-            form.isFieldTouched("message") && form.getFieldError("message")
-              ? styles.error
-              : ""
-          }
         >
-          <AndTextArea />
+          <div style={getFieldStyle("message")}>
+            <AndTextArea />
+          </div>
         </Form.Item>
 
         <Form.Item>
