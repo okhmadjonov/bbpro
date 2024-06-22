@@ -61,15 +61,14 @@ export default function Home({
   return (
     <IntlWrapperProvider>
       <Head>
-        <title>bbpro.me</title>
+        <title>Big Box Pro</title>
       </Head>
       <Banner>
         <HomeHeader homeBanner={homeBanner} />
       </Banner>
 
       <Advantages />
-      {/* <AboutCompany abouts={abouts} /> */}
-
+  
       <Brends brands={brands} />
       <Order />
     </IntlWrapperProvider>
