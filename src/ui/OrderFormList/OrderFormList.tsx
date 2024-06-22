@@ -40,7 +40,7 @@ const OrderFormList = () => {
   };
 
   return (
-    <div>
+    <>
       <Form
         form={form}
         name="OrderForm"
@@ -120,7 +120,7 @@ const OrderFormList = () => {
           <Button type="primary" htmlType="submit" label={t("order")} />
         </Form.Item>
       </Form>
-    </div>
+    </>
   );
 };
 

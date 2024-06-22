@@ -33,7 +33,7 @@ export const Modal = ({
   cancelText,
   zIndex = 1050,
   wrapClassName,
-  width = 1000,
+  width = 998,
   footer,
   forceRender,
   getContainer,

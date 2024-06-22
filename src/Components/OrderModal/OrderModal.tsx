@@ -30,9 +30,7 @@ export const OrderModal: React.FC<Props> = ({
         footer={null}
         zIndex={2500}
       >
-        {/* <EditPage link="Order/" showBackButton={false}> */}
-          <OrderFormList />
-        {/* </EditPage> */}
+        <OrderFormList />
       </Modal>
     </>
   );
