@@ -1,5 +1,9 @@
-.error input,
-.error textarea {
-  background-color: red;
-  background: red;
+/* styles/OrderFormList.module.scss */
+.inputField {
+  background-color: darkred;
+  border: none;
+}
+
+.textareaField {
+  background-color: darkred;
 }
