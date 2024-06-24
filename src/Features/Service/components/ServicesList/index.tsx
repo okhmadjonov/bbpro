@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import ServicesCard from "../ServicesCard/index";
 import styles from "./ServicesList.module.scss";
 import { Tabs } from "antd";
+
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
 import Pagination from "@/ui/Pagination/Pagination";
@@ -19,7 +20,6 @@ interface ServiceListProps {
   initialDataId: number;
 }
 
-const { TabPane } = Tabs;
 const ServicesList = ({ catalogCategory, initialDataId }: ServiceListProps) => {
   const t = useTranslations("");
   const locale: string = useLocale();
@@ -57,31 +57,32 @@ const ServicesList = ({ catalogCategory, initialDataId }: ServiceListProps) => {
 
   return (
     <div className={styles.products_list} data-aos="fade-up">
-      <Tabs defaultActiveKey="Software" onChange={onChange}
-      className={styles.products_list__tabs} 
-      >
-        {catalogCategory?.map((item) => (
-          <TabPane
-            tab={item.title[locale as keyof LocaleStringsInterface]}
-            key={item.id}
-          >
+      <Tabs
+        defaultActiveKey="Software"
+        items={catalogCategory?.map((item) => ({
+          key: item.id,
+          label: item.title[locale as keyof LocaleStringsInterface],
+          children: (
             <div className={styles.products_list__cards}>
-              {catrgoryData.items.map(
-                (el: ServiceListInterface, index: number) => (
-                  <ServicesCard
-                    id={el.id}
-                    key={index}
-                    index={index}
-                    description={el.description}
-                    title={el.title}
-                    imageUrl={el.imageUrl}
-                  />
-                )
+              {catrgoryData?.items?.map(
+                (el: ServiceListInterface, index: number) => {
+                  return (
+                    <ServicesCard
+                      id={el.id}
+                      key={index}
+                      index={index}
+                      description={el.description}
+                      title={el.title}
+                      imageUrl={el.imageUrl}
+                    />
+                  );
+                }
               )}
             </div>
-          </TabPane>
-        ))}
-      </Tabs>
+          ),
+        }))}
+        onChange={onChange}
+      />
 
       <Pagination
         className="pagination_product_list"
