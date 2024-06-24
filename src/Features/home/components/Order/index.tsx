@@ -26,7 +26,7 @@ const Order = () => {
               onClick={showModal}
               type="default"
               label={t("order_btn")}
-              size="middle"
+              size="small"
               className="defaultwhite-button"
             />
           </div>
