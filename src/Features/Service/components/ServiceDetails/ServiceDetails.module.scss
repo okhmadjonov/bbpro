@@ -1,9 +1,10 @@
 .servicedetails {
   display: grid;
   grid-template-columns: 1fr;
+
   .imageUrl {
     width: 350px !important;
-    height: 150px !important; /* To maintain the aspect ratio */
+    height: 250px !important;
   }
 
   .details {

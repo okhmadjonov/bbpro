@@ -36,7 +36,7 @@ export const AndTextArea = ({
   value,
   onBlur,
   defaultValue,
-  maxLength = 255,
+  // maxLength = 255,
   allowClear,
   label,
   rules = [],
@@ -80,7 +80,7 @@ export const AndTextArea = ({
         value={value}
         onBlur={onBlur}
         defaultValue={defaultValue}
-        maxLength={maxLength}
+        // maxLength={maxLength}
         allowClear={allowClear}
         rows={rows}
         onKeyDown={onKeyDown}
