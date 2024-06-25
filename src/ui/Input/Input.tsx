@@ -43,7 +43,6 @@ export const Input = ({
   size = "large",
   value,
   onBlur,
-  maxLength = 255,
   allowClear,
   label,
   rules = [],
@@ -55,8 +54,6 @@ export const Input = ({
   dependencies,
   onKeyDown,
 }: InputProps) => {
-  // const intl = useIntl();
-  // Custom validator function
   const validateInput = (
     rule: Rule,
     value: string,
@@ -97,7 +94,6 @@ export const Input = ({
           size={size}
           value={value}
           onBlur={onBlur}
-          maxLength={maxLength}
           allowClear={allowClear}
           className={className}
         />
@@ -113,7 +109,6 @@ export const Input = ({
           size={size}
           value={value}
           onBlur={onBlur}
-          maxLength={maxLength}
           allowClear={allowClear}
           className={className}
           onKeyDown={onKeyDown}
