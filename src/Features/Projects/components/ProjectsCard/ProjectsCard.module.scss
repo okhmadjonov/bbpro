@@ -43,12 +43,13 @@
   }
 
   &__image {
-    width: 350px !important;
-    height: 150px !important;
+    width: 100% !important;
+    height: 30vh;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: 0.3s;
+    margin-bottom: 20px;
     @media (max-width: 768px) {
       max-width: 336px !important;
     }
