@@ -22,7 +22,6 @@ const Navbar = () => {
   );
 
   const navLinks = [
-    // { link: "/about", key: "GlobalKeyWords.about" },
     { link: "/service", key: "GlobalKeyWords.service" },
     { link: "/project", key: "GlobalKeyWords.project" },
     { link: "/info", key: "GlobalKeyWords.info" },
@@ -126,7 +125,6 @@ const Navbar = () => {
               </div>
               <div className={styles.navbar__icons}>
                 <Link target="_blank" href="https://www.facebook.com/">
-               
                   <Image src={facebook} alt="Facebook Icon" />
                 </Link>
 
@@ -188,7 +186,6 @@ const Navbar = () => {
             </ul>
             <div className={styles.navbar__icons}>
               <Link target="_blank" href="https://www.facebook.com/">
-             
                 <Image src={facebook} alt="Facebook Icon" />
               </Link>
 
