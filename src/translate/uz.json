@@ -98,8 +98,6 @@
     "AboutSlider": "Kompaniya rasmlari",
     "Orders": "Arizalar",
     "Name": "Ismi",
-    "Phone": "Telefon raqami",
-    "Email": "Email",
     "Message": "Xabar",
     "close": "Chiqish"
   },
@@ -112,7 +110,13 @@
   },
 
   "ADVAN": {
-    "title": "Afzalliklari"
+    "title": "Afzalliklari",
+    "left_one": "Yuqori malakali muhandislarning shaxsiy tarkibi",
+    "left_two": "Mahalliy bozorga jahonning eng yaxshi IT tajribalarini joriy etish bo'yicha 10 yillik tajriba",
+    "left_three": "Yagona integratordan yetkazib berish va o'rnatish",
+    "right_one": "Infratuzilma loyihalarini amalga oshirish bo'yicha xizmatlarning to'liq to'plami",
+    "right_two": "Loyiha hujjatlarini har tomonlama ishlab chiqish va ekspert yordami",
+    "right_three": "Sotishdan oldingi va sotishdan keyingi yordam"
   },
   "AboutCompany": {
     "title": "Korxona haqida"
