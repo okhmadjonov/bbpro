@@ -67,8 +67,6 @@
     "Fullname": "Full Name",
     "OurTeamPage": "Our Team Page",
     "Address": "Address",
-    "Phone": "Phone",
-    "Email": "Email",
     "WorkDay": "Work Day",
     "Weekend": "Weekend",
     "LocationPage": "Location Page",
@@ -98,7 +96,7 @@
     "Phone": "Phone",
     "Email": "Email",
     "Message": "Message",
-    "close":"Exit"
+    "close": "Exit"
   },
   "BRANDS": {
     "brands": "Our sponsors"
@@ -109,7 +107,13 @@
   },
 
   "ADVAN": {
-    "title": "Advantages"
+    "title": "Advantages",
+    "left_one": "Our own staff of highly qualified engineers",
+    "left_two": "10 years of experience in implementing the best global IT practices in the local market",
+    "left_three": "Supply and installation from a single integrator",
+    "right_one": "A full range of services for the implementation of infrastructure projects",
+    "right_two": "Comprehensive development and expert support of project documentation",
+    "right_three": "Pre-sale and Post-sale support"
   },
   "AboutCompany": {
     "title": "About company"
