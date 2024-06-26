@@ -5,22 +5,17 @@ import en from "../translate/en.json";
 import uz from "../translate/uz.json";
 import { useRouter } from "next/router";
 
-interface IntlWrapperProviderProps {
+interface intlWrapperProviderProps {
   children: React.ReactNode;
 }
 
-const IntlWrapperProvider = ({ children }: IntlWrapperProviderProps) => {
+const IntlWrapperProvider = ({ children }: intlWrapperProviderProps) => {
   const router = useRouter();
-  const { locale } = router;
-  const defaultLocale = "ru";
-
-  const currentLocale = locale || defaultLocale;
-
-  const messages =
-    currentLocale === "ru" ? ru : currentLocale === "uz" ? uz : en;
+  const locale = router.locale || "ru";
+  const message = locale === "uz" ? uz : locale === "en" ? en : ru;
 
   return (
-    <IntlProvider messages={messages} locale={defaultLocale}>
+    <IntlProvider messages={message} locale={locale}>
       {children}
     </IntlProvider>
   );

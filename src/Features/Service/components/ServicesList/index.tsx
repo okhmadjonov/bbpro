@@ -22,7 +22,7 @@ interface ServiceListProps {
 
 const ServicesList = ({ catalogCategory, initialDataId }: ServiceListProps) => {
   const t = useTranslations("");
-  const locale: string = useLocale();
+  const locale = useLocale();
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [currentCatrgoryId, setCurrentCatrgoryId] = useState(initialDataId);
   const [catrgoryData, setCatrgoryData] = useState({
