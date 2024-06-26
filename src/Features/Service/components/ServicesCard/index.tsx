@@ -63,7 +63,11 @@ const ServicesCard = ({
 
   return (
     <>
-      <div className={styles.newproductscard} data-aos="fade-up">
+      <div
+        className={styles.newproductscard}
+        data-aos="fade-up"
+        // style={{ backgroundImage: `url(${Telecom.src})` }}
+      >
         <div className={styles.newproducts__inner}>
           <div className={styles.newproductscard__image}>
             <Image

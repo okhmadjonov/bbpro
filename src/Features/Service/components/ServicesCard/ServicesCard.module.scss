@@ -7,7 +7,6 @@
   max-width: 100% !important;
   height: 100% !important;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
-
   @media (max-width: 768px) {
     padding: 14px;
   }
@@ -22,7 +21,7 @@
   }
   &__title {
     font-family: "RG-StandardBold";
-    margin-bottom: 12px;
+    margin: 12px 0px 10px;
     font-size: 1.125rem;
     font-weight: 500;
     line-height: 1.5rem;
@@ -47,7 +46,6 @@
     align-items: center;
     justify-content: center;
     transition: 0.3s;
-    margin-bottom: 20px;
     margin: 0 auto;
 
     @media screen and (max-width: 360px) {
@@ -86,6 +84,11 @@
 
 .newproductscard:hover {
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+  background-image: url("../../../../Assets/Images/cardback.jpg");
+  background-size: cover;
+  background-position: center;
+ 
+
   .newproductscard__image {
     img {
       transform: scale(1.05);
@@ -93,13 +96,18 @@
   }
 
   .newproductscard__title {
-    color: var(--btn-color);
+    color: white;
+  }
+  .newproductscard__text {
+    color: white;
+    opacity: 1;
   }
 
   button {
-    border: 1px solid var(--btn-color) !important;
+    border: 1px solid white !important;
+
     span {
-      color: var(--btn-color) !important;
+      color: white;
     }
   }
 }

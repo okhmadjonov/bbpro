@@ -37,8 +37,9 @@ import AboutComp from "./cscu2.png";
 
 /*-----------------------------Login----------------------------*/
 import LoginAdmin from "./loginadmin.jpg";
-
+import cardback from "./cardback.jpg";
 export {
+  cardback,
   AboutComp,
   chevronDown,
   back1,
