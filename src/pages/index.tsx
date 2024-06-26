@@ -59,7 +59,7 @@ export default function Home({
   const t = useTranslations();
 
   return (
-    <IntlWrapperProvider>
+    <>
       <Head>
         <title>Big Box Pro</title>
       </Head>
@@ -71,7 +71,7 @@ export default function Home({
   
       <Brends brands={brands} />
       <Order />
-    </IntlWrapperProvider>
+    </>
   );
 }
 
