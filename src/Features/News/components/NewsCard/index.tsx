@@ -6,13 +6,11 @@ import { useTranslations } from "next-intl";
 import styles from "./NewsCard.module.scss";
 import Link from "next/link";
 import { BASE_URL } from "@/services/api";
-import { back1 } from "@/Assets/Images";
 
 const NewsCard = (props: NewCardProps) => {
   const { data, index, locale } = props;
   const t = useTranslations("");
-  const [truncate, setTruncate] = useState("");
-
+  const [trancate, setTrancate] = useState("");
   useEffect(() => {
     const changedSize = () => {
       const screenWidth = window.innerWidth;
@@ -31,7 +29,7 @@ const NewsCard = (props: NewCardProps) => {
       const truncateText =
         description.slice(0, maxLength) +
         (description.length > maxLength ? "..." : "");
-      setTruncate(truncateText);
+      setTrancate(truncateText);
     };
 
     changedSize();
@@ -39,42 +37,37 @@ const NewsCard = (props: NewCardProps) => {
     window.addEventListener("resize", changedSize);
 
     return () => {
-      window.removeEventListener("resize", changedSize);
+      window.addEventListener("resize", changedSize);
     };
   }, [data.description, locale]);
 
-  const backgroundImages = [back1];
-  const backgroundImage = backgroundImages[index % backgroundImages.length];
-
   return (
-    <div
-      className={styles.newscard}
-      data-aos="fade-up"
-      // style={{ backgroundImage: `url(${backgroundImage.src})` }}
-    >
-      <div className={styles.newproducts__inner}>
-        <div className={styles.newscard__image}>
-          <Image
-            src={`${BASE_URL}/${data?.imageUrl}`}
-            alt="img"
-            width={336}
-            height={248}
-          />
+    <>
+      <div className={styles.newscard} data-aos="fade-up">
+        <div className={styles.newproducts__inner}>
+          <div className={styles.newscard__image}>
+            <Image
+              src={`${BASE_URL}/${data?.imageUrl}`}
+              alt="img"
+              width={336}
+              height={248}
+            />
+          </div>
+
+          <h2 className={styles.newscard__title}>
+            {data.title[locale as keyof LocaleStringsInterface]}
+          </h2>
+
+          <p className={styles.newscard__text}>{trancate}</p>
         </div>
 
-        <h2 className={styles.newscard__title}>
-          {data.title[locale as keyof LocaleStringsInterface]}
-        </h2>
-
-        <p className={styles.newscard__text}>{truncate}</p>
+        <Link href={`info/${data.id}`}>
+          <button className={styles.newscard__btn}>
+            {t("GlobalKeyWords.btn_text")} <SvgSelector id="nextgreen-svg" />
+          </button>
+        </Link>
       </div>
-
-      <Link href={`info/${data.id}`}>
-        <button className={styles.newscard__btn}>
-          {t("GlobalKeyWords.btn_text")} <SvgSelector id="nextgreen-svg" />
-        </button>
-      </Link>
-    </div>
+    </>
   );
 };
 
