@@ -47,7 +47,7 @@
     justify-content: center;
     transition: 0.3s;
     margin: 0 auto;
-
+  
     @media screen and (max-width: 360px) {
       max-width: 336px !important;
       margin: 0 auto;
@@ -87,7 +87,6 @@
   background-image: url("../../../../Assets/Images/cardback.jpg");
   background-size: cover;
   background-position: center;
- 
 
   .newproductscard__image {
     img {

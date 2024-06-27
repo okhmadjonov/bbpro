@@ -240,10 +240,10 @@ export interface AboutInterface {
   updatedAt: string;
 }
 
-export interface OrderModalInterface{
-  id:number,
-  Name:string,
-  Phone:string,
-  Email: string,
-  Message:string
+export interface OrderModalInterface {
+  id: number;
+  Name: string;
+  Phone: string;
+  Email: string;
+  Message: string;
 }
