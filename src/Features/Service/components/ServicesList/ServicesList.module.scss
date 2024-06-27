@@ -1,4 +1,46 @@
 .products_list {
+  .labelCard {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .labelItem {
+    width: calc(33.33% - 20px);
+    margin: 5px;
+    padding: 5px 10px;
+    min-height: 60px;
+    background-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    font-size: 1rem;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: all ease-in-out 0.3s;
+
+    &:hover {
+      background-color: var(--btn-hover);
+      color: white;
+      transition: all ease-in-out 0.3s;
+    }
+
+    &.active {
+      background-color: var(--btn-hover);
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      width: calc(50% - 20px);
+    }
+
+    @media (max-width: 360px) {
+      width: calc(100% - 20px);
+      margin: 5px 0;
+    }
+  }
   .products_list__cards {
     display: grid;
     align-items: center;

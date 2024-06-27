@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ServicesCard from "../ServicesCard/index";
 import styles from "./ServicesList.module.scss";
-import { Tabs } from "antd";
+import { Tabs, Card } from "antd";
 
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
@@ -24,8 +24,8 @@ const ServicesList = ({ catalogCategory, initialDataId }: ServiceListProps) => {
   const t = useTranslations("");
   const locale = useLocale();
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const [currentCatrgoryId, setCurrentCatrgoryId] = useState(initialDataId);
-  const [catrgoryData, setCatrgoryData] = useState({
+  const [currentCategoryId, setCurrentCategoryId] = useState(initialDataId);
+  const [categoryData, setCategoryData] = useState({
     items: [],
     totalItems: 0,
   });
@@ -33,15 +33,17 @@ const ServicesList = ({ catalogCategory, initialDataId }: ServiceListProps) => {
   const pagination = (page: number) => {
     setCurrentPage(page);
   };
+
   const onChange = (key: any) => {
     setCurrentPage(1);
-    setCurrentCatrgoryId(key);
+    setCurrentCategoryId(key);
     appendData({ pageIndex: 1, pageSize: 12, id: key });
   };
+
   useEffect(() => {
-    if (typeof currentCatrgoryId !== "number") return;
-    appendData({ pageIndex: currentPage, pageSize: 12, id: currentCatrgoryId });
-  }, [currentPage, currentCatrgoryId]);
+    if (typeof currentCategoryId !== "number") return;
+    appendData({ pageIndex: currentPage, pageSize: 12, id: currentCategoryId });
+  }, [currentPage, currentCategoryId]);
 
   const { appendData, isLoading } = useQueryApiClient({
     request: {
@@ -50,45 +52,43 @@ const ServicesList = ({ catalogCategory, initialDataId }: ServiceListProps) => {
       disableOnMount: true,
     },
     onSuccess(res) {
-      setCatrgoryData(res.data);
+      setCategoryData(res.data);
       smoothScroll("top", 0);
     },
   });
 
   return (
     <div className={styles.products_list} data-aos="fade-up">
-      <Tabs
-        defaultActiveKey="Software"
-        items={catalogCategory?.map((item) => ({
-          key: item.id,
-          label: item.title[locale as keyof LocaleStringsInterface],
-          children: (
-            <div className={styles.products_list__cards}>
-              {catrgoryData?.items?.map(
-                (el: ServiceListInterface, index: number) => {
-                  return (
-                    <ServicesCard
-                      id={el.id}
-                      key={index}
-                      index={index}
-                      description={el.description}
-                      title={el.title}
-                      imageUrl={el.imageUrl}
-                    />
-                  );
-                }
-              )}
-            </div>
-          ),
-        }))}
-        onChange={onChange}
-      />
-
+      <div className={styles.labelCard}>
+        {catalogCategory.map((item) => (
+          <span
+            key={item.id}
+            className={`${styles.labelItem} ${
+              currentCategoryId === item.id ? styles.active : ""
+            }`}
+            onClick={() => onChange(item.id)}
+          >
+            {item.title[locale as keyof LocaleStringsInterface]}
+          </span>
+        ))}
+      </div>
+      <div className={styles.products_list__cards}>
+        {categoryData.items.map((el: ServiceListInterface, index: number) => (
+          <ServicesCard
+            id={el.id}
+            key={index}
+            index={index}
+            description={el.description}
+            title={el.title}
+            imageUrl={el.imageUrl}
+          />
+        ))}
+      </div>
       <Pagination
         className="pagination_product_list"
         current={currentPage}
         pageSize={12}
-        total={catrgoryData?.totalItems}
+        total={categoryData.totalItems}
         onChange={pagination}
         prevIcon={prevIcon.src}
         nextIcon={nextIcon.src}

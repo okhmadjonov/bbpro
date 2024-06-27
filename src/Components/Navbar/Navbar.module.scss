@@ -355,3 +355,32 @@
 .disableScrollHtml {
   overflow: hidden;
 }
+
+/*------------------------------------------------*/
+/* Navbar.module.scss */
+.navItem {
+  position: relative;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  display: none;
+  z-index: 1000;
+}
+
+.dropdownMenu .dropdownItem {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdownMenu .dropdownItem:hover {
+  background-color: #f0f0f0;
+}
+
+.navItem:hover .dropdownMenu {
+  display: block;
+}
