@@ -19,7 +19,18 @@
     "order": "Send",
     "order_btn": "Apply order",
     "order_title": "Didn't find a solution for yourself?",
-    "order_subtitle": "Submit an application and our manager will contact you and choose an individual solution for you!"
+    "order_subtitle": "Submit an application and our manager will contact you and choose an individual solution for you!",
+    "order_success": "Your order has been successfully sent.",
+    "order_error": "Unable to save the order.",
+    "order_name": "Name",
+    "order_name_message": "Please enter your name",
+    "order_phone": "Phone",
+    "order_phone_message": "Please enter your phone number",
+    "order_phone_place": "Enter phone number without country code",
+    "order_email": "Email",
+    "order_email_message": "Please enter a valid email address",
+    "order_message": "Message",
+    "order_message_message": "Please enter your message"
   },
   "LOGIN": {
     "title": "Login",

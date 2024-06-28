@@ -64,7 +64,7 @@ export const ContactInfoModal: React.FC<Props> = ({
               <Link href="/">
                 <button className={styles.number__btn}>
                   <SvgSelector id="contact_info_phone_svg" />
-                  +99 (890) 000-00-00
+                  +99 (899) 860-00-57
                 </button>
               </Link>
 

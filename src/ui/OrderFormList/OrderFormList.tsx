@@ -16,11 +16,11 @@ const OrderFormList = () => {
       method: "POST",
     },
     onSuccess(res) {
-      message.success("Ваш заказ успешно отправлен.");
+      message.success(t("order_success"));
       form.resetFields();
     },
     onError(err) {
-      message.error(err.message || "Не удалось сохранить заказ.");
+      message.error(err.message || t("order_error"));
     },
   });
 
@@ -44,11 +44,11 @@ const OrderFormList = () => {
       >
         <Form.Item
           name="name"
-          label="Name"
+          label={t("order_name")}
           rules={[
             {
               required: true,
-              message: "Please enter your name",
+              message: t("order_name_message"),
             },
           ]}
           validateStatus={
@@ -68,12 +68,12 @@ const OrderFormList = () => {
 
         <Form.Item
           name="phone"
-          label="Phone"
+          label={t("order_phone")}
           initialValue=""
           rules={[
             {
               required: true,
-              message: "Please enter your phone number",
+              message: t("order_phone_message"),
             },
           ]}
           validateStatus={
@@ -92,18 +92,18 @@ const OrderFormList = () => {
             addonBefore="+998"
             style={{ width: "100%" }}
             maxLength={9}
-            placeholder="Enter phone number without country code"
+            placeholder={t("order_phone_place")}
           />
         </Form.Item>
 
         <Form.Item
           name="email"
-          label="Email"
+          label={t("order_email")}
           rules={[
             {
               required: true,
               type: "email",
-              message: "Please enter a valid email address",
+              message: t("order_email_message"),
             },
           ]}
           validateStatus={
@@ -123,11 +123,11 @@ const OrderFormList = () => {
 
         <Form.Item
           name="message"
-          label="Message"
+          label={t("order_message")}
           rules={[
             {
               required: true,
-              message: "Please enter your message",
+              message: t("order_message_message"),
             },
           ]}
           validateStatus={

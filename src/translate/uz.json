@@ -20,7 +20,18 @@
     "order": "Yuborish",
     "order_btn": "Ariza qoldirish",
     "order_title": "O'zingiz uchun yechim topmadingizmi?",
-    "order_subtitle": "Ariza qoldiring va menejerimiz siz bilan bog'lanadi va siz uchun individual echimni tanlaydi!"
+    "order_subtitle": "Ariza qoldiring va menejerimiz siz bilan bog'lanadi va siz uchun individual echimni tanlaydi!",
+    "order_success": "Buyurtmangiz muvaffaqiyatli yuborildi.",
+    "order_error": "Buyurtmani saqlab bo'lmadi.",
+    "order_name": "Ism",
+    "order_name_message": "Iltimos, ismingizni kiriting",
+    "order_phone": "Telefon",
+    "order_phone_message": "Telefon raqamingizni kiriting",
+    "order_phone_place": "Telefon raqamini mamlakat kodisiz kiriting",
+    "order_email": "Elektron pochta",
+    "order_email_message": "Iltimos, to'g'ri elektron pochta manzilini kiriting",
+    "order_message": "Xabar",
+    "order_message_message": "Iltimos, xabaringizni kiriting"
   },
 
   "LOGIN": {

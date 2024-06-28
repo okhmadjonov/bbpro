@@ -15,7 +15,6 @@ const Footer = () => {
         <div className="container">
           <div className={styles.footer__top_mobile}>
             <div>
-              {/* <Link href={"/about"}>{t("GlobalKeyWords.about")}</Link> */}
               <Link href={"/service"}>{t("GlobalKeyWords.service")}</Link>
               <Link href={"/project"}>{t("GlobalKeyWords.project")}</Link>
               <Link href={"/contact"}>{t("GlobalKeyWords.contact")}</Link>
