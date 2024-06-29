@@ -40,13 +40,14 @@ const ProjectList = ({ projectlist }: ProjectListProps) => {
 
   return (
     <div className={styles.projectslist}>
-      <div className={styles.projectslist__about}>
+      <div className={styles.projects_list__cards}>
         {projectsDataState?.data?.map((data, index) => (
           <ProjectsCard key={index} index={index} data={data} locale={locale} />
         ))}
       </div>
       <div>
         <Pagination
+         className="pagination_product_list"
           total={projectsDataState.totalItems}
           pageSize={12}
           current={currentPage}

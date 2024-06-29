@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import { Button } from "@/ui/index";
 import SvgSelector from "@/Assets/Icons/SvgSelector";
 import {
   LocaleStringsInterface,
@@ -63,12 +64,17 @@ const ProjectsCard = (props: ProjectCardProps) => {
 
         <p className={styles.projectscard__text}>{truncate}</p>
       </div>
-
-      <Link href={`project/${data.id}`}>
-        <button className={styles.projectscard__btn}>
-          {t("GlobalKeyWords.btn_text")} <SvgSelector id="nextgreen-svg" />
-        </button>
-      </Link>
+      <div className={styles.btn_block}>
+        <Link href={`project/${data.id}`}>
+          <Button
+            type="default"
+            label={t("GlobalKeyWords.btn_text")}
+            iconId="nextgreen-svg"
+            iconPosition="right"
+            size="middle"
+          />
+        </Link>
+      </div>
     </div>
   );
 };

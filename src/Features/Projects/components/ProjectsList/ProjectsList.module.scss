@@ -1,20 +1,33 @@
 .projectslist {
-  &__about {
+  .projects_list__cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
     gap: 32px;
-    margin-bottom: 20px;
-    justify-content: center !important;
-    align-items: center !important;
-    @media screen and (max-width: 1600px) {
-      grid-template-columns: repeat(3, 1fr);
-    }
-    @media screen and (max-width: 1250px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .pagination__product_list {
+    padding-bottom: 108px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projectslist {
+    .projects_list__cards {
       grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      padding-top: 24px;
+      padding-bottom: 20px;
     }
-    @media screen and (max-width: 650px) {
-      display: flex;
-      flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .projectslist {
+    .projects_list__cards {
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 }
