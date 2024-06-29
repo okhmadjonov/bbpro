@@ -26,7 +26,8 @@ const Navbar = () => {
     { link: "/project", key: "GlobalKeyWords.project" },
     { link: "/info", key: "GlobalKeyWords.info" },
     { link: "/contact", key: "GlobalKeyWords.contact" },
-    { link: "/challenge", key: "GlobalKeyWords.challenge" },
+    // { link: "/challenge", key: "GlobalKeyWords.challenge" },
+    { link: "/challenge", key: "GlobalKeyWords.mero" },
   ];
 
   const showModal = () => {

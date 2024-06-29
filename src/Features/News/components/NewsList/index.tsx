@@ -43,13 +43,14 @@ const NewList = ({ newlist }: NewListProps) => {
 
   return (
     <div className={styles.newslist}>
-      <div className={styles.newslist__about}>
+      <div className={styles.news_list__cards}>
         {newsDataState?.data?.map((data, index) => (
           <NewsCard key={index} index={index} data={data} locale={locale} />
         ))}
       </div>
       <div>
         <Pagination
+          className="pagination__product_list"
           total={newsDataState.totalItems}
           pageSize={12}
           current={currentPage}

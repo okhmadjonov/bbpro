@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import styles from "./NewsCard.module.scss";
 import Link from "next/link";
 import { BASE_URL } from "@/services/api";
+import { Button } from "@/ui/index";
 
 const NewsCard = (props: NewCardProps) => {
   const { data, index, locale } = props;
@@ -61,11 +62,17 @@ const NewsCard = (props: NewCardProps) => {
           <p className={styles.newscard__text}>{trancate}</p>
         </div>
 
-        <Link href={`info/${data.id}`}>
-          <button className={styles.newscard__btn}>
-            {t("GlobalKeyWords.btn_text")} <SvgSelector id="nextgreen-svg" />
-          </button>
-        </Link>
+        <div className={styles.btn_block}>
+          <Link href={`info/${data.id}`}>
+            <Button
+              type="default"
+              label={t("GlobalKeyWords.btn_text")}
+              iconId="nextgreen-svg"
+              iconPosition="right"
+              size="middle"
+            />
+          </Link>
+        </div>
       </div>
     </>
   );

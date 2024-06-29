@@ -149,6 +149,7 @@
   }
 
   &__navs {
+    min-width: 200px;
     display: flex;
     align-items: start;
     flex-direction: column;

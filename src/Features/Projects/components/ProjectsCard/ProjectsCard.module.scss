@@ -12,36 +12,33 @@
     max-width: 387px !important;
   }
 
+  a {
+    display: block;
+    width: 180px;
+  }
   &__inner {
     display: flex;
     flex-direction: column;
   }
 
   &__title {
-    margin: 12px 10px 0px 0px;
+    font-family: "RG-StandardBold";
+    margin: 12px 0px 10px;
     font-size: 1.125rem;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.5rem;
     letter-spacing: 0em;
     text-align: left;
-    font-family: "RG-StandardBold";
-    color: var(--black-color);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
 
   &__text {
-    margin: 12px 0px 0px 0px;
+    opacity: 0.5;
+    padding-bottom: 8px;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5rem;
     letter-spacing: 0em;
     text-align: left;
-    color: var(--black-color);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
 
   &__image {
@@ -51,7 +48,6 @@
     align-items: center;
     justify-content: center;
     transition: 0.3s;
-    margin-bottom: 20px;
     margin: 0 auto;
 
     @media screen and (max-width: 360px) {
@@ -78,38 +74,11 @@
       height: 100% !important;
     }
   }
-  a {
-    text-decoration: none;
-    list-style: none;
-  }
-  &__btn {
-    color: var(--black-color);
-    background: none;
-    border-radius: 8px;
-    font-size: 16px;
-    margin: 12px 0px 0px 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    min-width: 164px;
-    white-space: nowrap;
-    min-height: 48px;
-    padding: 0px 16px;
-    font-weight: 600;
-    line-height: 1.5rem;
-    letter-spacing: 0.2px;
-    border: none;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-
-    @media screen and (max-width: 768px) {
-      width: 100%;
-    }
-
-    svg {
-      min-width: 24px;
-      min-height: 24px;
-      fill: #000;
+  .btn_block {
+    a {
+      @media (max-width: 768px) {
+        width: 100% !important;
+      }
     }
   }
 }
