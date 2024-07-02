@@ -1,52 +1,39 @@
+# Use an official Node.js LTS (Long Term Support) version as the base image
 FROM node:18-alpine AS base
 
-FROM base AS deps
-RUN apk add --no-cache libc6-compat
+# Set the working directory
 WORKDIR /app
 
-COPY package.json yarn.lock* package-lock.json* pnpm-lock.yaml* ./
-RUN \
-  if [ -f yarn.lock ]; then yarn --frozen-lockfile; \
-  elif [ -f package-lock.json ]; then npm ci; \
-  elif [ -f pnpm-lock.yaml ]; then corepack enable pnpm && pnpm i --frozen-lockfile; \
-  else echo "Lockfile not found." && exit 1; \
-  fi
+# Install dependencies
+COPY package.json .
+COPY yarn.lock .
+RUN yarn install --frozen-lockfile --production=true
 
-
+# Build the application
 FROM base AS builder
+
+# Set the working directory
 WORKDIR /app
-COPY --from=deps /app/node_modules ./node_modules
+
+# Copy the source code
 COPY . .
 
+# Build the Next.js application
+RUN yarn build
 
+# Final production image
+FROM node:18-alpine AS production
 
-RUN \
-  if [ -f yarn.lock ]; then yarn run build; \
-  elif [ -f package-lock.json ]; then npm run build; \
-  elif [ -f pnpm-lock.yaml ]; then corepack enable pnpm && pnpm run build; \
-  else echo "Lockfile not found." && exit 1; \
-  fi
-
-FROM base AS runner
+# Set the working directory
 WORKDIR /app
 
-ENV NODE_ENV production
-
-RUN addgroup --system --gid 1001 nodejs
-RUN adduser --system --uid 1001 nextjs
-
+# Copy only necessary files from previous stages
+COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/public ./public
+COPY --from=base /app/node_modules ./node_modules
 
-RUN mkdir .next
-RUN chown nextjs:nodejs .next
-
-COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
-COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
-
-USER nextjs
-
+# Expose the port Next.js is running on
 EXPOSE 3000
 
-ENV PORT 3000
-
-CMD HOSTNAME="0.0.0.0" node server.js
+# Start the Next.js application
+CMD ["yarn", "start"]
