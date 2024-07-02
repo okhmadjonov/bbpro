@@ -1,39 +1,39 @@
-# Use an official Node.js LTS (Long Term Support) version as the base image
+# Use node:18-alpine as the base image
 FROM node:18-alpine AS base
 
-# Set the working directory
+# Set the working directory inside the container
 WORKDIR /app
+
+# Copy only the package.json file to install dependencies
+COPY package.json .
 
 # Install dependencies
-COPY package.json .
-COPY yarn.lock .
-RUN yarn install --frozen-lockfile --production=true
+RUN npm install --only=production
 
-# Build the application
+# Use a new stage for the builder
 FROM base AS builder
 
-# Set the working directory
-WORKDIR /app
-
-# Copy the source code
+# Copy the rest of the application code
 COPY . .
 
-# Build the Next.js application
-RUN yarn build
+# Run the build script (assuming it's defined in package.json scripts)
+RUN npm run build
 
-# Final production image
+# Use node:18-alpine as the production image
 FROM node:18-alpine AS production
 
-# Set the working directory
+# Set the working directory inside the container
 WORKDIR /app
 
-# Copy only necessary files from previous stages
+# Copy built assets from the builder stage
 COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/public ./public
+
+# Copy node_modules from the base stage (already installed dependencies)
 COPY --from=base /app/node_modules ./node_modules
 
-# Expose the port Next.js is running on
+# Expose port 3000 (assuming your application listens on this port)
 EXPOSE 3000
 
-# Start the Next.js application
-CMD ["yarn", "start"]
+# Define the command to run your application
+CMD ["npm", "start"]
