@@ -26,7 +26,10 @@ const ProjectDetails = ({ projectsDetail }: Props) => {
       />
       <div className={styles.details}>
         <h2>{projectsDetail?.title[locale as keyof LocaleStringsInterface]}</h2>
-        <Link className={styles.downloadLink} href="#">
+        <Link
+          className={styles.downloadLink}
+          href={projectsDetail.downloadLink.en}
+        >
           {t("downloadLink")}
         </Link>
         <p

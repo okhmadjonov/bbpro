@@ -89,7 +89,6 @@ const EditPage = ({
             });
           }
         } else if (typeof value === "object") {
-          // Process non-array objects as usual
           for (const lang in value) {
             if (Object.prototype.hasOwnProperty.call(value, lang)) {
               formData.append(`${key}.${lang}`, value[lang]);

@@ -14,7 +14,6 @@ import folder from "./folder-2.svg";
 import location from "./location.svg";
 import people from "./people.svg";
 import BrandsAdminIcon from "./tag.svg";
-import ct from "./cyberthread.jpeg";
 import category from "./category-2.svg";
 import CompanyIcon from "./company_icon.svg";
 import facebook from "./facebook.png";
@@ -32,8 +31,6 @@ import PhotoGallerySlide8 from "./PhotoGallery/8.jpg";
 import leftIcon from "./leftIcon.png";
 import rightIcon from "./rightIcon.png";
 import chevronDown from "./chevron-down.png";
-import AboutComp from "./cscu2.png";
-
 /*----------------------------------Projects-------------------------------------*/
 
 import p1 from "./projects/p1.png";
@@ -57,13 +54,9 @@ import p18 from "./projects/p18.jpg";
 
 /*-----------------------------Login----------------------------*/
 import LoginAdmin from "./loginadmin.jpg";
-import cardback from "./cardback.jpg";
 
 export {
-  cardback,
-  AboutComp,
   chevronDown,
- 
   facebook,
   instagram,
   telegram,
@@ -84,7 +77,6 @@ export {
   location,
   people,
   BrandsAdminIcon,
-  ct,
   category,
   CompanyIcon,
 

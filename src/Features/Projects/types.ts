@@ -5,6 +5,7 @@ export interface ProjectsData {
   imageUrl: string;
   title: LocaleStringsInterface;
   description: LocaleStringsInterface;
+  downloadLink: LocaleStringsInterface;
   createdAt: string;
   updatedAt: string;
 }

@@ -108,7 +108,8 @@
     "Phone": "Phone",
     "Email": "Email",
     "Message": "Message",
-    "close": "Exit"
+    "close": "Exit",
+    "downloadLink": "Download link"
   },
   "BRANDS": {
     "brands": "Our sponsors"
@@ -131,7 +132,7 @@
     "title": "About company"
   },
 
-  "Projects":{
-    "downloadLink":"Download link"
+  "Projects": {
+    "downloadLink": "Download link"
   }
 }

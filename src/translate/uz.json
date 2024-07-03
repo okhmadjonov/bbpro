@@ -5,7 +5,7 @@
     "project": "Proyektlar",
     "contact": "Aloqa",
     "challenge": "Musobaqalar",
-    "mero":"Bizning tadbirlarimiz",
+    "mero": "Bizning tadbirlarimiz",
     "about": "Kompaniya haqida",
     "address": "Manzil",
     "info": "Yangiliklar",
@@ -110,7 +110,8 @@
     "Orders": "Arizalar",
     "Name": "Ismi",
     "Message": "Xabar",
-    "close": "Chiqish"
+    "close": "Chiqish",
+    "downloadLink": "Yuklab Olish havolasi"
   },
   "BRANDS": {
     "brands": "Bizning hamkorlarimiz"
@@ -132,7 +133,7 @@
   "AboutCompany": {
     "title": "Korxona haqida"
   },
-  "Projects":{
-    "downloadLink":"Yuklab Olish havolasi"
+  "Projects": {
+    "downloadLink": "Yuklab Olish havolasi"
   }
 }
