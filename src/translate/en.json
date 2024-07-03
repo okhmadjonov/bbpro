@@ -129,5 +129,9 @@
   },
   "AboutCompany": {
     "title": "About company"
+  },
+
+  "Projects":{
+    "downloadLink":"Download link"
   }
 }

@@ -1,16 +1,19 @@
 import React from "react";
 import styles from "./ProjectDetails.module.scss";
 import Image from "next/image";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { LocaleStringsInterface } from "@/Components/Types";
 import { BASE_URL } from "@/services/api";
 import { ProjectsData } from "../../types";
+import Link from "next/link";
 
 interface Props {
   projectsDetail: ProjectsData;
 }
 
 const ProjectDetails = ({ projectsDetail }: Props) => {
+  const t = useTranslations("Projects");
+
   const locale = useLocale();
   return (
     <div className={styles.projectdetails}>
@@ -22,19 +25,19 @@ const ProjectDetails = ({ projectsDetail }: Props) => {
         height={1000}
       />
       <div className={styles.details}>
-        <div className={styles.details_about}>
-          <h2>
-            {projectsDetail?.title[locale as keyof LocaleStringsInterface]}
-          </h2>
-          <div
-            dangerouslySetInnerHTML={{
-              __html:
-                projectsDetail.description[
-                  locale as keyof LocaleStringsInterface
-                ],
-            }}
-          ></div>
-        </div>
+        <h2>{projectsDetail?.title[locale as keyof LocaleStringsInterface]}</h2>
+        <Link className={styles.downloadLink} href="#">
+          {t("downloadLink")}
+        </Link>
+        <p
+          className={styles.description}
+          dangerouslySetInnerHTML={{
+            __html:
+              projectsDetail.description[
+                locale as keyof LocaleStringsInterface
+              ],
+          }}
+        ></p>
       </div>
     </div>
   );
