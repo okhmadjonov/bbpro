@@ -23,15 +23,14 @@ const ServiceDetails = ({ ssDetail }: Props) => {
         height={1000}
       />
       <div className={styles.details}>
-        <div className={styles.details_about}>
-          <h2>{ssDetail?.title[locale as keyof LocaleStringsInterface]}</h2>
-          <div
-            dangerouslySetInnerHTML={{
-              __html:
-                ssDetail.description[locale as keyof LocaleStringsInterface],
-            }}
-          ></div>
-        </div>
+        <h2>{ssDetail?.title[locale as keyof LocaleStringsInterface]}</h2>
+        <p
+          className={styles.description}
+          dangerouslySetInnerHTML={{
+            __html:
+              ssDetail.description[locale as keyof LocaleStringsInterface],
+          }}
+        ></p>
       </div>
     </div>
   );
