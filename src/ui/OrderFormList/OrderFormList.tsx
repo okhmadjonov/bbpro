@@ -146,7 +146,12 @@ const OrderFormList = () => {
         </Form.Item>
 
         <Form.Item>
-          <Button type="primary" htmlType="submit" label={t("order")} />
+          <Button
+            type="primary"
+            size="small"
+            htmlType="submit"
+            label={t("order")}
+          />
         </Form.Item>
       </Form>
     </div>
