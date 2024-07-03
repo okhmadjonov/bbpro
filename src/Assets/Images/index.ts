@@ -20,7 +20,6 @@ import CompanyIcon from "./company_icon.svg";
 import facebook from "./facebook.png";
 import instagram from "./instagram.png";
 import telegram from "./telegram.png";
-import back1 from "./back1.jpg";
 
 /**------------------------------PhotoGallery--------------------------------- */
 import PhotoGallerySlide1 from "./PhotoGallery/1.jpg";
@@ -35,20 +34,40 @@ import rightIcon from "./rightIcon.png";
 import chevronDown from "./chevron-down.png";
 import AboutComp from "./cscu2.png";
 
+/*----------------------------------Projects-------------------------------------*/
+
+import p1 from "./projects/p1.png";
+import p2 from "./projects/p2.jpg";
+import p3 from "./projects/p3.png";
+import p4 from "./projects/p4.jpg";
+import p5 from "./projects/p5.jpg";
+import p6 from "./projects/p6.jpg";
+import p7 from "./projects/p7.jpg";
+import p8 from "./projects/p8.jpg";
+import p9 from "./projects/p9.jpg";
+import p10 from "./projects/p10.jpg";
+import p11 from "./projects/p11.png";
+import p12 from "./projects/p12.jpg";
+import p13 from "./projects/p13.png";
+import p14 from "./projects/p14.jpg";
+import p15 from "./projects/p15.jpg";
+import p16 from "./projects/p16.png";
+import p17 from "./projects/p17.png";
+import p18 from "./projects/p18.jpg";
+
 /*-----------------------------Login----------------------------*/
 import LoginAdmin from "./loginadmin.jpg";
 import cardback from "./cardback.jpg";
+
 export {
   cardback,
   AboutComp,
   chevronDown,
-  back1,
+ 
   facebook,
   instagram,
   telegram,
-  /**----------------- */
   LoginAdmin,
-  /* -------------------------- */
   en_flag,
   ru_flag,
   uz_flag,
@@ -79,5 +98,24 @@ export {
   PhotoGallerySlide8,
   leftIcon,
   rightIcon,
-  /**  ---------------photo gallery----------------- */
+
+  /**  ---------------Projects----------------- */
+  p1,
+  p2,
+  p3,
+  p4,
+  p5,
+  p6,
+  p7,
+  p8,
+  p9,
+  p10,
+  p11,
+  p12,
+  p13,
+  p14,
+  p15,
+  p16,
+  p17,
+  p18,
 };

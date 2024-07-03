@@ -85,9 +85,12 @@
 
 .projectscard:hover {
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
-  background-image: url("../../../../Assets/Images/cardback.jpg");
+  background-image: url("../../../../Assets/Images/bd.jpg");
+  background-repeat: no-repeat;
+  background-clip: inherit;
   background-size: cover;
   background-position: center;
+
 
   .projectscard__image {
     img {
