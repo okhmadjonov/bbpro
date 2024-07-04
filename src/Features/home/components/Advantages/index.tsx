@@ -23,24 +23,19 @@ const Advantages = () => {
           <div className={styles.advantages__left}>
             <div className={styles.advantages__item}>
               <span className={styles.item__icon}>
-                <Image src={team} alt="Team Image" width={40} height={40} />
+                <Image src={team} alt="Team Image" />
               </span>
               <p>{t("left_one")}</p>
             </div>
             <div className={styles.advantages__item}>
               <span className={styles.item__icon}>
-                <Image
-                  src={professor}
-                  alt="Team Image"
-                  width={40}
-                  height={40}
-                />
+                <Image src={professor} alt="Team Image" />
               </span>
               <p>{t("left_two")}</p>
             </div>
             <div className={styles.advantages__item}>
               <span className={styles.item__icon}>
-                <Image src={install} alt="Team Image" width={40} height={40} />
+                <Image src={install} alt="Team Image" />
               </span>
               <p>{t("left_three")}</p>
             </div>
@@ -48,24 +43,19 @@ const Advantages = () => {
           <div className={styles.advantages__right}>
             <div className={styles.advantages__item}>
               <span className={styles.item__icon}>
-                <Image
-                  src={renovation}
-                  alt="Team Image"
-                  width={40}
-                  height={40}
-                />
+                <Image src={renovation} alt="Team Image" />
               </span>
               <p>{t("right_one")}</p>
             </div>
             <div className={styles.advantages__item}>
               <span className={styles.item__icon}>
-                <Image src={docs} alt="Team Image" width={40} height={40} />
+                <Image src={docs} alt="Team Image" />
               </span>
               <p>{t("right_two")}</p>
             </div>
             <div className={styles.advantages__item}>
               <span className={styles.item__icon}>
-                <Image src={sale} alt="Team Image" width={40} height={40} />
+                <Image src={sale} alt="Team Image" />
               </span>
               <p>{t("right_three")}</p>
             </div>
