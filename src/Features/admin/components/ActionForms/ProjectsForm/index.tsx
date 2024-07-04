@@ -13,7 +13,7 @@ const ProjectsForm = ({ data }: Props) => {
     <div>
       <LanguageFormList listName="title" />
       <LanguageFormList inputType="textarea" listName="description" />
-      <LanguageFormList listName="downloadlink" />
+      <LanguageFormList listName="downloadLink" />
     </div>
   );
 };
