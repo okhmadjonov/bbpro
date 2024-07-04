@@ -54,8 +54,24 @@ import p18 from "./projects/p18.jpg";
 
 /*-----------------------------Login----------------------------*/
 import LoginAdmin from "./loginadmin.jpg";
+/*-----------------------------Advantages----------------------------*/
+import team from "./advantages/team.png";
+import professor from "./advantages/professor.png";
+import install from "./advantages/box.png";
+import renovation from "./advantages/renovation.png";
+import docs from "./advantages/folders.png";
+import sale from "./advantages/sale.png";
 
 export {
+  /*-------------------------Team-------------------------- */
+  team,
+  professor,
+  install,
+  renovation,
+  docs,
+  sale,
+
+  /*---------------------------------------------------------*/
   chevronDown,
   facebook,
   instagram,

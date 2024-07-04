@@ -31,7 +31,7 @@ const ProjectsPage = () => {
       ),
     },
     {
-      title: t("downloadLink"),
+      title: t("DownloadLink"),
       dataIndex: "downloadlink",
       key: "downloadlink",
       render: (text: string, record: any) => (
