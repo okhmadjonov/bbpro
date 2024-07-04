@@ -111,7 +111,7 @@
     "Name": "Ismi",
     "Message": "Xabar",
     "close": "Chiqish",
-    "DownloadLink": "Yuklab Olish havolasi"
+    "DownloadLink": "Yuklab olish havolasi"
   },
   "BRANDS": {
     "brands": "Bizning hamkorlarimiz"
@@ -134,6 +134,6 @@
     "title": "Korxona haqida"
   },
   "Projects": {
-    "downloadLink": "Yuklab Olish havolasi"
+    "downloadLink": "Bu yerdan yuklab oling yoki toʻliq tavsifni koʻring."
   }
 }
