@@ -19,6 +19,7 @@ const Edit = () => {
     },
     onSuccess(res) {
       setData(res.data);
+      console.log("One data: ", res.data);
     },
   });
 
