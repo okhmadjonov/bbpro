@@ -175,7 +175,7 @@ export const Table = ({
   };
 
   const updatedColumns = [
-    ...parsedColumns, // Include existing columns
+    ...parsedColumns,
     {
       dataIndex: "edit",
       key: "edit",
