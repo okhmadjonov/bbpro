@@ -48,7 +48,6 @@ const Footer = () => {
                 <Link href={"/project"}>{t("GlobalKeyWords.project")}</Link>
                 <Link href={"/info"}>{t("GlobalKeyWords.info")}</Link>
                 <Link href={"/contact"}>{t("GlobalKeyWords.contact")}</Link>
-                {/* <Link href={"/challenge"}>{t("GlobalKeyWords.challenge")}</Link> */}
                 <Link href={"/challenge"}>{t("GlobalKeyWords.mero")}</Link>
               </div>
             </div>
