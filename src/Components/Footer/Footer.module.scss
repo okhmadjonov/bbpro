@@ -124,7 +124,7 @@
   }
   &__navigation {
     padding-left: 10px;
-    box-shadow: 0 0px 4px 0 #05001f, 0 0px 0px 0;
+    // box-shadow: 0 0px 4px 0 #05001f, 0 0px 0px 0;
     @media (max-width: 768px) {
       display: none;
     }
@@ -176,7 +176,7 @@
 
   &__contact {
     padding-left: 10px;
-    box-shadow: 0 0px 4px 0 #05001f, 0 0px 0px 0;
+    // box-shadow: 0 0px 4px 0 #05001f, 0 0px 0px 0;
     h2 {
       font-size: 1.5rem;
       font-weight: 500;
