@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+
 const nextConfig = {
   output: "standalone",
   distDir: "build",
@@ -60,7 +61,7 @@ const nextConfig = {
         },
       },
     });
-
+  
     return config;
   },
 };
