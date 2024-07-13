@@ -60,8 +60,7 @@ const EditPage = ({
 
   const convertDataToFormData = (data: any) => {
     const formData = new FormData();
-    console.log("data: " + JSON.stringify(formData));
-
+  
     for (const key in data) {
       if (Object.prototype.hasOwnProperty.call(data, key)) {
         const value = data[key];
