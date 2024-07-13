@@ -1,6 +1,5 @@
 import GoToBack from "@/Components/GoToBack";
 import Loader from "@/Components/Loader/Loader";
-import { ServicesListResponseInterface } from "@/Components/Types";
 import { API, axiosHeadersSetToken } from "@/services/api";
 import dynamic from "next/dynamic";
 import Head from "next/head";
@@ -18,7 +17,6 @@ const PageTitle = dynamic(() => import("@/Components/PageTitle"), {
 });
 
 interface Props {
-  // servicelist: ServicesListResponseInterface;
   catalogCategory: any;
 }
 
@@ -46,10 +44,14 @@ export default function Service({ catalogCategory }: Props) {
 export const getServerSideProps = async (context: any) => {
   try {
     await axiosHeadersSetToken(context);
+
     const servicesListResponse = await API.getSolutionsList();
 
     const catalogCategoryResponse = await API.getCatalogCategory()
-      .then((res: any) => res.data)
+      .then((res: any) => {
+        return res.data;
+      })
+
       .catch((error: any) => {
         return { data: [] };
       });

@@ -43,7 +43,6 @@ axiosInstance.interceptors.response.use(
     const status = error.response?.status;
     if (typeof window !== "undefined") {
       if (status === 401) {
-        console.log("Run after api call", status);
         message.error(error?.message);
         setTimeout(() => {
           signOut({ redirect: true });
@@ -58,9 +57,7 @@ axiosInstance.interceptors.response.use(
 export const API = {
   //Home page
   postLogin: (data: any) =>
-    axiosInstance
-      .post("/Auth/login", data)
-      .then((res: any) => res && console.log(data)),
+    axiosInstance.post("/Auth/login", data).then((res: any) => res),
 
   //contact info
   getContact: () => axiosInstance.get("/Contact"),

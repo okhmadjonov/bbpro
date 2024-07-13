@@ -43,7 +43,7 @@ const AdminNav = ({ collapsed, setCollapsed }: Props) => {
    
     try {
       await signOut({ redirect: false });
-      console.log("Sign out successful, redirecting to login page");
+    
       router.push("/login");
     } catch (error) {
       console.error("Sign out error:", error);

@@ -154,6 +154,15 @@ export interface ServiceListInterface {
   createdAt: string;
   updatedAt: string;
 }
+
+export interface CategoryInterface {
+  id: number;
+  imageUrl: string;
+  title: LocaleStringsInterface;
+  createdAt: string;
+  updatedAt: string;
+}
+
 export interface NewServicesCardProps {
   description: LocaleStringsInterface;
   title: LocaleStringsInterface;
