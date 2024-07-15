@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./PhotoGallery.module.scss";
 import {
   PhotoGallerySlide1,
@@ -30,41 +30,49 @@ const PhotoGallery = () => {
 
     { image: PhotoGallerySlide8, id: 8 },
   ];
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 360);
+    };
+
+    handleResize(); 
+    window.addEventListener("resize", handleResize); 
+
+    return () => {
+      window.removeEventListener("resize", handleResize); 
+    };
+  }, []);
+  const chevronStyle = isSmallScreen
+  ? {
+      cursor: "pointer",
+      width: "40px",
+      height: "40px",
+      borderRadius: "50%",
+      backgroundColor: "white",
+      padding: "2vw",
+      margin: "4px",
+      fontSize: "1em",
+    }
+  : {
+      cursor: "pointer",
+      width: "60px",
+      height: "60px",
+      borderRadius: "50%",
+      backgroundColor: "white",
+      padding: "1vw",
+      margin: "8px",
+      fontSize: "2em",
+    };
 
   return (
     <div className={styles.photo_gallery}>
       <div className={styles.photo_gallery_title}>
-        <div className={styles.navigate_icons}>
-          <BsChevronLeft
-            style={{
-              cursor: "pointer",
-              width: "60px",
-              height: "60px",
-              borderRadius: "50%",
-              backgroundColor: "white",
-              padding: "1vw",
-              margin: "8px",
-              fontSize: "2em",
-            }}
-            className="button_prev_galery"
-          />
-
-          <div>
-            <BsChevronRight
-              style={{
-                cursor: "pointer",
-                width: "60px",
-                height: "60px",
-                borderRadius: "50%",
-                backgroundColor: "white",
-                padding: "1vw",
-                margin: "8px",
-                fontSize: "2em",
-              }}
-              className="button_next_galery"
-            />
-          </div>
-        </div>
+       <div className={styles.navigate_icons}>
+        <BsChevronLeft style={chevronStyle} className="button_prev_galery" />
+        <BsChevronRight style={chevronStyle} className="button_next_galery" />
+       </div>
       </div>
       <div className={styles.photo_gallery_slide}>
         <Swiper
@@ -74,6 +82,10 @@ const PhotoGallery = () => {
           breakpoints={{
             520: {
               slidesPerView: 3,
+              spaceBetween: 10,
+            },
+            360: {
+              slidesPerView: 1,
               spaceBetween: 10,
             },
           }}

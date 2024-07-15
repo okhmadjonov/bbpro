@@ -15,7 +15,7 @@ const VideoPlayer = () => {
       <div className={styles.videoplayer_video}>
         <video src={selectedVideo} controls></video>
       </div>
-      <div className={styles.videoplayer_videolist}>
+   
         <div className={styles.videoplayer_items}>
           <div
             className={styles.videoplayer_item}
@@ -74,7 +74,7 @@ const VideoPlayer = () => {
           </div>
         </div>
       </div>
-    </div>
+
   );
 };
 
