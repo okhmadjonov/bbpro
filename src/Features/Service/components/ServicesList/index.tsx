@@ -10,7 +10,6 @@ import { nextIcon, prevIcon } from "@/Assets/Images/index";
 import {
   LocaleStringsInterface,
   ServiceListInterface,
-  ServicesListResponseInterface,
 } from "@/Components/Types";
 import useQueryApiClient from "@/utils/useQueryApiClient";
 import { smoothScroll } from "@/utils/smoothScroll";
@@ -29,6 +28,11 @@ const ServicesList = ({ catalogCategory, initialDataId }: ServiceListProps) => {
     items: [],
     totalItems: 0,
   });
+
+  useEffect(() => {
+    // Log catalogCategory to the console
+    console.log("Catalog Category in Service:", catalogCategory[0].title.Ru);
+  }, [catalogCategory]);
 
   const pagination = (page: number) => {
     setCurrentPage(page);

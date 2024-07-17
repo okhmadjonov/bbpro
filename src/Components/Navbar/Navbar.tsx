@@ -11,7 +11,12 @@ import { useEffect, useState } from "react";
 import { BigBoxPro } from "@/Assets/Images";
 import { facebook, instagram, telegram } from "@/Assets/Images";
 
-const Navbar = () => {
+interface ServiceListProps {
+  catalogCategory: any[];
+  initialDataId: number;
+}
+
+const Navbar = ({ catalogCategory, initialDataId }: ServiceListProps) => {
   const location = useRouter();
   const t = useTranslations("");
   const [scrolled, setScrolled] = useState<string>("absolute");
@@ -26,7 +31,6 @@ const Navbar = () => {
     { link: "/project", key: "GlobalKeyWords.project" },
     { link: "/info", key: "GlobalKeyWords.info" },
     { link: "/contact", key: "GlobalKeyWords.contact" },
-    // { link: "/challenge", key: "GlobalKeyWords.challenge" },
     { link: "/challenge", key: "GlobalKeyWords.mero" },
   ];
 
@@ -86,6 +90,7 @@ const Navbar = () => {
   useEffect(() => {
     handleSetNavType();
   }, [location.pathname]);
+
 
   return (
     <div
