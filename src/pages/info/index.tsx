@@ -26,7 +26,7 @@ export default function Info({ newlist }: Props) {
       </Head>
       <div className="container">
         <div className="container_top_padding">
-          <GoToBack pathArr={[{ title: "info", path: "locations" }]} />
+          <GoToBack pathArr={[{ title: "info", path: "info" }]} />
           <PageTitle />
           <NewList newlist={newlist} />
         </div>
