@@ -3,7 +3,7 @@ import Loader from "@/Components/Loader/Loader";
 import { API, axiosHeadersSetToken } from "@/services/api";
 import dynamic from "next/dynamic";
 import Head from "next/head";
-import React from "react";
+import React, { useEffect } from "react";
 
 const ServiceList = dynamic(
   () => import("@/Features/Service/components/ServicesList"),
@@ -21,6 +21,7 @@ interface Props {
 }
 
 export default function Service({ catalogCategory }: Props) {
+
   return (
     <div>
       <Head>
