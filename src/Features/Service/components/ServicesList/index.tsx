@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import ServicesCard from "../ServicesCard/index";
 import styles from "./ServicesList.module.scss";
 import { Tabs, Card } from "antd";
-
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
 import Pagination from "@/ui/Pagination/Pagination";
@@ -23,16 +22,19 @@ const ServicesList = ({ catalogCategory, initialDataId }: ServiceListProps) => {
   const t = useTranslations("");
   const locale = useLocale();
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const [currentCategoryId, setCurrentCategoryId] = useState(initialDataId);
+  const [currentCategoryId, setCurrentCategoryId] =
+    useState<number>(initialDataId);
   const [categoryData, setCategoryData] = useState({
     items: [],
     totalItems: 0,
   });
 
   useEffect(() => {
-    // Log catalogCategory to the console
-    console.log("Catalog Category in Service:", catalogCategory[0].title.Ru);
-  }, [catalogCategory]);
+    const storedCategoryId = localStorage.getItem("currentCategoryId");
+    if (storedCategoryId) {
+      setCurrentCategoryId(Number(storedCategoryId));
+    }
+  }, []);
 
   const pagination = (page: number) => {
     setCurrentPage(page);
@@ -41,6 +43,7 @@ const ServicesList = ({ catalogCategory, initialDataId }: ServiceListProps) => {
   const onChange = (key: any) => {
     setCurrentPage(1);
     setCurrentCategoryId(key);
+    localStorage.setItem("currentCategoryId", key);
     appendData({ pageIndex: 1, pageSize: 12, id: key });
   };
 
@@ -91,7 +94,7 @@ const ServicesList = ({ catalogCategory, initialDataId }: ServiceListProps) => {
       <Pagination
         className="pagination_product_list"
         current={currentPage}
-        pageSize={12}
+        pageSize={6}
         total={categoryData.totalItems}
         onChange={pagination}
         prevIcon={prevIcon.src}
