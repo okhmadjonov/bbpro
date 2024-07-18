@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px 0;
+
     ul {
       display: flex;
       align-items: center;
@@ -298,7 +298,7 @@
       a {
         color: #fff;
         &:after {
-          border-color: #e0f7fa;
+          border-color: #333333;
         }
       }
     }
@@ -330,7 +330,7 @@
   width: 100%;
   z-index: 99;
   margin-top: -5px;
-  background-color: var(--nestle1);
+  // background-color: var(--nestle1);
 }
 
 .absolute {
@@ -345,16 +345,18 @@
 
 .fixed {
   position: fixed;
+  height: 10vh;
   transition: 0.4s ease;
   transform: translateY(0);
   background-color: var(--nestle1);
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
 .disableScrollHtml {
   overflow: hidden;
 }
 
+/*------------------------------------------------*/
+/* Navbar.module.scss */
 .navItem {
   position: relative;
 }
