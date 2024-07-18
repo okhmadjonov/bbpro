@@ -21,7 +21,6 @@ interface Props {
 }
 
 export default function Service({ catalogCategory }: Props) {
-
   return (
     <div>
       <Head>

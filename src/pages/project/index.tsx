@@ -22,6 +22,7 @@ interface Props {
 }
 
 export default function Project({ projectlist }: Props) {
+ 
   return (
     <div>
       <Head>
@@ -41,15 +42,41 @@ export default function Project({ projectlist }: Props) {
 export const getServerSideProps = async (context: any) => {
   try {
     await axiosHeadersSetToken(context);
-    const projectsListResponse = await API.getProjectsList();
+    const projectsListResponse = await API.getProjectsList()
+      .then((res: any) => res.data)
+      .catch((error: any) => ({
+        data: [],
+        totalItems: 0,
+        itemsPerPage: 0,
+        currentItemCount: 0,
+        pageIndex: 0,
+        totalPages: 0,
+      }));
 
     return {
       props: {
-        projectlist: projectsListResponse.data || [],
+        projectlist: projectsListResponse || {
+          data: [],
+          totalItems: 0,
+          itemsPerPage: 0,
+          currentItemCount: 0,
+          pageIndex: 0,
+          totalPages: 0,
+        },
       },
     };
   } catch (error) {
-    console.error("Error fetching projects list:", error);
-    return { props: { projectlist: [] } };
+    return {
+      props: {
+        newlist: {
+          data: [],
+          totalItems: 0,
+          itemsPerPage: 0,
+          currentItemCount: 0,
+          pageIndex: 0,
+          totalPages: 0,
+        },
+      },
+    };
   }
 };

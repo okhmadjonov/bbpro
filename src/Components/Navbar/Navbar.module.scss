@@ -298,7 +298,7 @@
       a {
         color: #fff;
         &:after {
-          border-color: #333333;
+          border-color: #e0f7fa;
         }
       }
     }
@@ -330,9 +330,7 @@
   width: 100%;
   z-index: 99;
   margin-top: -5px;
-  // padding: 0;
   background-color: var(--nestle1);
-  // background-color: #1146AA;
 }
 
 .absolute {
@@ -350,7 +348,6 @@
   transition: 0.4s ease;
   transform: translateY(0);
   background-color: var(--nestle1);
-  // background-color: #1146AA;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
@@ -358,8 +355,6 @@
   overflow: hidden;
 }
 
-/*------------------------------------------------*/
-/* Navbar.module.scss */
 .navItem {
   position: relative;
 }

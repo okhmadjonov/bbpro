@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ServicesCard from "../ServicesCard/index";
 import styles from "./ServicesList.module.scss";
-import { Tabs, Card } from "antd";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
 import Pagination from "@/ui/Pagination/Pagination";
@@ -9,6 +8,7 @@ import { nextIcon, prevIcon } from "@/Assets/Images/index";
 import {
   LocaleStringsInterface,
   ServiceListInterface,
+  ServiceCategoryDataInterface,
 } from "@/Components/Types";
 import useQueryApiClient from "@/utils/useQueryApiClient";
 import { smoothScroll } from "@/utils/smoothScroll";
@@ -21,13 +21,21 @@ interface ServiceListProps {
 const ServicesList = ({ catalogCategory, initialDataId }: ServiceListProps) => {
   const t = useTranslations("");
   const locale = useLocale();
-  const [currentPage, setCurrentPage] = useState<number>(1);
   const [currentCategoryId, setCurrentCategoryId] =
     useState<number>(initialDataId);
-  const [categoryData, setCategoryData] = useState({
-    items: [],
-    totalItems: 0,
-  });
+  const [categoryData, setCategoryData] =
+    useState<ServiceCategoryDataInterface>({
+      items: [],
+      totalItems: 0,
+      itemsPerPage: 6,
+      currentItemCount: 0,
+      pageIndex: 1,
+      totalPages: 0,
+    });
+
+  const [currentPage, setCurrentPage] = useState<number>(
+    categoryData.pageIndex
+  );
 
   useEffect(() => {
     const storedCategoryId = localStorage.getItem("currentCategoryId");
@@ -36,21 +44,33 @@ const ServicesList = ({ catalogCategory, initialDataId }: ServiceListProps) => {
     }
   }, []);
 
-  const pagination = (page: number) => {
+  useEffect(() => {
+    if (currentCategoryId) {
+      appendData({
+        pageIndex: currentPage,
+        pageSize: 6,
+        id: currentCategoryId,
+      });
+    }
+  }, [currentPage, currentCategoryId]);
+
+  useEffect(() => {
+    if (categoryData.pageIndex !== currentPage) {
+      setCurrentPage(categoryData.pageIndex);
+    }
+  }, [categoryData]);
+
+  const handlePageChange = (page: number, pageSize: number) => {
+    appendData({ PageSize: pageSize, PageIndex: page });
     setCurrentPage(page);
   };
 
-  const onChange = (key: any) => {
+  const onChange = (key: number) => {
     setCurrentPage(1);
     setCurrentCategoryId(key);
-    localStorage.setItem("currentCategoryId", key);
-    appendData({ pageIndex: 1, pageSize: 12, id: key });
+    localStorage.setItem("currentCategoryId", key.toString());
+    appendData({ pageIndex: 1, pageSize: 6, id: key });
   };
-
-  useEffect(() => {
-    if (typeof currentCategoryId !== "number") return;
-    appendData({ pageIndex: currentPage, pageSize: 12, id: currentCategoryId });
-  }, [currentPage, currentCategoryId]);
 
   const { appendData, isLoading } = useQueryApiClient({
     request: {
@@ -96,7 +116,7 @@ const ServicesList = ({ catalogCategory, initialDataId }: ServiceListProps) => {
         current={currentPage}
         pageSize={6}
         total={categoryData.totalItems}
-        onChange={pagination}
+        onChange={handlePageChange}
         prevIcon={prevIcon.src}
         nextIcon={nextIcon.src}
       />

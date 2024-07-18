@@ -10,6 +10,7 @@ import { Button } from "@/ui/index";
 
 const NewsCard = (props: NewCardProps) => {
   const { data, index, locale } = props;
+
   const t = useTranslations("");
   const [trancate, setTrancate] = useState("");
   useEffect(() => {
