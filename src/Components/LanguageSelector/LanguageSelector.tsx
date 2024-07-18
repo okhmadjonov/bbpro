@@ -10,7 +10,7 @@ const LanguageSelector = ({
   navType,
   isMobile = false,
 }: {
-  navType: "transparent" | "color";
+  navType: "transparent" | "color" | "thirdcolor";
   isMobile?: boolean;
 }) => {
   const router = useRouter();
@@ -92,7 +92,6 @@ const LanguageSelector = ({
             className={styles.flag}
           />
           <span className={styles.lang_item}>{selectedLanguage}</span>
-         
         </div>
         <ul className={styles.language_list}>
           {languages?.map((lang) => (

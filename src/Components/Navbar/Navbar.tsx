@@ -21,9 +21,9 @@ const Navbar = ({ catalogCategory, initialDataId }: ServiceListProps) => {
   const [scrolled, setScrolled] = useState<string>("absolute");
   const [mobileNavVisible, setMobileNavVisible] = useState<boolean>(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [navType, setNavType] = useState<"transparent" | "color">(
-    "transparent"
-  );
+  const [navType, setNavType] = useState<
+    "transparent" | "color" | "thirdcolor"
+  >("transparent");
 
   const navLinks = [
     { link: "/service", key: "GlobalKeyWords.service" },
@@ -36,17 +36,6 @@ const Navbar = ({ catalogCategory, initialDataId }: ServiceListProps) => {
   const showModal = () => {
     setIsModalOpen(true);
   };
-  useEffect(() => {
-    if (mobileNavVisible) {
-      document.documentElement.classList.add(styles.disableScrollHtml);
-    } else {
-      document.documentElement.classList.remove(styles.disableScrollHtml);
-    }
-
-    return () => {
-      document.documentElement.classList.remove(styles.disableScrollHtml);
-    };
-  }, [mobileNavVisible]);
 
   const handleScroll = () => {
     const offset = window.scrollY;
@@ -65,6 +54,14 @@ const Navbar = ({ catalogCategory, initialDataId }: ServiceListProps) => {
   const handleSetNavType = () => {
     if (location.pathname === "/" || location.pathname === "/main") {
       setNavType("transparent");
+    } else if (
+      location.pathname === "/service" ||
+      location.pathname === "/project" ||
+      location.pathname === "/info" ||
+      location.pathname === "/contact" ||
+      location.pathname === "/challenge"
+    ) {
+      setNavType("thirdcolor");
     } else {
       setNavType("color");
     }
@@ -84,18 +81,17 @@ const Navbar = ({ catalogCategory, initialDataId }: ServiceListProps) => {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-  });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   useEffect(() => {
     handleSetNavType();
   }, [location.pathname]);
 
   return (
-    <div
-      className={`${styles.desktop} 
-      ${styles[navType]}
-    `}
-    >
+    <div className={`${styles.desktop} ${styles[navType]}`}>
       <div className={`${styles[scrolled]} ${styles.sticky_nav}`}>
         <div className="container">
           <nav className={styles.navbar}>
@@ -133,11 +129,11 @@ const Navbar = ({ catalogCategory, initialDataId }: ServiceListProps) => {
                 </Link>
 
                 <Link target="_blank" href="https://t.me/">
-                  <Image src={telegram} alt="Facebook Icon" />
+                  <Image src={telegram} alt="Telegram Icon" />
                 </Link>
 
                 <Link target="_blank" href="https://www.instagram.com/">
-                  <Image src={instagram} alt="Facebook Icon" />
+                  <Image src={instagram} alt="Instagram Icon" />
                 </Link>
               </div>
               <div
@@ -181,7 +177,9 @@ const Navbar = ({ catalogCategory, initialDataId }: ServiceListProps) => {
                   }
                   key={index}
                   href={item.link}
-                  onClick={() => setMobileNavVisible(false)}
+                  onClick={() => {
+                    setMobileNavVisible(false);
+                  }}
                 >
                   <span>{t(item.key)}</span>
                   <SvgSelector id="line_chevron_svg" />
@@ -194,11 +192,11 @@ const Navbar = ({ catalogCategory, initialDataId }: ServiceListProps) => {
               </Link>
 
               <Link target="_blank" href="https://t.me/">
-                <Image src={telegram} alt="Facebook Icon" />
+                <Image src={telegram} alt="Telegram Icon" />
               </Link>
 
               <Link target="_blank" href="https://www.instagram.com/">
-                <Image src={instagram} alt="Facebook Icon" />
+                <Image src={instagram} alt="Instagram Icon" />
               </Link>
             </div>
             <div className={styles.number}>
@@ -212,7 +210,7 @@ const Navbar = ({ catalogCategory, initialDataId }: ServiceListProps) => {
         </div>
         <div
           onClick={() => setMobileNavVisible(false)}
-          className={`${styles.mask}  ${mobileNavVisible ? styles.active : ""}`}
+          className={`${styles.mask} ${mobileNavVisible ? styles.active : ""}`}
         ></div>
       </div>
       <ContactInfoModal

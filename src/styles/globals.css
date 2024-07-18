@@ -169,6 +169,7 @@ body {
 
 a {
   text-decoration: none;
+  color: #333;
 }
 
 @media screen and (max-width: 1580px) {
