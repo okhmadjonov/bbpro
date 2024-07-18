@@ -34,19 +34,44 @@ export default function Info({ newlist }: Props) {
     </div>
   );
 }
-
 export const getServerSideProps = async (context: any) => {
   try {
     await axiosHeadersSetToken(context);
-    const newsListResponse = await API.getNewsList();
+    const newsListResponse = await API.getNewsList()
+      .then((res: any) => res.data)
+      .catch((error: any) => ({
+        data: [],
+        totalItems: 0,
+        itemsPerPage: 0,
+        currentItemCount: 0,
+        pageIndex: 0,
+        totalPages: 0,
+      }));
 
     return {
       props: {
-        newlist: newsListResponse.data || [],
+        newlist: newsListResponse || {
+          data: [],
+          totalItems: 0,
+          itemsPerPage: 0,
+          currentItemCount: 0,
+          pageIndex: 0,
+          totalPages: 0,
+        },
       },
     };
   } catch (error) {
-    console.error("Error fetching news list:", error);
-    return { props: { newlist: [] } };
+    return {
+      props: {
+        newlist: {
+          data: [],
+          totalItems: 0,
+          itemsPerPage: 0,
+          currentItemCount: 0,
+          pageIndex: 0,
+          totalPages: 0,
+        },
+      },
+    };
   }
 };

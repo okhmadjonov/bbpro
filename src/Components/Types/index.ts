@@ -122,13 +122,19 @@ export interface NewListInterface {
   description: LocaleStringsInterface;
 }
 
-export interface NewsListResponseInterface {
-  data: NewListInterface[];
+export interface NewsListInterface {
+  items: NewListInterface[];
   totalItems: number;
   itemsPerPage: number;
+  currentItemCount: number;
   pageIndex: number;
   totalPages: number;
 }
+
+export interface NewsListResponseInterface {
+  data: NewsListInterface;
+}
+
 //Projects
 export interface ProjectListInterface {
   id: number;
@@ -136,12 +142,17 @@ export interface ProjectListInterface {
   title: LocaleStringsInterface;
   description: LocaleStringsInterface;
 }
-export interface ProjectsListResponseInterface {
-  data: ProjectListInterface[];
+export interface ProjectsListInterface {
+  items: ProjectListInterface[];
   totalItems: number;
   itemsPerPage: number;
+  currentItemCount: number;
   pageIndex: number;
   totalPages: number;
+}
+
+export interface ProjectsListResponseInterface {
+  data: ProjectsListInterface;
 }
 
 //Services
@@ -153,6 +164,15 @@ export interface ServiceListInterface {
   categoryId: number;
   createdAt: string;
   updatedAt: string;
+}
+
+export interface ServiceCategoryDataInterface {
+  items: ServiceListInterface[];
+  totalItems: number;
+  itemsPerPage: number;
+  currentItemCount: number;
+  pageIndex: number;
+  totalPages: number;
 }
 
 export interface CategoryInterface {
