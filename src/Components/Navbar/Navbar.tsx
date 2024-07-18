@@ -8,7 +8,6 @@ import { useRouter } from "next/router";
 import { phoneNumber1 } from "@/utils/consts";
 import { ContactInfoModal } from "../ContactInfoModal/ContactInfoModal";
 import { useEffect, useState } from "react";
-import { BigBoxPro } from "@/Assets/Images";
 import { facebook, instagram, telegram } from "@/Assets/Images";
 
 interface ServiceListProps {
@@ -90,7 +89,6 @@ const Navbar = ({ catalogCategory, initialDataId }: ServiceListProps) => {
   useEffect(() => {
     handleSetNavType();
   }, [location.pathname]);
-
 
   return (
     <div

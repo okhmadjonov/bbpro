@@ -1,7 +1,6 @@
 .footer {
   padding-top: 150px;
   background-color: var(--nestle1);
-  // background-color: #1146aa;
 
   @media (max-width: 1024px) {
     padding-top: 50px;
@@ -124,7 +123,6 @@
   }
   &__navigation {
     padding-left: 10px;
-    // box-shadow: 0 0px 4px 0 #05001f, 0 0px 0px 0;
     @media (max-width: 768px) {
       display: none;
     }
@@ -175,8 +173,9 @@
   }
 
   &__contact {
+    min-width: 390px;
     padding-left: 10px;
-    // box-shadow: 0 0px 4px 0 #05001f, 0 0px 0px 0;
+
     h2 {
       font-size: 1.5rem;
       font-weight: 500;
