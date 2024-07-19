@@ -10,20 +10,17 @@ import { ContactInfoModal } from "../ContactInfoModal/ContactInfoModal";
 import { useEffect, useState } from "react";
 import { facebook, instagram, telegram } from "@/Assets/Images";
 
-interface ServiceListProps {
-  catalogCategory: any[];
-  initialDataId: number;
-}
 
-const Navbar = ({ catalogCategory, initialDataId }: ServiceListProps) => {
+
+const Navbar = ( ) => {
   const location = useRouter();
   const t = useTranslations("");
   const [scrolled, setScrolled] = useState<string>("absolute");
   const [mobileNavVisible, setMobileNavVisible] = useState<boolean>(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [navType, setNavType] = useState<
-    "transparent" | "color" 
-  >("transparent");
+  const [navType, setNavType] = useState<"transparent" | "color">(
+    "transparent"
+  );
 
   const navLinks = [
     { link: "/service", key: "GlobalKeyWords.service" },
@@ -54,8 +51,7 @@ const Navbar = ({ catalogCategory, initialDataId }: ServiceListProps) => {
   const handleSetNavType = () => {
     if (location.pathname === "/" || location.pathname === "/main") {
       setNavType("transparent");
-    }
-     else {
+    } else {
       setNavType("color");
     }
   };

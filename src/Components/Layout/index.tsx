@@ -10,10 +10,9 @@ import { API, axiosHeadersSetToken } from "@/services/api";
 
 interface ILayoutsProps {
   children: ReactNode;
-  catalogCategory: any;
 }
 
-const MainLayout = ({ children, catalogCategory }: ILayoutsProps) => {
+const MainLayout = ({ children }: ILayoutsProps) => {
   const router = useRouter();
   const { data: session } = useSession();
 
@@ -23,7 +22,6 @@ const MainLayout = ({ children, catalogCategory }: ILayoutsProps) => {
       easing: "ease-in-out",
     });
   }, []);
-
 
   useEffect(() => {
     const checkSessionExpiration = async () => {
@@ -53,8 +51,7 @@ const MainLayout = ({ children, catalogCategory }: ILayoutsProps) => {
   return (
     <>
       <Navbar
-        catalogCategory={catalogCategory}
-        initialDataId={catalogCategory?.[0]?.id}
+       
       />
       <main>{children}</main>
       <Footer />
@@ -63,34 +60,3 @@ const MainLayout = ({ children, catalogCategory }: ILayoutsProps) => {
 };
 
 export default MainLayout;
-
-export const getServerSideProps = async (context: any) => {
-  try {
-    await axiosHeadersSetToken(context);
-
-    const servicesListResponse = await API.getSolutionsList();
-
-    const catalogCategoryResponse = await API.getCatalogCategory()
-      .then((res: any) => {
-        return res.data;
-      })
-
-      .catch((error: any) => {
-        return { data: [] };
-      });
-
-    return {
-      props: {
-        servicelist: servicesListResponse.data || [],
-        catalogCategory: catalogCategoryResponse.data || [],
-      },
-    };
-  } catch (error) {
-    return {
-      props: {
-        servicelist: [],
-        catalogCategory: [],
-      },
-    };
-  }
-};
