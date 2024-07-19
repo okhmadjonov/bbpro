@@ -22,7 +22,7 @@ const Navbar = ({ catalogCategory, initialDataId }: ServiceListProps) => {
   const [mobileNavVisible, setMobileNavVisible] = useState<boolean>(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [navType, setNavType] = useState<
-    "transparent" | "color" | "thirdcolor"
+    "transparent" | "color" 
   >("transparent");
 
   const navLinks = [
@@ -54,15 +54,8 @@ const Navbar = ({ catalogCategory, initialDataId }: ServiceListProps) => {
   const handleSetNavType = () => {
     if (location.pathname === "/" || location.pathname === "/main") {
       setNavType("transparent");
-    } else if (
-      location.pathname === "/service" ||
-      location.pathname === "/project" ||
-      location.pathname === "/info" ||
-      location.pathname === "/contact" ||
-      location.pathname === "/challenge"
-    ) {
-      setNavType("thirdcolor");
-    } else {
+    }
+     else {
       setNavType("color");
     }
   };
