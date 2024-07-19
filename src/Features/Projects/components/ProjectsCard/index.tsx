@@ -53,8 +53,8 @@ const ProjectsCard = (props: ProjectCardProps) => {
           <Image
             src={`${BASE_URL}/${data?.imageUrl}`}
             alt="img"
-            width={336}
-            height={248}
+            width={1000}
+            height={1000}
           />
         </div>
 
@@ -62,7 +62,7 @@ const ProjectsCard = (props: ProjectCardProps) => {
           {data.title[locale as keyof LocaleStringsInterface]}
         </h2>
 
-        <p className={styles.projectscard__text}>{truncate}</p>
+        {/* <p className={styles.projectscard__text}>{truncate}</p> */}
       </div>
       <div className={styles.btn_block}>
         <Link href={`project/${data.id}`}>
