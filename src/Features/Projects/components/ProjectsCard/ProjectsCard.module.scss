@@ -7,7 +7,6 @@
   max-width: 100% !important;
   height: 100% !important;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
-  // border: 1px solid red;
 
   @media (max-width: 768px) {
     max-width: 387px !important;
@@ -20,7 +19,6 @@
   .projectsproducts__inner {
     display: flex;
     flex-direction: column;
-    
   }
 
   &__title {
@@ -31,7 +29,6 @@
     line-height: 1.5rem;
     letter-spacing: 0em;
     text-align: left;
-   
   }
 
   &__text {
@@ -46,13 +43,13 @@
 
   &__image {
     width: 100% !important;
-    height: 20vh;
     display: flex;
+    height: 20vh;
     align-items: center;
     justify-content: center;
     transition: 0.3s;
     margin: 0 auto;
-    padding: 20px 20px;
+    padding: 30px;
   
     @media screen and (max-width: 360px) {
       max-width: 336px !important;
