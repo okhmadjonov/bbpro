@@ -350,54 +350,11 @@
   }
 }
 
-//  third color
-.thirdcolor {
-  .navbar {
-    .logo {
-      svg {
-        fill: #333333;
-      }
-    }
-    ul {
-      a {
-        color: #333;
-        &:after {
-          border-color: #333;
-        }
-      }
-    }
-  }
-  .bars_menu {
-    svg {
-      path {
-        fill: #292929;
-      }
-    }
-  }
-  .info_side {
-    .number {
-      color: #333;
-    }
-    svg {
-      path {
-        stroke: #333;
-      }
-    }
-  }
-  .number h5 {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    color: #292929;
-  }
-}
-
 .sticky_nav {
   width: 100%;
   z-index: 99;
   margin-top: -5px;
-  // background-color: var(--nestle1);
+  background-color: var(--nestle1);
 }
 
 .absolute {
@@ -412,7 +369,6 @@
 
 .fixed {
   position: fixed;
-  height: 10vh;
   transition: 0.4s ease;
   transform: translateY(0);
   background-color: var(--nestle1);
