@@ -13,22 +13,30 @@ interface Props {
 const ServiceDetails = ({ ssDetail }: Props) => {
   const locale = useLocale();
 
+  const formatDescription = (description: string) => {
+    return description.replace(/\r\n/g, "<br />").replace(/\. /g, ".<br />");
+  };
+
+  const description =
+    ssDetail.description[locale as keyof LocaleStringsInterface];
+  const formattedDescription = formatDescription(description);
+
   return (
     <div className={styles.servicedetails}>
       <Image
         className={styles.imageUrl}
         src={`${BASE_URL}/${ssDetail.imageUrl}`}
-        alt="Error"
+        alt={ssDetail.title[locale as keyof LocaleStringsInterface]}
         width={1000}
         height={1000}
+        priority
       />
       <div className={styles.details}>
         <h2>{ssDetail?.title[locale as keyof LocaleStringsInterface]}</h2>
         <p
           className={styles.description}
           dangerouslySetInnerHTML={{
-            __html:
-              ssDetail.description[locale as keyof LocaleStringsInterface],
+            __html: formattedDescription,
           }}
         ></p>
       </div>

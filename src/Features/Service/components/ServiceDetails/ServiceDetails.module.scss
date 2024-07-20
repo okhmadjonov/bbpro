@@ -9,7 +9,6 @@
   }
 
   .details {
-    margin: 0 auto;
     @media (max-width: 1250px) {
       padding: 32px 0px 32px 0px;
     }
@@ -18,7 +17,7 @@
       padding: 20px 0px 20px 0px;
     }
 
-    padding: 80px 0px 50px 0px;
+    padding: 50px 0px 50px 0px;
     width: 60%;
     display: flex;
     flex-direction: column;
@@ -26,10 +25,10 @@
     gap: 20px;
 
     h2 {
-      font-size: var(--heading-two);
+      font-size: 1.5em;
       font-weight: 400;
       font-family: "RG-StandardBold";
-      color: var(--nestle2);
+      color: #292929;
       margin-bottom: 20px;
 
       @media (max-width: 650px) {
@@ -40,7 +39,8 @@
     }
 
     p {
-      font-size: var(--paragraph);
+      line-height: 30px;
+      font-size: 1em;
       color: var(--dark-gray-color);
     }
   }
