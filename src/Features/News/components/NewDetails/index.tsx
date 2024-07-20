@@ -12,6 +12,15 @@ interface Props {
 
 const NewDetails = ({ newsDetail }: Props) => {
   const locale = useLocale();
+
+  const formatDescription = (description: string) => {
+    return description.replace(/\r\n/g, "<br />").replace(/\. /g, ".<br />");
+  };
+
+  const description =
+    newsDetail.description[locale as keyof LocaleStringsInterface];
+  const formattedDescription = formatDescription(description);
+
   return (
     <div className={styles.newdetails}>
       <Image
@@ -20,14 +29,14 @@ const NewDetails = ({ newsDetail }: Props) => {
         alt="Error"
         width={1000}
         height={1000}
+        priority
       />
       <div className={styles.details}>
         <h2>{newsDetail?.title[locale as keyof LocaleStringsInterface]}</h2>
         <p
           className={styles.description}
           dangerouslySetInnerHTML={{
-            __html:
-              newsDetail.description[locale as keyof LocaleStringsInterface],
+            __html: formattedDescription,
           }}
         ></p>
       </div>
