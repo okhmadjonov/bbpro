@@ -22,7 +22,6 @@ interface Props {
 }
 
 export default function Project({ projectlist }: Props) {
- 
   return (
     <div>
       <Head>
@@ -30,7 +29,7 @@ export default function Project({ projectlist }: Props) {
       </Head>
       <div className="container">
         <div className="container_top_padding">
-          <GoToBack pathArr={[{ title: "project", path: "locations" }]} />
+          <GoToBack pathArr={[{ title: "project", path: "project" }]} />
           <PageTitle />
           <ProjectList projectlist={projectlist} />
         </div>
