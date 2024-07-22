@@ -106,7 +106,6 @@ export const Table = ({
     className,
     ...rest
   }) => {
-    // actions dont have link
     if (rest.dataIndex === "id" || rest.dataIndex === undefined) {
       return (
         <td className={className} colSpan={rest.colSpan}>
