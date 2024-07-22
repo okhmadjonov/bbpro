@@ -62,10 +62,14 @@ const ProjectsCard = (props: ProjectCardProps) => {
           {data.title[locale as keyof LocaleStringsInterface]}
         </h2>
 
-        {/* <p className={styles.projectscard__text}>{truncate}</p> */}
+    =
       </div>
       <div className={styles.btn_block}>
-        <Link href={`project/${data.id}`}>
+        <a
+          href={`/templates/template${data.id}/index.html`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Button
             type="default"
             label={t("GlobalKeyWords.btn_text")}
@@ -73,7 +77,7 @@ const ProjectsCard = (props: ProjectCardProps) => {
             iconPosition="right"
             size="middle"
           />
-        </Link>
+        </a>
       </div>
     </div>
   );
