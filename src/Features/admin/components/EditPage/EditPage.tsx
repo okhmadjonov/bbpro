@@ -1,10 +1,9 @@
-import { Form, message } from "antd";
 import React, { useEffect, useState } from "react";
+import { Form, message } from "antd";
 import { useRouter } from "next/router";
 import useQueryApiClient from "@/utils/useQueryApiClient";
 import { useTranslations } from "next-intl";
 import { Button, Upload } from "@/ui";
-import { BASE_URL } from "@/services/api";
 
 interface Props {
   link: string;
@@ -27,12 +26,14 @@ const EditPage = ({
   const t = useTranslations("ADMIN");
 
   const [imageFile, setImageFile] = useState<File | null>(null);
-  const [imageSrc, setImageSrc] = useState<string | undefined>(data?.imageUrl);
 
   useEffect(() => {
-    form.setFieldsValue(data);
-    if (data?.categoryId) {
-      form.setFieldValue("categoryId", String(data.categoryId));
+    if (data) {
+      form.setFieldsValue(data);
+      if (data?.categoryId) {
+        form.setFieldValue("categoryId", String(data.categoryId));
+      }
+      setImageFile(null); // Reset image file when data changes
     }
   }, [data]);
 
@@ -42,7 +43,7 @@ const EditPage = ({
       method: "PUT",
       multipart,
     },
-    onSuccess(res) {
+    onSuccess() {
       router.back();
     },
   });
@@ -53,14 +54,14 @@ const EditPage = ({
       method: "POST",
       multipart,
     },
-    onSuccess(res) {
+    onSuccess() {
       router.back();
     },
   });
 
   const convertDataToFormData = (data: any) => {
     const formData = new FormData();
-  
+
     for (const key in data) {
       if (Object.prototype.hasOwnProperty.call(data, key)) {
         const value = data[key];
@@ -104,11 +105,13 @@ const EditPage = ({
 
   const onFinish = (values: any) => {
     const formData = convertDataToFormData(values);
+
     if (imageFile) {
       formData.append("imageUrl", imageFile);
-    } else if (imageSrc) {
-      formData.append("imageUrl", imageSrc);
+    } else if (data?.imageUrl) {
+      formData.append("imageUrl", data.imageUrl); // Ensure imageUrl is included if imageFile is not provided
     }
+
     if (slug) {
       updateData(formData);
     } else {
@@ -124,10 +127,6 @@ const EditPage = ({
     router.back();
   };
 
-  const buttonStyle = {
-    marginBottom: "30px",
-  };
-
   return (
     <>
       {showBackButton && (
@@ -139,7 +138,7 @@ const EditPage = ({
         />
       )}
       <Form onFinish={onFinish} form={form}>
-        {multipart && multipart === true ? (
+        {multipart && (
           <Upload
             onChange={(file: File) => setImageFile(file)}
             btnLabel={t("Upload")}
@@ -151,7 +150,7 @@ const EditPage = ({
               },
             ]}
           />
-        ) : null}
+        )}
         {children}
         <Button
           size="small"
