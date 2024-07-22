@@ -52,19 +52,20 @@ const AdminTableList: React.FC<Props> = ({
   return (
     <div>
       <Table
-        dataSource={dataSource?.items ? dataSource?.items : dataSource}
+        dataSource={dataSource?.items ? dataSource.items : dataSource}
         columns={columns}
         editable={true}
         handleEdit={handleOpenEditModal}
         handleDelete={handleOpenDeleteModal}
         loading={isLoading}
       />
-      {paginationVisible && (
+      {paginationVisible && dataSource && (
         <Pagination
-          total={dataSource?.totalItems}
+          total={dataSource.totalItems}
           pageSize={10}
-          current={dataSource?.pageIndex}
+          current={dataSource.pageIndex}
           onChange={handlePageChange}
+          showSizeChanger={false}
         />
       )}
       <DeleteModal

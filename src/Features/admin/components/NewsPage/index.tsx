@@ -15,13 +15,19 @@ const NewsPage = () => {
   const t = useTranslations("ADMIN");
   const locale = useLocale();
   const router = useRouter();
-  const [query, setQuery] = useState({ PageSize: 10, PageIndex: 1 });
+  const [query, setQuery] = useState({ PageSize: 1001, PageIndex: 1 });
   const [selectedData, setSelectedData] = useState<SelectedDataInterface>({
     type: "default",
     data: {},
   });
 
   const columns = [
+    {
+      title: "ID",
+      dataIndex: "ID",
+      key: "ID",
+      render: (text: string, record: any) => <div>{record.id}</div>,
+    },
     {
       title: t("Title"),
       dataIndex: "title",

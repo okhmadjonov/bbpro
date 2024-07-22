@@ -6,9 +6,8 @@ import {
 import { Button } from "@/ui";
 import { smoothScroll } from "@/utils/smoothScroll";
 import useQueryApiClient from "@/utils/useQueryApiClient";
-import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { useEffect, useState, useTransition } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocale, useTranslations } from "use-intl";
 
 const ServicesPage = () => {
@@ -16,13 +15,19 @@ const ServicesPage = () => {
   const locale = useLocale();
   const router = useRouter();
 
-  const [query, setQuery] = useState({ PageSize: 10, PageIndex: 1 });
+  const [query, setQuery] = useState({ PageSize: 1001, PageIndex: 1 });
   const [selectedData, setSelectedData] = useState<SelectedDataInterface>({
     type: "default",
     data: {},
   });
 
   const columns = [
+    {
+      title: "ID",
+      dataIndex: "ID",
+      key: "ID",
+      render: (text: string, record: any) => <div>{record.id}</div>,
+    },
     {
       title: t("Title"),
       dataIndex: "title",
@@ -49,8 +54,8 @@ const ServicesPage = () => {
     router.push("/admin/services/create");
   };
 
-  const handlePageChange = (page: number, pageSize: number) => {
-    setQuery({ PageSize: pageSize, PageIndex: page });
+  const handlePageChange = (page: number) => {
+    setQuery((prevQuery) => ({ ...prevQuery, PageIndex: page }));
   };
 
   const {
@@ -59,7 +64,7 @@ const ServicesPage = () => {
     appendData,
   } = useQueryApiClient({
     request: {
-      url: "/Solution",
+      url: `/Solution?pageSize=${query.PageSize}&pageIndex=${query.PageIndex}`,
       method: "GET",
       disableOnMount: true,
     },
