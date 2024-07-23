@@ -62,7 +62,20 @@ import renovation from "./advantages/renovation.png";
 import docs from "./advantages/folders.png";
 import sale from "./advantages/sale.png";
 
+/*--------------------------- Details -----------------------------*/
+import seo from "./details/seo.png";
+import responsive from "./details/responsive.png";
+import secure from "./details/secure.png";
+import fast from "./details/speed.png";
+
 export {
+  /*-------------------------details-------------------------- */
+
+  seo,
+  responsive,
+  secure,
+  fast,
+
   /*-------------------------Team-------------------------- */
   team,
   professor,

@@ -10,7 +10,7 @@
       width: 100%;
       height: 30%;
       font-family: "Montserrat", sans-serif;
-      font-weight: 600;
+      font-weight: 500;
       color: var(--nestle2);
       display: flex;
       align-items: center;
@@ -21,7 +21,11 @@
       width: 100%;
       height: 60%;
       margin-top: 20px;
-      font-size: 1.5em;
+      font-size: 1.2em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
       span {
         margin: 0 auto;
         font-family: "Montserrat", sans-serif;
@@ -30,10 +34,86 @@
         line-height: 32px;
         color: var(--nestle2);
         display: flex;
+        padding-top: 20px;
         text-align: center;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+        @media screen and (max-width: 1020px) {
+          font-size: 1em;
+          width: 100%;
+        }
       }
     }
   }
+  // web development end
+
+  .features {
+    width: 100%;
+    min-height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: space-between;
+    gap: 50px;
+    @media screen and (max-width: 360px) {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+
+      .features_item {
+        width: 100%;
+      }
+    }
+    @media screen and (max-width: 480px) {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+
+      .features_item {
+        width: 50%;
+      }
+    }
+
+    .features_item {
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+
+      .ft_image {
+        width: 100%;
+        height: 100px;
+        overflow: hidden;
+        img {
+          width: 40%;
+          height: 100%;
+        }
+      }
+
+      .ft_title {
+        margin-top: 20px;
+        width: 100%;
+        height: 50px;
+        font-size: 1.2em;
+        line-height: 30px;
+        color: var(--nestle2);
+        display: flex;
+        font-weight: 600;
+        align-items: center;
+        justify-content: flex-start;
+        border-bottom: 1px solid black;
+      }
+      .ft_subtitle {
+        margin-top: 20px;
+        font-size: 1em;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        line-height: 30px;
+        color: var(--nestle2);
+      }
+    }
+  }
+
   .imageUrl {
     width: 350px !important;
     height: 250px !important;
