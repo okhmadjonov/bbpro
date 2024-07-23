@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Table } from "@/ui";
 import Pagination from "@/ui/Pagination/Pagination";
 import { ColumnsType } from "antd/es/table";

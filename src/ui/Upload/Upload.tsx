@@ -111,16 +111,13 @@ export const Upload = ({
                 width={100}
                 height={100}
                 style={{ width: "100%" }}
+                priority
               />
             ) : (
               uploadButton
             )}
           </AntdUpload>
         </Space>
-      </Form.Item>
-      {/* Hidden field to store imageUrl */}
-      <Form.Item name="imageUrl" noStyle>
-        <input type="hidden" value={imageSrc} />
       </Form.Item>
     </div>
   );

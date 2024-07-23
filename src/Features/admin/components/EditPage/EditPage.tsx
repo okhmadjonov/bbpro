@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
 import { Form, message } from "antd";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import useQueryApiClient from "@/utils/useQueryApiClient";
+import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { Button, Upload } from "@/ui";
 
@@ -10,30 +11,19 @@ interface Props {
   children?: React.ReactNode;
   data?: any;
   multipart?: boolean;
-  showBackButton?: boolean;
 }
 
-const EditPage = ({
-  link,
-  children,
-  data,
-  multipart,
-  showBackButton = true,
-}: Props) => {
+const EditPage = ({ link, children, data, multipart }: Props) => {
   const [form] = Form.useForm();
   const router = useRouter();
   const slug = router?.query?.id;
   const t = useTranslations("ADMIN");
 
-  const [imageFile, setImageFile] = useState<File | null>(null);
-
+  const [imageFile, setImageFile] = useState<File | null>();
   useEffect(() => {
-    if (data) {
-      form.setFieldsValue(data);
-      if (data?.categoryId) {
-        form.setFieldValue("categoryId", String(data.categoryId));
-      }
-      setImageFile(null); // Reset image file when data changes
+    form.setFieldsValue(data);
+    if (data?.categoryId) {
+      form.setFieldValue("categoryId", String(data.categoryId));
     }
   }, [data]);
 
@@ -43,7 +33,7 @@ const EditPage = ({
       method: "PUT",
       multipart,
     },
-    onSuccess() {
+    onSuccess(res) {
       router.back();
     },
   });
@@ -54,11 +44,12 @@ const EditPage = ({
       method: "POST",
       multipart,
     },
-    onSuccess() {
+    onSuccess(res) {
       router.back();
     },
   });
 
+  // bu esa faqat shu yer uchun qogan joylaga ishlatmisiz
   const convertDataToFormData = (data: any) => {
     const formData = new FormData();
 
@@ -68,10 +59,12 @@ const EditPage = ({
 
         if (Array.isArray(value)) {
           if (key === "phone") {
+            // If key is 'phone', directly append the whole array
             value.forEach((phone: string, index: number) => {
               formData.append(`phone[${index}]`, phone);
             });
           } else {
+            // Process other arrays similarly as before
             value.forEach((subContent: any, index: number) => {
               for (const subKey in subContent) {
                 if (Object.prototype.hasOwnProperty.call(subContent, subKey)) {
@@ -89,12 +82,14 @@ const EditPage = ({
             });
           }
         } else if (typeof value === "object") {
+          // Process non-array objects as usual
           for (const lang in value) {
             if (Object.prototype.hasOwnProperty.call(value, lang)) {
               formData.append(`${key}.${lang}`, value[lang]);
             }
           }
         } else {
+          // Append other fields as-is
           formData.append(key, value);
         }
       }
@@ -105,13 +100,9 @@ const EditPage = ({
 
   const onFinish = (values: any) => {
     const formData = convertDataToFormData(values);
-
     if (imageFile) {
       formData.append("imageUrl", imageFile);
-    } else if (data?.imageUrl) {
-      formData.append("imageUrl", data.imageUrl); // Ensure imageUrl is included if imageFile is not provided
     }
-
     if (slug) {
       updateData(formData);
     } else {
@@ -127,18 +118,20 @@ const EditPage = ({
     router.back();
   };
 
+  const buttonStyle = {
+    marginBottom: "30px",
+  };
+
   return (
     <>
-      {showBackButton && (
-        <Button
-          type="primary"
-          onClick={handleBackButtonClick}
-          style={{ marginBottom: "30px" }}
-          label={t("Back")}
-        />
-      )}
+      <Button
+        type="primary"
+        onClick={handleBackButtonClick}
+        style={buttonStyle}
+        label={t("Back")}
+      ></Button>
       <Form onFinish={onFinish} form={form}>
-        {multipart && (
+        {multipart && multipart == true ? (
           <Upload
             onChange={(file: File) => setImageFile(file)}
             btnLabel={t("Upload")}
@@ -146,11 +139,12 @@ const EditPage = ({
             rules={[
               {
                 required: true,
-                message: "Please Select Image!",
+                message: `Please Select Image!`,
               },
             ]}
           />
-        )}
+        ) : null}
+
         {children}
         <Button
           size="small"
