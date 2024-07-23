@@ -36,7 +36,6 @@ const ServiceDetails = ({ ssDetail }: Props) => {
           </span>
         </p>
       </div>
-      <hr style={{ margin: "50px 0px" }} />
 
       {/*-----------------------------  Features ------------------------ */}
       <div className={styles.features}>
@@ -88,8 +87,6 @@ const ServiceDetails = ({ ssDetail }: Props) => {
           </p>
         </div>
       </div>
-
-      
 
       <hr style={{ margin: "50px 0px" }} />
       <Image
