@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { ColumnsType, TableLocale } from "antd/lib/table/interface";
 import { Table as AntdTable } from "antd";
 import {
@@ -151,6 +151,8 @@ export const Table = ({
     );
   };
   const t = useTranslations("ADMIN");
+
+
   const parsedColumns = columns.map((col: any) => {
     if (components) {
       return { ...col };

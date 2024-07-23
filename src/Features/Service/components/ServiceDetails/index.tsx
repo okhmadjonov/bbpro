@@ -23,6 +23,17 @@ const ServiceDetails = ({ ssDetail }: Props) => {
 
   return (
     <div className={styles.servicedetails}>
+      <div className={styles.webdevelopment}>
+        <h2>Веб-разработка</h2>
+        <p>
+          <span>
+            Разрабатываем интернет-проекты «под ключ». Наши сайты расскажут о
+            сильных сторонах вашей компании. Агентство «Bbpro» поможет вашему
+            бизнесу.
+          </span>
+        </p>
+      </div>
+      <hr style={{ margin: "50px" }} />
       <Image
         className={styles.imageUrl}
         src={`${BASE_URL}/${ssDetail.imageUrl}`}

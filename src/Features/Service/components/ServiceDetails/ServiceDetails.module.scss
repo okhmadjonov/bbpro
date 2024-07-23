@@ -2,8 +2,39 @@
   display: grid;
   grid-template-columns: 1fr;
 
+  .webdevelopment {
+    width: 100%;
+    height: 250px;
+
+    h2 {
+      width: 100%;
+      height: 30%;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+      color: var(--nestle2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3em;
+    }
+    p {
+      width: 100%;
+      height: 60%;
+      margin-top: 20px;
+      font-size: 1.5em;
+      span {
+        margin: 0 auto;
+        font-family: "Montserrat", sans-serif;
+        width: 50%;
+        height: 100%;
+        line-height: 32px;
+        color: var(--nestle2);
+        display: flex;
+        text-align: center;
+      }
+    }
+  }
   .imageUrl {
-    margin: 0 auto;
     width: 350px !important;
     height: 250px !important;
   }
