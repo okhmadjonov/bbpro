@@ -10,25 +10,24 @@
     margin: 5px;
     padding: 5px 10px;
     min-height: 60px;
-    border-radius: 5px;
     cursor: pointer;
     display: flex;
     font-size: 1rem;
     align-items: center;
     text-align: center;
     justify-content: center;
-    border: 1px solid var(--nestle2);
     transition: all ease-in-out 0.3s;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 2px 0px;
 
     &:hover {
-      background-color: var(--nestle2);
+      background-color: #535353;
       color: white;
       transition: all ease-in-out 0.3s;
       border: none;
     }
 
     &.active {
-      background-color: var(--nestle2);
+      background-color: #535353;
       color: white;
     }
 
