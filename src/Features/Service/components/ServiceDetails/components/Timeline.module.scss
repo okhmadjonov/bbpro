@@ -16,7 +16,7 @@
     font-size: 2em;
 
     @media screen and (max-width: 960px) {
-      display: none;
+      display: no;
     }
   }
 }
@@ -47,6 +47,7 @@
 }
 
 .timelineitemcontent {
+  cursor: pointer;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
   background: rgb(71, 7, 16);
