@@ -8,6 +8,7 @@ import { ServicesData } from "../../types";
 import { seo, responsive, secure, fast } from "@/Assets/Images";
 import WebDevelopment from "./components/WebDevelopment";
 import Features from "./components/Features";
+import Timeline from "./components/Timeline";
 
 interface Props {
   ssDetail: ServicesData;
@@ -28,6 +29,7 @@ const ServiceDetails = ({ ssDetail }: Props) => {
     <div className={styles.servicedetails}>
       <WebDevelopment />
       <Features />
+      <Timeline />
 
       <hr style={{ margin: "50px 0px" }} />
       <Image
