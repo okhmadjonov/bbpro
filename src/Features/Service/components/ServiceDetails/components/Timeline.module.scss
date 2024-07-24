@@ -13,7 +13,11 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    font-size: 3em;
+    font-size: 2em;
+
+    @media screen and (max-width: 960px) {
+      display: none;
+    }
   }
 }
 
@@ -45,13 +49,19 @@
 .timelineitemcontent {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
-  background-color: #fff;
+  background: rgb(71, 7, 16);
+  background: linear-gradient(
+    90deg,
+    rgba(71, 7, 16, 1) 53%,
+    rgba(12, 12, 46, 1) 100%,
+    rgba(0, 212, 255, 1) 100%
+  );
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   padding: 15px;
   position: relative;
-  width: 400px;
+  width: 300px;
   max-width: 70%;
   text-align: right;
 }
@@ -96,24 +106,20 @@
   right: 5px;
 }
 
-.timelineitemcontent time {
-  color: #777;
-  font-size: 12px;
-  font-weight: bold;
-}
-
 .timelineitemcontent p {
   font-size: 16px;
   line-height: 24px;
   margin: 15px 0;
   max-width: 250px;
+  color: #fff;
+  font-weight: 400;
 }
 
 .timelineitemcontent a {
-  color: #333;
+  color: #fff;
   text-decoration: none;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 400;
 }
 
 .timelineitemcontent a::after {
