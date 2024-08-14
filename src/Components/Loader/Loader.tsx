@@ -12,17 +12,16 @@ function Loader({ isComponent = true }: Props) {
 
   useEffect(() => {
     if (animationContainer.current) {
-      // Проверяем, что ref привязан к DOM-элементу
       const anim = lottie.loadAnimation({
         container: animationContainer.current,
-        renderer: "svg", // или 'canvas', в зависимости от вашего предпочтения
+        renderer: "svg",
         loop: true,
         autoplay: true,
         animationData: animationData,
       });
       anim.setSpeed(1.5);
       return () => {
-        anim.destroy(); // Очистка анимации при размонтировании компонента
+        anim.destroy();
       };
     }
   }, []);
