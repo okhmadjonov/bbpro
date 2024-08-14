@@ -10,9 +10,7 @@ import { ContactInfoModal } from "../ContactInfoModal/ContactInfoModal";
 import { useEffect, useState } from "react";
 import { facebook, instagram, telegram } from "@/Assets/Images";
 
-
-
-const Navbar = ( ) => {
+const Navbar = () => {
   const location = useRouter();
   const t = useTranslations("");
   const [scrolled, setScrolled] = useState<string>("absolute");

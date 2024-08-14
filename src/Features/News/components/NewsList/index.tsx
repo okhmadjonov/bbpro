@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import NewsCard from "../NewsCard/index";
 import styles from "./NewsList.module.scss";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
@@ -11,6 +10,7 @@ import {
 } from "@/Components/Types";
 import useQueryApiClient from "@/utils/useQueryApiClient";
 import { smoothScroll } from "@/utils/smoothScroll";
+import NewsCard from "../NewsCard";
 
 interface NewListProps {
   newlist: NewsListResponseInterface;
