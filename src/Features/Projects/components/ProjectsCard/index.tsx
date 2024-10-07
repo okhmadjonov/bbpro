@@ -64,6 +64,8 @@ const ProjectsCard = (props: ProjectCardProps) => {
       <div className={styles.btn_block}>
         <a
           href={`/templates/template${data.id}/index.html`}
+          //href={`${BASE_URL}/${data?.download_link}`}
+          //href="https://kun.uz"
           target="_blank"
           rel="noopener noreferrer"
         >

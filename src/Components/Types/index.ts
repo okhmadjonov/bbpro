@@ -141,6 +141,7 @@ export interface ProjectListInterface {
   imageUrl: string;
   title: LocaleStringsInterface;
   description: LocaleStringsInterface;
+  // download_link: string;
 }
 export interface ProjectsListInterface {
   items: ProjectListInterface[];

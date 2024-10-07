@@ -9,6 +9,7 @@ import MainLayout from "@/Components/Layout";
 import Head from "next/head";
 import Loader from "@/Components/Loader/Loader";
 import { SessionProvider } from "next-auth/react";
+import { BigBoxPro } from "@/Assets/Images";
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -36,12 +37,19 @@ export default function App({ Component, pageProps }: AppProps) {
         <IntlWrapperProvider>
           <MainLayout>
             <Head>
-              <meta name="description" content="Новое описание вашего сайта" />
               <meta
-                name="viewport"
-                content="width=device-width, initial-scale=1"
+                property="og:title"
+                content="Big Box Pro - IT Services & Security"
               />
+              <meta
+                property="og:description"
+                content="Производство ИТ-услуг и обеспечение высокого уровня безопасности. Наша главная цель — обеспечить безопасность и стабильную скорость."
+              />
+              <link rel="BigBoxPro" href="/bigboxpro.png" />
+
+              <meta property="og:type" content="website" />
             </Head>
+
             <Component {...pageProps} />
           </MainLayout>
         </IntlWrapperProvider>
