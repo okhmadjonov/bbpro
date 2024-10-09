@@ -78,14 +78,14 @@ const ServicesCard = ({
             />
           </div>
 
-          <h2 className={styles.newproductscard__title}>
+          {/* <h2 className={styles.newproductscard__title}>
             {title && title[locale as keyof LocaleStringsInterface]}
           </h2>
 
           <p
             className={styles.newproductscard__text}
             dangerouslySetInnerHTML={{ __html: truncatedDescription }}
-          ></p>
+          ></p> */}
         </div>
         <div className={styles.btn_block}>
           <Link href={`/service/${id}`}>

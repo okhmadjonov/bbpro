@@ -57,9 +57,9 @@ const ProjectsCard = (props: ProjectCardProps) => {
             height={1000}
           />
         </div>
-        <h2 className={styles.projectscard__title}>
+        {/* <h2 className={styles.projectscard__title}>
           {data.title[locale as keyof LocaleStringsInterface]}
-        </h2>
+        </h2> */}
       </div>
       <div className={styles.btn_block}>
         <a

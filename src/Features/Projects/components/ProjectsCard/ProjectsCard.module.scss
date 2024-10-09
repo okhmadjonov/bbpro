@@ -5,15 +5,19 @@
   justify-content: space-between;
   max-width: 100% !important;
   height: 100% !important;
-  box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 2px 0px;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 1px 0px;
+
   @media (max-width: 768px) {
     max-width: 387px !important;
   }
 
   a {
     display: block;
-    width: 180px;
+    width: 168px;
+    margin-top: 20px;
   }
+
   .projectsproducts__inner {
     display: flex;
     flex-direction: column;
@@ -22,11 +26,13 @@
   &__title {
     font-family: "RG-StandardBold";
     margin: 12px 0px 10px;
-    font-size: 1.125rem;
+    font-size: 1rem;
+    letter-spacing: 2px;
     font-weight: 500;
     line-height: 1.5rem;
-    letter-spacing: 0em;
-    text-align: left;
+    letter-spacing: 0.1em;
+    text-align: center;
+    color: var(--btn-color);
   }
 
   &__text {
